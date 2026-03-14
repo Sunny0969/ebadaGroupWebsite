@@ -180,6 +180,56 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   gap: 2rem;
   margin-top: 3rem;
 }
+
+/* Mobile horizontal scroll for Materiality cards */
+@media (max-width: 768px) {
+  .sus-materiality__grid {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) rgba(255,255,255,0.1);
+    gap: 1rem;
+    padding: 0.5rem 0 1.5rem 0;
+    margin: 0 -1.5rem;
+    margin-top: 3rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    scroll-padding-left: 1.5rem;
+    scroll-padding-right: 1.5rem;
+  }
+  .sus-materiality__grid::-webkit-scrollbar {
+    height: 6px;
+  }
+  .sus-materiality__grid::-webkit-scrollbar-track {
+    background: rgba(255,255,255,0.1);
+    border-radius: 3px;
+    margin: 0 1.5rem;
+  }
+  .sus-materiality__grid::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 3px;
+  }
+  .sus-materiality__grid::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-d);
+  }
+  /* All cards - Full width (65%) for proper scroll pattern */
+  .sus-materiality__grid .sus-materiality-card {
+    flex: 0 0 calc(65% - 0.5rem);
+    min-width: calc(65% - 0.5rem);
+    max-width: calc(65% - 0.5rem);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+  /* Prevent hover effects on mobile scroll */
+  .sus-materiality__grid .sus-materiality-card:hover {
+    transform: none;
+  }
+}
+
 .sus-materiality-card {
   background: var(--white);
   border-radius: var(--r-lg);
@@ -387,7 +437,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  .sus-materiality__grid { grid-template-columns: 1fr; }
+  /* Materiality grid already handled above for mobile scroll */
   .sus-initiatives__grid { grid-template-columns: 1fr; }
   .sus-stats__grid { grid-template-columns: repeat(2, 1fr); }
   .sus-sdgs__grid { grid-template-columns: repeat(2, 1fr); }

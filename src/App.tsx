@@ -43,12 +43,14 @@ import NotFound from './assets/components/NotFound'
 import BackToTop from './assets/components/BackToTop'
 import SocialProofNotification from './assets/components/SocialProofNotification'
 import AccessibilityControls from './assets/components/AccessibilityControls'
+import ScrollToTop from './assets/components/ScrollToTop'
 import './App.css'
 
 function App() {
   return (
     <LanguageProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <LiveChat />
         <Routes>
         <Route path="/" element={<HomePage />} />

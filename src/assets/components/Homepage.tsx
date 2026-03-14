@@ -188,6 +188,7 @@ export default function HomePage() {
       {/* ── QUICK SEARCH ── */}
       <section className="cdp-qsearch">
         <div className="cdp-wrap cdp-qsearch__inner">
+          <span className="cdp-qsearch__label">Quick Job Search</span>
           <form 
             onSubmit={(e) => {
               e.preventDefault();
@@ -201,30 +202,33 @@ export default function HomePage() {
               if (type) params.append('type', type);
               window.location.href = `/job-seekers/listings${params.toString() ? '?' + params.toString() : ''}`;
             }}
-            style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}
+            className="cdp-qsearch__form"
           >
-            <span className="cdp-qsearch__label">Quick Job Search</span>
-            <select name="category" className="cdp-sel" defaultValue="">
-              <option value="">Category</option>
-              <option value="Manufacturing">Manufacturing</option>
-              <option value="Engineering">Engineering</option>
-              <option value="Logistics">Logistics</option>
-              <option value="IT / Tech">IT / Tech</option>
-            </select>
-            <select name="location" className="cdp-sel" defaultValue="">
-              <option value="">Location</option>
-              <option value="Tokyo">Tokyo</option>
-              <option value="Osaka">Osaka</option>
-              <option value="Nagoya">Nagoya</option>
-              <option value="Fukuoka">Fukuoka</option>
-            </select>
-            <select name="type" className="cdp-sel" defaultValue="">
-              <option value="">Type</option>
-              <option value="Dispatch">Dispatch</option>
-              <option value="Direct Hire">Direct Hire</option>
-              <option value="Part-time">Part-time</option>
-            </select>
-            <button type="submit" className="cdp-btn cdp-btn--primary">Search Jobs →</button>
+            <div className="cdp-qsearch__row">
+              <select name="category" className="cdp-sel" defaultValue="">
+                <option value="">Category</option>
+                <option value="Manufacturing">Manufacturing</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Logistics">Logistics</option>
+                <option value="IT / Tech">IT / Tech</option>
+              </select>
+              <select name="location" className="cdp-sel" defaultValue="">
+                <option value="">Location</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Osaka">Osaka</option>
+                <option value="Nagoya">Nagoya</option>
+                <option value="Fukuoka">Fukuoka</option>
+              </select>
+              <select name="type" className="cdp-sel" defaultValue="">
+                <option value="">Type</option>
+                <option value="Dispatch">Dispatch</option>
+                <option value="Direct Hire">Direct Hire</option>
+                <option value="Part-time">Part-time</option>
+              </select>
+            </div>
+            <div className="cdp-qsearch__button-wrapper">
+              <button type="submit" className="cdp-btn cdp-btn--primary">Search Jobs →</button>
+            </div>
           </form>
         </div>
       </section>
