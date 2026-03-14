@@ -1,0 +1,320 @@
+/* ═══════════════════════════════════════════
+   CDP JAPAN — HEADER STYLES
+   ═══════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+/* ── TOKENS ── */
+:root {
+  --navy:    #0A1628;
+  --navy-2:  #112040;
+  --navy-3:  #1a2f55;
+  --accent:  #E8431A;
+  --accent-d:#c43614;
+  --white:   #FFFFFF;
+  --off:     #F5F4F0;
+  --muted:   #8A95A3;
+  --border:  #e0ddd8;
+  --txt:     #1C2533;
+  --txt-2:   #4A5568;
+
+  --font-serif: 'Noto Serif JP', 'Georgia', serif;
+  --font-sans:  'DM Sans', 'Helvetica Neue', sans-serif;
+
+  --r:   6px;
+  --r-lg: 12px;
+  --trans: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow: 0 4px 24px rgba(10, 22, 40, 0.10);
+  --shadow-lg: 0 12px 48px rgba(10, 22, 40, 0.18);
+}
+
+.cdp-wrap {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ── BUTTONS ── */
+.cdp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--r);
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.02em;
+  transition: background 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              color 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+}
+.cdp-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s ease, height 0.6s ease;
+}
+.cdp-btn:hover::before {
+  width: 300px;
+  height: 300px;
+}
+.cdp-btn:hover { 
+  transform: translateY(-3px) scale(1.05);
+}
+.cdp-btn:active {
+  transform: translateY(-1px) scale(1.02);
+}
+.cdp-btn--primary  { background: var(--accent); color: var(--white); }
+.cdp-btn--primary:hover { background: var(--accent-d); box-shadow: 0 6px 20px rgba(232,67,26,0.35); }
+.cdp-btn--white    { background: var(--white); color: var(--navy); }
+.cdp-btn--white:hover { background: var(--off); box-shadow: 0 6px 20px rgba(0,0,0,0.12); }
+.cdp-btn--ghost    { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,0.7); }
+.cdp-btn--ghost:hover { background: rgba(255,255,255,0.12); }
+.cdp-btn--outline  { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
+.cdp-btn--outline:hover { background: var(--navy); color: var(--white); }
+.cdp-btn--sm { 
+  padding: 0.55rem 1.25rem; 
+  font-size: 0.85rem;
+  opacity: 1 !important;
+  visibility: visible !important;
+  display: inline-flex !important;
+}
+
+/* ── HEADER ── */
+.cdp-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 999;
+  transition: background var(--trans), box-shadow var(--trans);
+  background: var(--navy);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.15);
+  animation: headerSlideDown 0.6s ease both;
+}
+@keyframes headerSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.cdp-header--scrolled {
+  background: var(--navy);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+
+/* Make Contact Us button look like nav link when scrolled */
+.cdp-header--scrolled .cdp-header__right .cdp-btn--sm {
+  background: transparent !important;
+  color: var(--white) !important;
+  border: none !important;
+  padding: 0.5rem 0.75rem;
+}
+.cdp-header--scrolled .cdp-header__right .cdp-btn--sm:hover {
+  background: rgba(255,255,255,0.08) !important;
+  color: var(--white) !important;
+  transform: translateY(0);
+}
+
+/* Contact Us button - always white in header */
+.cdp-header__right .cdp-btn--sm {
+  color: var(--white) !important;
+  background: transparent !important;
+  border: none !important;
+}
+.cdp-header__inner {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  height: 72px;
+}
+
+/* LOGO */
+.cdp-logo {
+  display: flex;
+  align-items: baseline;
+  gap: 0.4rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.cdp-logo__mark {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+.cdp-logo__sub {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--white);
+  text-transform: uppercase;
+  opacity: 1;
+}
+.cdp-logo__sub--light { color: var(--white); opacity: 1; }
+.cdp-logo--light .cdp-logo__mark { color: var(--accent); }
+
+/* NAV */
+.cdp-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  margin-left: auto;
+}
+.cdp-nav__item { position: relative; }
+.cdp-nav__link {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--white);
+  border-radius: var(--r);
+  transition: color var(--trans), background var(--trans);
+  white-space: nowrap;
+  text-decoration: none;
+}
+.cdp-nav__link:hover { color: var(--white); background: rgba(255,255,255,0.12); }
+.cdp-nav__chevron {
+  font-size: 0.9rem;
+  opacity: 0.6;
+  transform: rotate(90deg);
+  display: inline-block;
+}
+
+/* DROPDOWN */
+.cdp-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  background: var(--navy-2);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: var(--r);
+  min-width: 220px;
+  padding: 0.5rem 0;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity var(--trans), transform var(--trans);
+}
+.cdp-dropdown--open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+.cdp-dropdown__link {
+  display: block;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.75);
+  transition: color var(--trans), background var(--trans);
+  text-decoration: none;
+}
+.cdp-dropdown__link:hover { color: var(--white); background: rgba(255,255,255,0.06); }
+
+.cdp-header__right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-shrink: 0;
+}
+
+.cdp-header__lang {
+  position: relative;
+}
+
+.cdp-header__lang-btn {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--white);
+  background: transparent;
+  border: none;
+  border-radius: var(--r);
+  cursor: pointer;
+  transition: all var(--trans);
+}
+
+.cdp-header__lang-btn:hover {
+  background: rgba(255,255,255,0.12);
+}
+
+/* Contact Us button in header - make it always visible like nav items */
+.cdp-header__right .cdp-btn {
+  opacity: 1;
+  visibility: visible;
+  display: inline-flex;
+  color: var(--white) !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.cdp-header--scrolled .cdp-header__right .cdp-btn {
+  opacity: 1;
+  visibility: visible;
+  color: var(--white) !important;
+}
+
+.cdp-header__right .cdp-btn:hover {
+  color: var(--white) !important;
+  background: rgba(255,255,255,0.08) !important;
+}
+
+/* BURGER */
+.cdp-burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  padding: 6px;
+}
+.cdp-burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  transition: transform var(--trans);
+}
+.cdp-mobile-nav {
+  background: var(--navy);
+  padding: 1rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.cdp-mobile-nav__link {
+  padding: 0.75rem 0;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  text-decoration: none;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1100px) {
+  .cdp-nav { display: none; }
+  .cdp-burger { display: flex; }
+}
+
+@media (max-width: 480px) {
+  .cdp-wrap { padding: 0 1.25rem; }
+}
