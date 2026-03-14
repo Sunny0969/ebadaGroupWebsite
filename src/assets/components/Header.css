@@ -147,29 +147,17 @@
 /* LOGO */
 .cdp-logo {
   display: flex;
-  align-items: baseline;
-  gap: 0.4rem;
+  align-items: center;
   text-decoration: none;
   flex-shrink: 0;
 }
-.cdp-logo__mark {
-  font-family: var(--font-serif);
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: var(--accent);
-  letter-spacing: 0.05em;
+.cdp-logo__img {
+  margin-top: 20px;
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
-.cdp-logo__sub {
-  font-family: var(--font-sans);
-  font-size: 0.7rem;
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  color: var(--white);
-  text-transform: uppercase;
-  opacity: 1;
-}
-.cdp-logo__sub--light { color: var(--white); opacity: 1; }
-.cdp-logo--light .cdp-logo__mark { color: var(--accent); }
 
 /* NAV */
 .cdp-nav {
@@ -236,6 +224,23 @@
   align-items: center;
   gap: 0.75rem;
   flex-shrink: 0;
+}
+
+.cdp-header__search-btn {
+  padding: 0.5rem;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+  border-radius: var(--r);
+  transition: background var(--trans);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cdp-header__search-btn:hover {
+  background: rgba(255,255,255,0.12);
 }
 
 .cdp-header__lang {
@@ -310,11 +315,60 @@
 }
 
 /* ── RESPONSIVE ── */
+/* Tablet and below */
 @media (max-width: 1100px) {
   .cdp-nav { display: none; }
   .cdp-burger { display: flex; }
+  .cdp-header__inner { gap: 1rem; }
+  .cdp-logo__img { height: 80px !important; width: auto !important; }
 }
 
+/* Mobile Large (768px and below) */
+@media (max-width: 768px) {
+  .cdp-wrap { padding: 0 1.5rem; }
+  .cdp-header__inner { height: 64px; }
+  .cdp-logo__img { height: 70px !important; margin-top: 10px !important; }
+  .cdp-header__right { gap: 0.5rem; }
+  .cdp-btn--sm { padding: 0.45rem 0.65rem !important; font-size: 0.8rem !important; }
+  .cdp-header__search-btn { padding: 0.4rem; }
+  .cdp-mobile-nav { padding: 1rem 1.5rem 1.5rem; }
+}
+
+/* Mobile Medium (480px and below) */
 @media (max-width: 480px) {
   .cdp-wrap { padding: 0 1.25rem; }
+  .cdp-header__inner { height: 60px; gap: 0.75rem; }
+  .cdp-logo__img { height: 60px !important; width: auto !important; margin-top: 5px !important; }
+  .cdp-header__right .cdp-btn--sm { display: none !important; }
+  .cdp-header__search-btn svg { width: 18px; height: 18px; }
+  .cdp-burger { padding: 4px; }
+  .cdp-burger span { width: 20px; }
+  .cdp-mobile-nav { padding: 0.75rem 1.25rem 1.25rem; }
+  .cdp-mobile-nav__link { padding: 0.65rem 0; font-size: 0.9rem; }
+}
+
+/* Mobile Small (360px and below) */
+@media (max-width: 360px) {
+  .cdp-wrap { padding: 0 1rem; }
+  .cdp-logo__img { height: 50px !important; }
+  .cdp-header__inner { height: 56px; }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .cdp-btn { min-height: 44px; min-width: 44px; }
+  .cdp-nav__link { padding: 0.75rem 1rem; }
+  .cdp-header__search-btn { min-width: 44px; min-height: 44px; }
+  .cdp-burger { min-width: 44px; min-height: 44px; }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .cdp-logo__img { image-rendering: -webkit-optimize-contrast; }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .cdp-header__inner { height: 56px; }
+  .cdp-logo__img { height: 50px !important; }
 }

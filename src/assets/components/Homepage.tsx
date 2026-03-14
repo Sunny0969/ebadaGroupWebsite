@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Homepage.css";
@@ -173,8 +174,8 @@ export default function HomePage() {
             Japan's trusted partner in manufacturing staffing, engineer dispatch, and workforce solutions — connecting talent with opportunity since 1994.
           </p>
           <div className="cdp-hero__actions">
-            <a href="#seekers" className="cdp-btn cdp-btn--white">Find a Job</a>
-            <a href="#employers" className="cdp-btn cdp-btn--ghost">Hire Talent</a>
+            <Link to="/job-seekers/listings" className="cdp-btn cdp-btn--white">Find a Job</Link>
+            <Link to="/employers/services" className="cdp-btn cdp-btn--ghost">Hire Talent</Link>
           </div>
         </div>
 
@@ -187,28 +188,44 @@ export default function HomePage() {
       {/* ── QUICK SEARCH ── */}
       <section className="cdp-qsearch">
         <div className="cdp-wrap cdp-qsearch__inner">
-          <span className="cdp-qsearch__label">Quick Job Search</span>
-          <select className="cdp-sel">
-            <option value="">Category</option>
-            <option>Manufacturing</option>
-            <option>Engineering</option>
-            <option>Logistics</option>
-            <option>IT / Tech</option>
-          </select>
-          <select className="cdp-sel">
-            <option value="">Location</option>
-            <option>Tokyo</option>
-            <option>Osaka</option>
-            <option>Nagoya</option>
-            <option>Fukuoka</option>
-          </select>
-          <select className="cdp-sel">
-            <option value="">Type</option>
-            <option>Dispatch</option>
-            <option>Direct Hire</option>
-            <option>Part-time</option>
-          </select>
-          <button className="cdp-btn cdp-btn--primary">Search Jobs →</button>
+          <form 
+            onSubmit={(e) => {
+              e.preventDefault();
+              const formData = new FormData(e.currentTarget);
+              const category = formData.get('category') as string;
+              const location = formData.get('location') as string;
+              const type = formData.get('type') as string;
+              const params = new URLSearchParams();
+              if (category) params.append('category', category);
+              if (location) params.append('location', location);
+              if (type) params.append('type', type);
+              window.location.href = `/job-seekers/listings${params.toString() ? '?' + params.toString() : ''}`;
+            }}
+            style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap" }}
+          >
+            <span className="cdp-qsearch__label">Quick Job Search</span>
+            <select name="category" className="cdp-sel" defaultValue="">
+              <option value="">Category</option>
+              <option value="Manufacturing">Manufacturing</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Logistics">Logistics</option>
+              <option value="IT / Tech">IT / Tech</option>
+            </select>
+            <select name="location" className="cdp-sel" defaultValue="">
+              <option value="">Location</option>
+              <option value="Tokyo">Tokyo</option>
+              <option value="Osaka">Osaka</option>
+              <option value="Nagoya">Nagoya</option>
+              <option value="Fukuoka">Fukuoka</option>
+            </select>
+            <select name="type" className="cdp-sel" defaultValue="">
+              <option value="">Type</option>
+              <option value="Dispatch">Dispatch</option>
+              <option value="Direct Hire">Direct Hire</option>
+              <option value="Part-time">Part-time</option>
+            </select>
+            <button type="submit" className="cdp-btn cdp-btn--primary">Search Jobs →</button>
+          </form>
         </div>
       </section>
 
@@ -232,7 +249,7 @@ export default function HomePage() {
                 <div className="cdp-svc__icon">{s.icon}</div>
                 <h3 className="cdp-svc__h3">{s.title}</h3>
                 <p className="cdp-svc__p">{s.desc}</p>
-                <a href="#services" className="cdp-svc__more">Learn More →</a>
+                {/* <a href="#services" className="cdp-svc__more">Learn More →</a> */}
               </article>
             ))}
           </div>
@@ -263,7 +280,7 @@ export default function HomePage() {
             <span className="cdp-eyebrow">Why CDP Japan</span>
             <h2 className="cdp-why__h2">Built on Trust.<br />Driven by Results.</h2>
             <p className="cdp-why__body">For over 30 years, CDP Japan has been the staffing partner of choice for Japan's leading manufacturers. Our commitment to quality, speed, and support sets us apart.</p>
-            <a href="#about" className="cdp-btn cdp-btn--primary">Discover Our Story →</a>
+            <Link to="/about/overview" className="cdp-btn cdp-btn--primary">Discover Our Story →</Link>
           </div>
           <div className="cdp-why__cards">
             {WHY.map((w, i) => (
@@ -287,7 +304,7 @@ export default function HomePage() {
             <span className="cdp-eyebrow cdp-eyebrow--light">For Job Seekers</span>
             <h3 className="cdp-dual__h3">Find Your Next Career Opportunity</h3>
             <p>Browse thousands of manufacturing and engineering positions across Japan.</p>
-            <a href="#seekers" className="cdp-btn cdp-btn--white">Browse Jobs →</a>
+            <Link to="/job-seekers/listings" className="cdp-btn cdp-btn--white">Browse Jobs →</Link>
           </div>
         </div>
         <div className="cdp-dual__half cdp-dual__half--b">
@@ -296,7 +313,7 @@ export default function HomePage() {
             <span className="cdp-eyebrow cdp-eyebrow--light">For Employers</span>
             <h3 className="cdp-dual__h3">Build Your Dream Team</h3>
             <p>Access Japan's largest pool of vetted manufacturing talent with fast placement guaranteed.</p>
-            <a href="#employers" className="cdp-btn cdp-btn--white">Request Talent →</a>
+            <Link to="/employers/services" className="cdp-btn cdp-btn--white">Request Talent →</Link>
           </div>
         </div>
       </section>
@@ -323,13 +340,13 @@ export default function HomePage() {
                 <div className="cdp-nc__body">
                   <time className="cdp-nc__date">{n.date}</time>
                   <h3 className="cdp-nc__h3">{n.title}</h3>
-                  <a href="#news" className="cdp-nc__more">Read More →</a>
+                  <Link to="/news" className="cdp-nc__more">Read More →</Link>
                 </div>
               </article>
             ))}
           </div>
           <div style={{ textAlign: "center", marginTop: "2.5rem" }}>
-            <a href="#news" className="cdp-btn cdp-btn--outline">View All News →</a>
+            <Link to="/news" className="cdp-btn cdp-btn--outline">View All News →</Link>
           </div>
         </div>
       </section>

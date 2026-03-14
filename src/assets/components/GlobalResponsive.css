@@ -1,0 +1,323 @@
+/* ═══════════════════════════════════════════
+   GLOBAL RESPONSIVE STYLES
+   Optimized for Google PageSpeed Insights
+   Mobile-first approach with smooth animations
+   ═══════════════════════════════════════════ */
+
+/* ── PERFORMANCE OPTIMIZATIONS ── */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Smooth scrolling with offset for fixed header */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+/* Optimize animations for performance */
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── RESPONSIVE BREAKPOINTS ── */
+/* Mobile First Approach */
+
+/* Extra Small Devices (phones, 320px and up) */
+@media (min-width: 320px) {
+  .cdp-wrap,
+  .contact-wrap,
+  .js-wrap,
+  .emp-wrap,
+  .au-wrap {
+    padding: 0 1rem;
+  }
+}
+
+/* Small Devices (landscape phones, 480px and up) */
+@media (min-width: 480px) {
+  .cdp-wrap,
+  .contact-wrap,
+  .js-wrap,
+  .emp-wrap,
+  .au-wrap {
+    padding: 0 1.25rem;
+  }
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .cdp-wrap,
+  .contact-wrap,
+  .js-wrap,
+  .emp-wrap,
+  .au-wrap {
+    padding: 0 2rem;
+  }
+}
+
+/* Large Devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .cdp-wrap,
+  .contact-wrap,
+  .js-wrap,
+  .emp-wrap,
+  .au-wrap {
+    padding: 0 2rem;
+    max-width: 1240px;
+  }
+}
+
+/* Extra Large Devices (large desktops, 1280px and up) */
+@media (min-width: 1280px) {
+  .cdp-wrap,
+  .contact-wrap,
+  .js-wrap,
+  .emp-wrap,
+  .au-wrap {
+    padding: 0 3rem;
+    max-width: 1400px;
+  }
+}
+
+/* ── TOUCH TARGET OPTIMIZATIONS ── */
+/* Minimum touch target size: 44x44px (Apple HIG, Material Design) */
+@media (hover: none) and (pointer: coarse) {
+  button,
+  a,
+  input[type="button"],
+  input[type="submit"],
+  .cdp-btn,
+  .contact-btn,
+  .js-btn,
+  .emp-btn,
+  .careers-btn {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  /* Increase spacing for touch */
+  .cdp-nav__link,
+  .cdp-mobile-nav__link {
+    padding: 1rem;
+    min-height: 44px;
+  }
+}
+
+/* ── IMAGE OPTIMIZATION ── */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}
+
+/* Lazy loading images */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* ── SMOOTH ANIMATIONS ── */
+/* Use transform and opacity for better performance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Will-change for elements that will animate */
+.cdp-section,
+.contact-section,
+.js-section,
+.emp-section,
+.au-section {
+  will-change: transform, opacity;
+}
+
+/* ── GRID RESPONSIVE UTILITIES ── */
+.responsive-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 480px) {
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ── TYPOGRAPHY SCALING ── */
+/* Fluid typography using clamp */
+h1 {
+  font-size: clamp(1.75rem, 4vw, 3.5rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+h4 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+}
+
+/* ── CONTAINER QUERIES (Future-proof) ── */
+@supports (container-type: inline-size) {
+  .container-responsive {
+    container-type: inline-size;
+  }
+}
+
+/* ── PRINT STYLES ── */
+@media print {
+  * {
+    background: white !important;
+    color: black !important;
+    box-shadow: none !important;
+  }
+  
+  .cdp-header,
+  .cdp-footer,
+  .cdp-burger,
+  .cdp-btn,
+  button {
+    display: none !important;
+  }
+}
+
+/* ── HIGH CONTRAST MODE ── */
+@media (prefers-contrast: high) {
+  * {
+    border-color: currentColor !important;
+  }
+  
+  .cdp-btn {
+    border: 2px solid currentColor;
+  }
+}
+
+/* ── DARK MODE SUPPORT (Future) ── */
+@media (prefers-color-scheme: dark) {
+  /* Will be implemented if needed */
+}
+
+/* ── LANDSCAPE ORIENTATION ── */
+@media (max-width: 768px) and (orientation: landscape) {
+  .cdp-hero,
+  .contact-hero {
+    min-height: 50vh;
+  }
+  
+  .cdp-header__inner {
+    height: 56px;
+  }
+}
+
+/* ── FOLDABLE DEVICES ── */
+@media (max-width: 768px) {
+  @supports (padding: max(0px)) {
+    .cdp-wrap,
+    .contact-wrap {
+      padding-left: max(1rem, env(safe-area-inset-left));
+      padding-right: max(1rem, env(safe-area-inset-right));
+    }
+  }
+}
+
+/* ── PERFORMANCE: CONTENT VISIBILITY ── */
+@media (min-width: 768px) {
+  section:not(:target) {
+    content-visibility: auto;
+    contain-intrinsic-size: 0 500px;
+  }
+}
+
+/* ── SMOOTH SCROLLING ── */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    scroll-margin-top: 72px;
+  }
+}
+
+/* ── FOCUS VISIBLE (Accessibility) ── */
+*:focus-visible {
+  outline: 2px solid var(--accent, #E8431A);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ── REDUCE ANIMATIONS ON LOW POWER MODE ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

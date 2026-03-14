@@ -514,8 +514,116 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* ── RESPONSIVE ── */
+/* ── RESPONSIVE ── */
+/* Tablet (968px and below) */
+@media (max-width: 968px) {
+  .emp-services__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .emp-resources__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile Large (768px and below) */
 @media (max-width: 768px) {
-  .emp-form-group__row { grid-template-columns: 1fr; }
-  .emp-services__grid { grid-template-columns: 1fr; }
-  .emp-portal__stats { grid-template-columns: 1fr; }
+  .emp {
+    padding-top: 64px;
+  }
+  .emp-wrap {
+    padding: 0 1.5rem;
+  }
+  .emp-section {
+    padding: 4rem 0;
+  }
+  .emp-form-group__row { 
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+  }
+  .emp-services__grid { 
+    grid-template-columns: 1fr; 
+    gap: 1.25rem;
+  }
+  .emp-resources__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .emp-portal__stats { 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem;
+  }
+  .emp-portal__table {
+    font-size: 0.85rem;
+    overflow-x: auto;
+    display: block;
+  }
+  .emp-portal__table thead,
+  .emp-portal__table tbody,
+  .emp-portal__table tr {
+    display: block;
+  }
+  .emp-portal__table th,
+  .emp-portal__table td {
+    display: block;
+    text-align: left;
+    padding: 0.75rem 0.5rem;
+  }
+  .emp-hero__h1 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+  }
+  .emp-h2 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+  }
+  .emp-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Mobile Medium (480px and below) */
+@media (max-width: 480px) {
+  .emp-wrap {
+    padding: 0 1.25rem;
+  }
+  .emp-section {
+    padding: 3rem 0;
+  }
+  .emp-hero {
+    padding: 3rem 0;
+  }
+  .emp-hero__h1 {
+    font-size: clamp(1.75rem, 6vw, 2rem);
+  }
+  .emp-portal__stats {
+    grid-template-columns: 1fr;
+  }
+  .emp-portal__dashboard {
+    padding: 1.25rem;
+  }
+}
+
+/* Mobile Small (360px and below) */
+@media (max-width: 360px) {
+  .emp-wrap {
+    padding: 0 1rem;
+  }
+  .emp-portal__dashboard {
+    padding: 1rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .emp-btn {
+    min-height: 44px;
+    padding: 0.875rem 1.75rem;
+  }
+  .emp-form-group input,
+  .emp-form-group textarea,
+  .emp-form-group select {
+    min-height: 44px;
+    padding: 0.875rem 1rem;
+  }
 }

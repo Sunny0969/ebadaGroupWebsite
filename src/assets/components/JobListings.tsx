@@ -122,6 +122,8 @@ export default function JobListings() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [showJobAlert, setShowJobAlert] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = 3;
 
   const filteredJobs = SAMPLE_JOBS.filter(job => {
     if (filters.category !== "All" && job.category !== filters.category) return false;
@@ -262,11 +264,29 @@ export default function JobListings() {
           </div>
 
           <div className="js-pagination">
-            <button className="js-pagination__btn">‹ Previous</button>
-            <button className="js-pagination__btn js-pagination__btn--active">1</button>
-            <button className="js-pagination__btn">2</button>
-            <button className="js-pagination__btn">3</button>
-            <button className="js-pagination__btn">Next ›</button>
+            <button 
+              className="js-pagination__btn" 
+              onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+              disabled={currentPage === 1}
+            >
+              ‹ Previous
+            </button>
+            {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+              <button
+                key={page}
+                className={`js-pagination__btn ${currentPage === page ? "js-pagination__btn--active" : ""}`}
+                onClick={() => setCurrentPage(page)}
+              >
+                {page}
+              </button>
+            ))}
+            <button 
+              className="js-pagination__btn" 
+              onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+              disabled={currentPage === totalPages}
+            >
+              Next ›
+            </button>
           </div>
         </div>
       </section>

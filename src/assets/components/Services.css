@@ -528,9 +528,93 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* ── RESPONSIVE ── */
+/* Tablet (968px and below) */
+@media (max-width: 968px) {
+  .sv-overview__layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .sv-features__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile Large (768px and below) */
 @media (max-width: 768px) {
-  .sv-overview__layout { grid-template-columns: 1fr; }
-  .sv-hero__h1 { font-size: 2rem; }
-  .sv-cta__actions { flex-direction: column; }
-  .sv-cta__actions .sv-btn { width: 100%; }
+  .sv {
+    padding-top: 64px;
+  }
+  .sv-wrap {
+    padding: 0 1.5rem;
+  }
+  .sv-section {
+    padding: 4rem 0;
+  }
+  .sv-overview__layout { 
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+  }
+  .sv-hero__h1 { 
+    font-size: clamp(2rem, 5vw, 2.5rem); 
+  }
+  .sv-h2 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+  }
+  .sv-cta__actions { 
+    flex-direction: column; 
+    gap: 0.75rem;
+  }
+  .sv-cta__actions .sv-btn { 
+    width: 100%; 
+    justify-content: center;
+  }
+  .sv-features__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .sv-faq-item {
+    padding: 1.25rem;
+  }
+}
+
+/* Mobile Medium (480px and below) */
+@media (max-width: 480px) {
+  .sv-wrap {
+    padding: 0 1.25rem;
+  }
+  .sv-section {
+    padding: 3rem 0;
+  }
+  .sv-hero {
+    padding: 3rem 0;
+  }
+  .sv-hero__h1 {
+    font-size: clamp(1.75rem, 6vw, 2rem);
+  }
+  .sv-cta {
+    padding: 4rem 0;
+  }
+}
+
+/* Mobile Small (360px and below) */
+@media (max-width: 360px) {
+  .sv-wrap {
+    padding: 0 1rem;
+  }
+  .sv-faq-item {
+    padding: 1rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .sv-btn {
+    min-height: 44px;
+    padding: 0.875rem 1.75rem;
+  }
+  .sv-faq-item__question {
+    min-height: 44px;
+    padding: 1rem 1.25rem;
+  }
 }

@@ -34,6 +34,15 @@ import JoinOurTeam from './assets/components/JoinOurTeam'
 import RecruitmentBlog from './assets/components/RecruitmentBlog'
 import ApplicationProcess from './assets/components/ApplicationProcess'
 import ContactUs from './assets/components/ContactUs'
+import FAQ from './assets/components/FAQ'
+import Support from './assets/components/Support'
+import PrivacyPolicy from './assets/components/PrivacyPolicy'
+import TermsConditions from './assets/components/TermsConditions'
+import CookiePolicy from './assets/components/CookiePolicy'
+import NotFound from './assets/components/NotFound'
+import BackToTop from './assets/components/BackToTop'
+import SocialProofNotification from './assets/components/SocialProofNotification'
+import AccessibilityControls from './assets/components/AccessibilityControls'
 import './App.css'
 
 function App() {
@@ -81,7 +90,16 @@ function App() {
         <Route path="/careers/blog" element={<RecruitmentBlog />} />
         <Route path="/careers/process" element={<ApplicationProcess />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/faq" element={<FAQ />} />
+        <Route path="/support" element={<Support />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-conditions" element={<TermsConditions />} />
+        <Route path="/cookie-policy" element={<CookiePolicy />} />
+        <Route path="*" element={<NotFound />} />
         </Routes>
+        <BackToTop />
+        <SocialProofNotification />
+        <AccessibilityControls />
       </BrowserRouter>
     </LanguageProvider>
   )

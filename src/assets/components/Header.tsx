@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useLanguage } from "../../contexts/LanguageContext";
+import SiteSearch from "./SiteSearch";
 import "./Header.css";
 
 const NAV_LINKS = [
@@ -78,11 +78,10 @@ const NAV_LINKS = [
 ];
 
 export default function Header() {
-  // const { language, setLanguage } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeNav, setActiveNav] = useState<string | null>(null);
-  const [showLangDropdown, setShowLangDropdown] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 60);
@@ -94,8 +93,13 @@ export default function Header() {
     <header className={`cdp-header ${scrolled ? "cdp-header--scrolled" : ""}`}>
       <div className="cdp-wrap cdp-header__inner">
         <Link to="/" className="cdp-logo">
-          <span className="cdp-logo__mark">CDP</span>
-          <span className="cdp-logo__sub">JAPAN</span>
+          <img 
+            src="/Images/Ebada-Group.png" 
+            alt="Ebada Group Logo" 
+            className="cdp-logo__img"
+            height="100"
+            width="180"
+          />
         </Link>
 
         <nav className="cdp-nav" role="navigation">
@@ -120,11 +124,7 @@ export default function Header() {
               {link.sub && (
                 <div className={`cdp-dropdown ${activeNav === link.label ? "cdp-dropdown--open" : ""}`}>
                   {link.sub.map((s) => (
-                    typeof s === 'string' ? (
-                      <a key={s} href="#" className="cdp-dropdown__link">{s}</a>
-                    ) : (
-                      <Link key={s.label} to={s.href} className="cdp-dropdown__link">{s.label}</Link>
-                    )
+                    <Link key={s.label} to={s.href} className="cdp-dropdown__link">{s.label}</Link>
                   ))}
                 </div>
               )}
@@ -133,33 +133,16 @@ export default function Header() {
         </nav>
 
         <div className="cdp-header__right">
-          <div 
-            className="cdp-header__lang"
-            onMouseEnter={() => setShowLangDropdown(true)}
-            onMouseLeave={() => setShowLangDropdown(false)}
+          <button 
+            className="cdp-header__search-btn"
+            onClick={() => setShowSearch(true)}
+            aria-label="Search"
+            title="Search"
           >
-            {/* <button className="cdp-header__lang-btn">
-              {language === "ja" ? "日本語" : "English"}
-            </button>
-            {showLangDropdown && (
-              <div className="cdp-dropdown cdp-dropdown--open" style={{ right: 0, left: "auto" }}>
-                <button 
-                  className="cdp-dropdown__link"
-                  onClick={() => { setLanguage("ja"); setShowLangDropdown(false); }}
-                  style={{ display: "block", width: "100%", textAlign: "left" }}
-                >
-                  日本語
-                </button>
-                <button 
-                  className="cdp-dropdown__link"
-                  onClick={() => { setLanguage("en"); setShowLangDropdown(false); }}
-                  style={{ display: "block", width: "100%", textAlign: "left" }}
-                >
-                  English
-                </button>
-              </div>
-            )} */}
-          </div>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M9 17A8 8 0 1 0 9 1a8 8 0 0 0 0 16zM19 19l-4.35-4.35" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </button>
           <Link to="/contact" className="cdp-btn cdp-btn--sm">Contact Us</Link>
           <button className="cdp-burger" onClick={() => setMobileOpen(!mobileOpen)} aria-label="Menu">
             <span /><span /><span />
@@ -183,6 +166,8 @@ export default function Header() {
           <Link to="/contact" className="cdp-btn cdp-btn--primary" style={{ marginTop: "1rem" }}>Contact Us</Link>
         </div>
       )}
+
+      <SiteSearch isOpen={showSearch} onClose={() => setShowSearch(false)} />
     </header>
   );
 }

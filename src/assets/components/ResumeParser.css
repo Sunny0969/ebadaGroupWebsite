@@ -1,0 +1,186 @@
+.resume-parser {
+  padding: 2rem;
+  background: var(--white);
+  border-radius: var(--r-lg);
+  border: 1px solid var(--border);
+}
+
+.resume-parser h3 {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--txt);
+}
+
+.resume-parser__description {
+  color: var(--txt-2);
+  margin-bottom: 1.5rem;
+}
+
+.resume-parser__dropzone {
+  border: 2px dashed var(--border);
+  border-radius: var(--r-lg);
+  padding: 3rem 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--trans);
+  background: var(--off);
+  position: relative;
+}
+
+.resume-parser__dropzone:hover {
+  border-color: var(--accent);
+  background: rgba(232, 67, 26, 0.05);
+}
+
+.resume-parser__icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.resume-parser__text {
+  font-size: 1.05rem;
+  color: var(--txt);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.resume-parser__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.resume-parser__hint {
+  font-size: 0.85rem;
+  color: var(--txt-2);
+  margin: 0;
+}
+
+.resume-parser__processing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.resume-parser__spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.resume-parser__error {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #fee2e2;
+  color: #dc2626;
+  border-radius: var(--r);
+  border: 1px solid #fecaca;
+}
+
+.resume-parser__results {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--off);
+  border-radius: var(--r-lg);
+}
+
+.resume-parser__results h4 {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: var(--txt);
+}
+
+.resume-parser__data {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.resume-parser__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.resume-parser__field label {
+  font-weight: 600;
+  color: var(--txt);
+  font-size: 0.9rem;
+}
+
+.resume-parser__field input,
+.resume-parser__field textarea {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  background: var(--white);
+  color: var(--txt);
+}
+
+.resume-parser__skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.resume-parser__skill-tag {
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--white);
+  border-radius: var(--r);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.resume-parser__actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.resume-parser__btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--r);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--trans);
+  font-family: var(--font-sans);
+}
+
+.resume-parser__btn--primary {
+  background: var(--accent);
+  color: var(--white);
+}
+
+.resume-parser__btn--primary:hover {
+  background: var(--accent-d);
+  transform: translateY(-2px);
+}
+
+.resume-parser__btn--secondary {
+  background: var(--white);
+  color: var(--txt);
+  border: 1px solid var(--border);
+}
+
+.resume-parser__btn--secondary:hover {
+  background: var(--off);
+}

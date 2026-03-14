@@ -45,7 +45,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 /* ── LAYOUT ── */
 .contact { overflow-x: hidden; padding-top: 72px; }
 .contact-wrap { max-width: 1240px; margin: 0 auto; padding: 0 2rem; }
-.contact-section { padding: 6rem 0; opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.contact-section { padding: 6rem 0; opacity: 1; transform: translateY(0); }
 .contact-section.contact--in { opacity: 1; transform: translateY(0); }
 
 /* ── TYPOGRAPHY ── */
@@ -385,19 +385,34 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* ── RESPONSIVE ── */
+/* Tablet (968px and below) */
 @media (max-width: 968px) {
   .contact-form-wrapper {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
   .contact-branches {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-wrap {
+    padding: 0 1.5rem;
   }
 }
+
+/* Mobile Large (768px and below) */
 @media (max-width: 768px) {
+  .contact {
+    padding-top: 64px;
+  }
   .contact-hero {
     height: 50vh;
     min-height: 350px;
+  }
+  .contact-hero__content {
+    padding: 0 1.5rem;
+  }
+  .contact-section {
+    padding: 4rem 0;
   }
   .contact-form,
   .contact-info {
@@ -405,6 +420,87 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   }
   .contact-map {
     height: 350px;
+  }
+  .contact-branches {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .contact-sh {
+    margin-bottom: 2.5rem;
+  }
+  .contact-h1 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+  }
+  .contact-h2 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+  }
+}
+
+/* Mobile Medium (480px and below) */
+@media (max-width: 480px) {
+  .contact-wrap {
+    padding: 0 1.25rem;
+  }
+  .contact-hero {
+    min-height: 300px;
+    height: 45vh;
+  }
+  .contact-hero__content {
+    padding: 0 1.25rem;
+  }
+  .contact-hero__p {
+    font-size: 0.95rem;
+  }
+  .contact-section {
+    padding: 3rem 0;
+  }
+  .contact-form,
+  .contact-info {
+    padding: 1.25rem;
+  }
+  .contact-map {
+    height: 300px;
+    margin-top: 2rem;
+  }
+  .contact-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Mobile Small (360px and below) */
+@media (max-width: 360px) {
+  .contact-wrap {
+    padding: 0 1rem;
+  }
+  .contact-hero {
+    min-height: 280px;
+  }
+  .contact-form,
+  .contact-info {
+    padding: 1rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .contact-btn {
+    min-height: 44px;
+    padding: 0.875rem 1.75rem;
+  }
+  .contact-form input,
+  .contact-form textarea,
+  .contact-form select {
+    min-height: 44px;
+    padding: 0.875rem 1rem;
+  }
+}
+
+/* Landscape Orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+  .contact-hero {
+    height: 60vh;
+    min-height: 400px;
   }
 }
 

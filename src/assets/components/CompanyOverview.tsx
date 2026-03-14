@@ -132,7 +132,7 @@ export default function CompanyOverview() {
             <p>CDP Japan was born from a simple but powerful belief: that matching the right person to the right job creates ripples of positive change — for individuals, for companies, and for Japanese society as a whole.</p>
             <p>Founded in 1994 by industry veterans who saw a critical gap in manufacturing staffing quality, we built our business on rigorous screening, genuine care for candidates, and uncompromising service to clients.</p>
             <p>Today, with 12 branches nationwide and a team of over 800 HR professionals, we continue to lead Japan's staffing industry through innovation, technology, and an unwavering human touch.</p>
-            <a href="#contact" className="au-btn au-btn--primary" style={{ marginTop: "1.5rem", display: "inline-flex" }}>Learn More →</a>
+            {/* <a href="#contact" className="au-btn au-btn--primary" style={{ marginTop: "1.5rem", display: "inline-flex" }}>Learn More →</a> */}
           </div>
           <div className="au-intro__video-wrap">
             <button className="au-video-thumb" onClick={() => setVideoOpen(true)} aria-label="Play introduction video">

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Employers.css";
@@ -62,7 +63,7 @@ export default function ClientPortal() {
                   Login
                 </button>
                 <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
-                  <a href="#" style={{ color: "var(--accent)", fontSize: "0.9rem" }}>Forgot Password?</a>
+                  <Link to="/support" style={{ color: "var(--accent)", fontSize: "0.9rem" }}>Forgot Password?</Link>
                 </div>
                 <div style={{ textAlign: "center", marginTop: "1rem", paddingTop: "1.5rem", borderTop: "1px solid var(--border)" }}>
                   <p style={{ color: "var(--txt-2)", fontSize: "0.9rem", marginBottom: "0.5rem" }}>Don't have an account?</p>
@@ -143,8 +144,16 @@ export default function ClientPortal() {
                     <td>{job.candidates}</td>
                     <td>{job.posted}</td>
                     <td>
-                      <button className="emp-btn emp-btn--sm" style={{ marginRight: "0.5rem" }}>View</button>
-                      <button className="emp-btn emp-btn--sm emp-btn--outline">Edit</button>
+                      <button 
+                        className="emp-btn emp-btn--sm" 
+                        style={{ marginRight: "0.5rem" }}
+                        onClick={() => alert(`Viewing details for: ${job.title}`)}
+                      >
+                        View
+                      </button>
+                      <Link to="/employers/post-job" className="emp-btn emp-btn--sm emp-btn--outline" style={{ textDecoration: "none", display: "inline-block" }}>
+                        Edit
+                      </Link>
                     </td>
                   </tr>
                 ))}
@@ -200,8 +209,19 @@ export default function ClientPortal() {
                     </td>
                     <td>{candidate.applied}</td>
                     <td>
-                      <button className="emp-btn emp-btn--sm" style={{ marginRight: "0.5rem" }}>View Profile</button>
-                      <button className="emp-btn emp-btn--sm emp-btn--outline">Request Interview</button>
+                      <button 
+                        className="emp-btn emp-btn--sm" 
+                        style={{ marginRight: "0.5rem" }}
+                        onClick={() => alert(`Viewing profile of ${candidate.name}`)}
+                      >
+                        View Profile
+                      </button>
+                      <button 
+                        className="emp-btn emp-btn--sm emp-btn--outline"
+                        onClick={() => alert(`Interview request sent for ${candidate.name}`)}
+                      >
+                        Request Interview
+                      </button>
                     </td>
                   </tr>
                 ))}
@@ -254,7 +274,12 @@ export default function ClientPortal() {
                     </span>
                   </td>
                   <td>
-                    <button className="emp-btn emp-btn--sm emp-btn--outline">Download</button>
+                    <button 
+                      className="emp-btn emp-btn--sm emp-btn--outline"
+                      onClick={() => alert("Invoice download would be initiated here")}
+                    >
+                      Download
+                    </button>
                   </td>
                 </tr>
                 <tr>
@@ -274,7 +299,12 @@ export default function ClientPortal() {
                     </span>
                   </td>
                   <td>
-                    <button className="emp-btn emp-btn--sm emp-btn--outline">Download</button>
+                    <button 
+                      className="emp-btn emp-btn--sm emp-btn--outline"
+                      onClick={() => alert("Invoice download would be initiated here")}
+                    >
+                      Download
+                    </button>
                   </td>
                 </tr>
               </tbody>

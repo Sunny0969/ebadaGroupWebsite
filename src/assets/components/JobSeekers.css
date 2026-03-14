@@ -876,10 +876,117 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 
 /* ── RESPONSIVE ── */
+/* Tablet (968px and below) */
+@media (max-width: 968px) {
+  .js-filters__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .js-job-card {
+    padding: 1.5rem;
+  }
+}
+
+/* Mobile Large (768px and below) */
 @media (max-width: 768px) {
-  .js-detail__content { grid-template-columns: 1fr; }
-  .js-detail__sidebar { position: static; }
-  .js-form-group__row { grid-template-columns: 1fr; }
-  .js-filters__grid { grid-template-columns: 1fr; }
-  .js-job-card__header { flex-direction: column; }
+  .js {
+    padding-top: 64px;
+  }
+  .js-wrap {
+    padding: 0 1.5rem;
+  }
+  .js-section {
+    padding: 4rem 0;
+  }
+  .js-detail__content { 
+    grid-template-columns: 1fr; 
+    gap: 2rem;
+  }
+  .js-detail__sidebar { 
+    position: static; 
+  }
+  .js-form-group__row { 
+    grid-template-columns: 1fr; 
+    gap: 1rem;
+  }
+  .js-filters__grid { 
+    grid-template-columns: 1fr; 
+    gap: 0.75rem;
+  }
+  .js-job-card__header { 
+    flex-direction: column; 
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+  .js-job-card__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .js-job-card__actions .js-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .js-hero__h1 {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+  }
+  .js-h2 {
+    font-size: clamp(1.75rem, 4vw, 2.25rem);
+  }
+}
+
+/* Mobile Medium (480px and below) */
+@media (max-width: 480px) {
+  .js-wrap {
+    padding: 0 1.25rem;
+  }
+  .js-section {
+    padding: 3rem 0;
+  }
+  .js-job-card {
+    padding: 1.25rem;
+  }
+  .js-hero {
+    padding: 3rem 0;
+  }
+  .js-hero__h1 {
+    font-size: clamp(1.75rem, 6vw, 2rem);
+  }
+  .js-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .js-pagination {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .js-pagination__btn {
+    min-width: 40px;
+    padding: 0.5rem 0.75rem;
+  }
+}
+
+/* Mobile Small (360px and below) */
+@media (max-width: 360px) {
+  .js-wrap {
+    padding: 0 1rem;
+  }
+  .js-job-card {
+    padding: 1rem;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .js-btn {
+    min-height: 44px;
+    padding: 0.875rem 1.75rem;
+  }
+  .js-job-card__actions .js-btn {
+    min-height: 48px;
+  }
+  .js-filters select,
+  .js-filters input {
+    min-height: 44px;
+    padding: 0.875rem 1rem;
+  }
 }

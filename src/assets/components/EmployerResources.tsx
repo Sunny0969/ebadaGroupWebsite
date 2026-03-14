@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Employers.css";
@@ -7,42 +8,42 @@ const RESOURCES = [
     icon: "📋",
     title: "Hiring Guides",
     description: "Best practices for manufacturing recruitment, interview techniques, and candidate evaluation. Comprehensive guides tailored for Japanese workplace culture.",
-    link: "#",
+    link: "/contact",
     linkText: "Download Guides"
   },
   {
     icon: "📊",
     title: "Market Insights",
     description: "Industry trends, salary benchmarks, and labor market analysis. Quarterly reports on hiring trends and workforce dynamics in Japan.",
-    link: "#",
+    link: "/contact",
     linkText: "View Reports"
   },
   {
     icon: "⚖️",
     title: "Legal Compliance",
     description: "Labor law updates, regulations, and compliance guidelines. Stay informed about changes in Japanese employment law and regulations.",
-    link: "#",
+    link: "/contact",
     linkText: "Read Updates"
   },
   {
     icon: "💼",
     title: "Retention Strategies",
     description: "Employee engagement tips, retention best practices, and strategies for building long-term workforce stability. Reduce turnover and improve satisfaction.",
-    link: "#",
+    link: "/contact",
     linkText: "Learn More"
   },
   {
     icon: "🎯",
     title: "Recruitment Templates",
     description: "Job description templates, interview question banks, and evaluation forms. Ready-to-use templates for efficient hiring processes.",
-    link: "#",
+    link: "/contact",
     linkText: "Access Templates"
   },
   {
     icon: "📞",
     title: "HR Consulting",
     description: "Schedule a consultation with our HR experts for personalized advice on workforce planning, talent acquisition, and organizational development.",
-    link: "#",
+    link: "/contact",
     linkText: "Book Consultation"
   }
 ];
@@ -100,9 +101,9 @@ export default function EmployerResources() {
                 <span className="emp-resource-card__icon">{resource.icon}</span>
                 <h3 className="emp-resource-card__title">{resource.title}</h3>
                 <p className="emp-resource-card__desc">{resource.description}</p>
-                <a href={resource.link} className="emp-resource-card__link">
+                <Link to={resource.link} className="emp-resource-card__link">
                   {resource.linkText} →
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -131,7 +132,7 @@ export default function EmployerResources() {
                 <p style={{ color: "var(--txt-2)", fontSize: "0.95rem", lineHeight: 1.7, marginBottom: "1rem" }}>
                   {article.excerpt}
                 </p>
-                <a href="#" style={{ color: "var(--accent)", fontWeight: 600 }}>Read More →</a>
+                <Link to="/news" style={{ color: "var(--accent)", fontWeight: 600 }}>Read More →</Link>
               </div>
             ))}
           </div>

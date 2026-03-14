@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./JobSeekers.css";
@@ -7,42 +8,42 @@ const RESOURCES = [
     icon: "📄",
     title: "Resume Templates",
     description: "Download professional resume templates tailored for Japanese job market. Available in Japanese and English formats.",
-    link: "#",
+    link: "/contact",
     linkText: "Download Templates"
   },
   {
     icon: "💼",
     title: "Interview Tips",
     description: "Comprehensive guides on interview preparation, common questions, and how to make a great impression in Japanese workplace culture.",
-    link: "#",
+    link: "/job-seekers/how-to-apply",
     linkText: "Read Guide"
   },
   {
     icon: "💰",
     title: "Salary Guides",
     description: "Industry-wise salary benchmarks to help you understand market rates and negotiate effectively. Updated quarterly.",
-    link: "#",
+    link: "/contact",
     linkText: "View Salary Guide"
   },
   {
     icon: "📚",
     title: "Career Advice Blog",
     description: "Regular articles on career development, workplace culture, skill building, and job search strategies in Japan.",
-    link: "#",
+    link: "/careers/blog",
     linkText: "Read Articles"
   },
   {
     icon: "🎯",
     title: "Career Assessment",
     description: "Take our free career assessment to identify your strengths, interests, and ideal career paths in the Japanese job market.",
-    link: "#",
+    link: "/job-seekers/register",
     linkText: "Take Assessment"
   },
   {
     icon: "📞",
     title: "Career Counseling",
     description: "Schedule a one-on-one session with our career counselors for personalized advice and guidance on your job search journey.",
-    link: "#",
+    link: "/contact",
     linkText: "Book Session"
   }
 ];
@@ -100,9 +101,9 @@ export default function CareerResources() {
                 <span className="js-resource-card__icon">{resource.icon}</span>
                 <h3 className="js-resource-card__title">{resource.title}</h3>
                 <p className="js-resource-card__desc">{resource.description}</p>
-                <a href={resource.link} className="js-resource-card__link">
+                <Link to={resource.link} className="js-resource-card__link">
                   {resource.linkText} →
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -131,7 +132,7 @@ export default function CareerResources() {
                 <p style={{ color: "var(--txt-2)", fontSize: "0.95rem", lineHeight: 1.7, marginBottom: "1rem" }}>
                   {article.excerpt}
                 </p>
-                <a href="#" style={{ color: "var(--accent)", fontWeight: 600 }}>Read More →</a>
+                <Link to="/careers/blog" style={{ color: "var(--accent)", fontWeight: 600 }}>Read More →</Link>
               </div>
             ))}
           </div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./JobSeekers.css";
@@ -43,7 +43,9 @@ const JOB_DATA = {
 
 export default function JobDetail() {
   const { id } = useParams<{ id: string }>();
-  const job = JOB_DATA[1]; // In real app, fetch by id
+  // Fetch job by id, fallback to job 1 if id is invalid or not found
+  const jobId = id ? parseInt(id) : 1;
+  const job = JOB_DATA[jobId as keyof typeof JOB_DATA] || JOB_DATA[1];
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
     name: "",

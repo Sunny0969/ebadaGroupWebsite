@@ -995,30 +995,154 @@
    }
    
    /* ── RESPONSIVE ── */
+   /* Tablet (1100px and below) */
    @media (max-width: 1100px) {
-     .cdp-services__grid { grid-template-columns: repeat(2, 1fr); }
-     .cdp-why__layout { grid-template-columns: 1fr; gap: 3rem; }
-     .cdp-why__cards { grid-template-columns: 1fr 1fr; }
-     .cdp-stats__row { grid-template-columns: repeat(2, 1fr); }
+     .cdp-services__grid { 
+       grid-template-columns: repeat(2, 1fr); 
+       gap: 1.5rem;
+     }
+     .cdp-why__layout { 
+       grid-template-columns: 1fr; 
+       gap: 3rem; 
+     }
+     .cdp-why__cards { 
+       grid-template-columns: 1fr 1fr; 
+       gap: 1.5rem;
+     }
+     .cdp-stats__row { 
+       grid-template-columns: repeat(2, 1fr); 
+       gap: 2rem;
+     }
+     .cdp-news__grid {
+       grid-template-columns: repeat(2, 1fr);
+       gap: 1.5rem;
+     }
    }
    
+   /* Mobile Large (768px and below) */
    @media (max-width: 768px) {
-     .cdp-section { padding: 4rem 0; }
-     .cdp-services__grid { grid-template-columns: 1fr; }
-     .cdp-dual { grid-template-columns: 1fr; }
-     .cdp-dual__half { min-height: 360px; }
-     .cdp-news__grid { grid-template-columns: repeat(2, 1fr); }
-     .cdp-why__cards { grid-template-columns: 1fr; }
-     .cdp-stats__row { grid-template-columns: repeat(2, 1fr); }
-     .cdp-hero__cols { grid-template-columns: 1fr 1fr; }
-     .cdp-hero__col:last-child { display: none; }
-     .cdp-qsearch__inner { flex-direction: column; align-items: stretch; }
+     .cdp-section { 
+       padding: 4rem 0; 
+     }
+     .cdp-services__grid { 
+       grid-template-columns: 1fr; 
+       gap: 1.25rem;
+     }
+     .cdp-dual { 
+       grid-template-columns: 1fr; 
+     }
+     .cdp-dual__half { 
+       min-height: 360px; 
+     }
+     .cdp-news__grid { 
+       grid-template-columns: repeat(2, 1fr); 
+       gap: 1.25rem;
+     }
+     .cdp-why__cards { 
+       grid-template-columns: 1fr; 
+       gap: 1.25rem;
+     }
+     .cdp-stats__row { 
+       grid-template-columns: repeat(2, 1fr); 
+       gap: 1.5rem;
+     }
+     .cdp-hero__cols { 
+       grid-template-columns: 1fr 1fr; 
+     }
+     .cdp-hero__col:last-child { 
+       display: none; 
+     }
+     .cdp-qsearch__inner { 
+       flex-direction: column; 
+       align-items: stretch; 
+       gap: 0.75rem;
+     }
+     .cdp-qsearch .cdp-sel {
+       width: 100%;
+     }
+     .cdp-hero__actions {
+       flex-direction: column;
+       gap: 0.75rem;
+     }
+     .cdp-hero__actions .cdp-btn {
+       width: 100%;
+       justify-content: center;
+     }
+     .cdp-sh__h2 {
+       font-size: clamp(1.75rem, 4vw, 2.25rem);
+     }
    }
    
+   /* Mobile Medium (480px and below) */
    @media (max-width: 480px) {
-     .cdp-wrap { padding: 0 1.25rem; }
-     .cdp-news__grid { grid-template-columns: 1fr; }
-     .cdp-stats__row { grid-template-columns: 1fr 1fr; }
-     .cdp-hero__h1 { font-size: 2.4rem; }
-     .cdp-hero__cols { grid-template-columns: 1fr 1fr; }
+     .cdp-wrap { 
+       padding: 0 1.25rem; 
+     }
+     .cdp-section {
+       padding: 3rem 0;
+     }
+     .cdp-news__grid { 
+       grid-template-columns: 1fr; 
+       gap: 1rem;
+     }
+     .cdp-stats__row { 
+       grid-template-columns: 1fr 1fr; 
+       gap: 1rem;
+     }
+     .cdp-hero__h1 { 
+       font-size: clamp(2rem, 6vw, 2.4rem); 
+       line-height: 1.2;
+     }
+     .cdp-hero__cols { 
+       grid-template-columns: 1fr 1fr; 
+     }
+     .cdp-hero__lead {
+       font-size: 0.95rem;
+     }
+     .cdp-qsearch__label {
+       font-size: 0.85rem;
+     }
+     .cdp-svc__h3 {
+       font-size: 1.1rem;
+     }
+     .cdp-svc__p {
+       font-size: 0.9rem;
+     }
+   }
+   
+   /* Mobile Small (360px and below) */
+   @media (max-width: 360px) {
+     .cdp-wrap {
+       padding: 0 1rem;
+     }
+     .cdp-hero__h1 {
+       font-size: 1.75rem;
+     }
+     .cdp-stats__row {
+       grid-template-columns: 1fr;
+     }
+   }
+   
+   /* Touch Device Optimizations */
+   @media (hover: none) and (pointer: coarse) {
+     .cdp-btn {
+       min-height: 44px;
+       padding: 0.875rem 1.75rem;
+     }
+     .cdp-svc {
+       padding: 1.5rem;
+     }
+     .cdp-hero__actions .cdp-btn {
+       min-height: 48px;
+     }
+   }
+   
+   /* Landscape Orientation */
+   @media (max-width: 768px) and (orientation: landscape) {
+     .cdp-hero {
+       min-height: 60vh;
+     }
+     .cdp-hero__cols {
+       grid-template-columns: repeat(3, 1fr);
+     }
    }
