@@ -89,6 +89,28 @@ export default function Header() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (!target.closest('.cdp-nav__item')) {
+        setActiveNav(null);
+      }
+    };
+
+    if (activeNav) {
+      document.addEventListener('click', handleClickOutside);
+      return () => document.removeEventListener('click', handleClickOutside);
+    }
+  }, [activeNav]);
+
+  const handleNavClick = (e: React.MouseEvent, link: typeof NAV_LINKS[0]) => {
+    if (link.sub) {
+      e.preventDefault();
+      setActiveNav(activeNav === link.label ? null : link.label);
+    }
+  };
+
   return (
     <header className={`cdp-header ${scrolled ? "cdp-header--scrolled" : ""}`}>
       <div className="cdp-wrap cdp-header__inner">
@@ -107,16 +129,22 @@ export default function Header() {
             <div
               key={link.label}
               className="cdp-nav__item"
-              onMouseEnter={() => link.sub && setActiveNav(link.label)}
-              onMouseLeave={() => setActiveNav(null)}
             >
               {link.href.startsWith('/') ? (
-                <Link to={link.href} className="cdp-nav__link">
+                <Link 
+                  to={link.href} 
+                  className="cdp-nav__link"
+                  onClick={(e) => handleNavClick(e, link)}
+                >
                   {link.label}
                   {link.sub && <span className="cdp-nav__chevron">›</span>}
                 </Link>
               ) : (
-                <a href={link.href} className="cdp-nav__link">
+                <a 
+                  href={link.href} 
+                  className="cdp-nav__link"
+                  onClick={(e) => handleNavClick(e, link)}
+                >
                   {link.label}
                   {link.sub && <span className="cdp-nav__chevron">›</span>}
                 </a>
@@ -124,7 +152,14 @@ export default function Header() {
               {link.sub && (
                 <div className={`cdp-dropdown ${activeNav === link.label ? "cdp-dropdown--open" : ""}`}>
                   {link.sub.map((s) => (
-                    <Link key={s.label} to={s.href} className="cdp-dropdown__link">{s.label}</Link>
+                    <Link 
+                      key={s.label} 
+                      to={s.href} 
+                      className="cdp-dropdown__link"
+                      onClick={() => setActiveNav(null)}
+                    >
+                      {s.label}
+                    </Link>
                   ))}
                 </div>
               )}

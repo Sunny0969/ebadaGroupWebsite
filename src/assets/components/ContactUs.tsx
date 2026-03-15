@@ -14,11 +14,11 @@ const BRANCHES = [
 ];
 
 const INQUIRY_TYPES = [
-  { value: "job-seeker", label: "Job Seeker Inquiry", route: "recruitment@cdpjp.com" },
-  { value: "employer", label: "Employer/Client Inquiry", route: "sales@cdpjp.com" },
-  { value: "partnership", label: "Partnership Inquiry", route: "business@cdpjp.com" },
-  { value: "media", label: "Media Inquiry", route: "pr@cdpjp.com" },
-  { value: "general", label: "General Inquiry", route: "info@cdpjp.com" },
+  { value: "job-seeker", label: "Job Seeker Inquiry", route: "sheikrahmanjp@gmail.com" },
+  { value: "employer", label: "Employer/Client Inquiry", route: "sheikrahmanjp@gmail.com" },
+  { value: "partnership", label: "Partnership Inquiry", route: "sheikrahmanjp@gmail.com" },
+  { value: "media", label: "Media Inquiry", route: "sheikrahmanjp@gmail.com" },
+  { value: "general", label: "General Inquiry", route: "sheikrahmanjp@gmail.com" },
 ];
 
 const SOCIAL_LINKS = [
@@ -30,13 +30,15 @@ const SOCIAL_LINKS = [
 ];
 
 const HEAD_OFFICE = {
-  name: "Tokyo Head Office",
-  address: "2-5-1 Marunouchi, Chiyoda-ku, Tokyo 100-0005, Japan",
-  phone: "03-1234-5678",
-  email: "info@cdpjp.com",
+  name: "Ebada Group Head Office",
+  address: "2F Tonoike Shukugo Bldg., 2-10-16 Shukugo, Utsunomiya-shi, Tochigi, Japan",
+  phone: "0283 41 6300",
+  mobile: "070-2181-8345",
+  email: "sheikrahmanjp@gmail.com",
+  representativeDirector: "RAHMAN SHEIK HABIBUR",
   hours: "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM\nSunday: Closed",
-  lat: 35.6812,
-  lng: 139.7671
+  lat: 36.5658,
+  lng: 139.8836
 };
 
 export default function ContactUs() {
@@ -56,10 +58,10 @@ export default function ContactUs() {
 
   useEffect(() => {
     // SEO: Update document title and meta
-    document.title = "Contact Us - CDP Japan | Get in Touch";
+    document.title = "Contact Us - Ebada Group | Get in Touch";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Contact CDP Japan for recruitment services, job opportunities, or business inquiries. Visit our head office in Tokyo or contact any of our branch offices across Japan.');
+      metaDescription.setAttribute('content', 'Contact Ebada Group for recruitment services, job opportunities, or business inquiries. Visit our head office in Utsunomiya, Tochigi or contact us via phone or email.');
     }
 
     const io = new IntersectionObserver(
@@ -141,7 +143,7 @@ export default function ContactUs() {
         <div className="contact-hero__content">
           <h1 className="contact-h1 contact-hero__h1">Contact Us</h1>
           <p className="contact-hero__p">
-            Get in touch with CDP Japan. Whether you're a job seeker, employer, or have a general inquiry, we're here to help.
+            Get in touch with Ebada Group. Whether you're a job seeker, employer, or have a general inquiry, we're here to help.
           </p>
         </div>
       </section>
@@ -270,7 +272,10 @@ export default function ContactUs() {
                   <span className="contact-info__label">Phone Numbers</span>
                   <div className="contact-info__value">
                     <p>
-                      <a href={`tel:${HEAD_OFFICE.phone}`}>{HEAD_OFFICE.phone}</a>
+                      <strong>Office:</strong> <a href={`tel:${HEAD_OFFICE.phone.replace(/\s/g, '')}`}>{HEAD_OFFICE.phone}</a>
+                    </p>
+                    <p>
+                      <strong>Mobile:</strong> <a href={`tel:${HEAD_OFFICE.mobile.replace(/-/g, '')}`}>{HEAD_OFFICE.mobile}</a>
                     </p>
                   </div>
                 </div>
@@ -290,6 +295,13 @@ export default function ContactUs() {
                     <pre style={{ fontFamily: "var(--font-sans)", whiteSpace: "pre-line", margin: 0 }}>
                       {HEAD_OFFICE.hours}
                     </pre>
+                  </div>
+                </div>
+
+                <div className="contact-info__item">
+                  <span className="contact-info__label">Representative Director</span>
+                  <div className="contact-info__value">
+                    <p style={{ fontWeight: 600, color: "var(--navy)" }}>{HEAD_OFFICE.representativeDirector}</p>
                   </div>
                 </div>
               </div>
@@ -314,7 +326,7 @@ export default function ContactUs() {
           <div className="contact-sh">
             <span className="contact-eyebrow">Find Us</span>
             <h2 className="contact-h2">Our Location</h2>
-            <p className="contact-sh__p">Visit our head office in Tokyo or find directions using the map below.</p>
+            <p className="contact-sh__p">Visit our head office in Utsunomiya, Tochigi or find directions using the map below.</p>
           </div>
 
           <div className="contact-map">
@@ -323,7 +335,7 @@ export default function ContactUs() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="CDP Japan Head Office Location"
+              title="Ebada Group Head Office Location"
             />
           </div>
         </div>

@@ -25,7 +25,7 @@ const SUCCESS_STORIES = [
     title: "Customer Service Outsourcing",
     client: "E-commerce Platform",
     challenge: "Needed 24/7 multilingual customer support without the overhead of in-house team management.",
-    solution: "CDP Japan deployed a dedicated team of 30 customer service specialists with language capabilities in Japanese, English, and Chinese.",
+    solution: "CDP Japan deployed a dedicated team of 3customer service specialists with language capabilities in Japanese, English, and Chinese.",
     result: "Customer satisfaction increased by 35%. Reduced operational costs by 40% while improving response times."
   },
   {

@@ -10,7 +10,7 @@ const ARTICLE_DATA: Record<number, any> = {
     date: "2024-03-15",
     thumbnail: "🏢",
     content: `
-      <p>CDP Japan is proud to announce a significant milestone in our company's history: 30 years of connecting people with opportunities across Japan's manufacturing sector. To mark this occasion, we are launching several major initiatives that will strengthen our position as Japan's leading staffing agency.</p>
+      <p>CDP Japan is proud to announce a significant milestone in our company's history: 3years of connecting people with opportunities across Japan's manufacturing sector. To mark this occasion, we are launching several major initiatives that will strengthen our position as Japan's leading staffing agency.</p>
       
       <h3>Three New Regional Offices</h3>
       <p>We are expanding our nationwide network with the opening of three new regional offices in Kyushu, Tohoku, and Chugoku regions. These strategic locations will bring our total branch count to 15 offices, ensuring local expertise and rapid response capabilities across all of Japan's major industrial corridors.</p>
@@ -21,7 +21,7 @@ const ARTICLE_DATA: Record<number, any> = {
       <p>The platform will be available to all clients starting in Q2 2024, with full rollout expected by the end of the year. Early testing has shown remarkable results, with 95% client satisfaction and 40% faster time-to-fill compared to traditional methods.</p>
       
       <h3>Commitment to Excellence</h3>
-      <p>As we celebrate 30 years of service, we remain committed to our core values: quality, integrity, and genuine care for every worker we place and every client we serve. This expansion represents not just growth, but our dedication to meeting the evolving needs of Japan's manufacturing sector.</p>
+      <p>As we celebrate 3years of service, we remain committed to our core values: quality, integrity, and genuine care for every worker we place and every client we serve. This expansion represents not just growth, but our dedication to meeting the evolving needs of Japan's manufacturing sector.</p>
       
       <p>We thank our clients, partners, and employees for their trust and support over the past three decades. Together, we will continue building a stronger, more connected workforce for Japan's future.</p>
     `,
@@ -41,7 +41,7 @@ const ARTICLE_DATA: Record<number, any> = {
       <h3>Impact and Opportunities</h3>
       <p>This collaboration is expected to create over 500 new engineering positions over the next 18 months, with opportunities ranging from entry-level technicians to senior R&D engineers. All positions will offer competitive compensation, comprehensive benefits, and opportunities for career growth in the rapidly evolving EV sector.</p>
       
-      <p>CDP Japan's 30 years of experience in technical staffing, combined with our partners' industry leadership, positions us to make a significant contribution to Japan's transition to sustainable transportation.</p>
+      <p>CDP Japan's 3years of experience in technical staffing, combined with our partners' industry leadership, positions us to make a significant contribution to Japan's transition to sustainable transportation.</p>
     `,
     related: [1, 3, 5]
   }

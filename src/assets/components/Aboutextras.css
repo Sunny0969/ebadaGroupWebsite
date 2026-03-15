@@ -1,0 +1,170 @@
+/* ═══════════════════════════════════════════════════════════
+   COMPANY OVERVIEW — EXTRA STYLES
+   Add these rules to the bottom of your existing About.css
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── SECTION REVEAL (extra ids) ── */
+.au-info-section,
+.au-assoc {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.au-info-section.au--in,
+.au-assoc.au--in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ══════════════════════════════════════
+   COMPANY INFORMATION TABLE
+══════════════════════════════════════ */
+.au-info-table-wrap {
+  max-width: 860px;
+  margin: 0 auto;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.au-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  font-size: 0.93rem;
+}
+
+.au-info-table__row {
+  border-bottom: 1px solid var(--border);
+  transition: background var(--trans);
+}
+.au-info-table__row:last-child { border-bottom: none; }
+.au-info-table__row:hover { background: rgba(232, 67, 26, 0.03); }
+
+.au-info-table__label {
+  width: 240px;
+  padding: 1.1rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: var(--navy);
+  background: rgba(10, 22, 40, 0.03);
+  border-right: 1px solid var(--border);
+  vertical-align: top;
+  font-family: var(--font-sans);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.au-info-table__value {
+  padding: 1.1rem 1.5rem;
+  color: var(--txt-2);
+  line-height: 1.65;
+  vertical-align: top;
+}
+
+.au-info-table__link {
+  color: var(--accent);
+  font-weight: 600;
+  transition: text-decoration var(--trans);
+}
+.au-info-table__link:hover { text-decoration: underline; }
+
+/* ══════════════════════════════════════
+   ASSOCIATIONS & LICENSES
+══════════════════════════════════════ */
+.au-assoc__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.au-assoc__card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: box-shadow var(--trans), transform var(--trans);
+}
+.au-assoc__card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+
+.au-assoc__card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.au-assoc__ico { font-size: 1.6rem; }
+.au-assoc__h3 {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.au-assoc__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+.au-assoc__list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.65rem;
+  font-size: 0.88rem;
+  color: var(--txt-2);
+  line-height: 1.55;
+}
+
+.au-assoc__badge {
+  display: inline-block;
+  background: rgba(232, 67, 26, 0.09);
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.55rem;
+  border-radius: 3px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.au-assoc__dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.au-assoc__note {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.65;
+  border-top: 1px solid var(--border);
+  padding-top: 1rem;
+  margin-top: 0.5rem;
+}
+
+/* ── RESPONSIVE ADDITIONS ── */
+@media (max-width: 768px) {
+  .au-info-table__label { width: 140px; padding: 0.9rem 1rem; white-space: normal; }
+  .au-info-table__value { padding: 0.9rem 1rem; }
+  .au-assoc__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .au-info-table { font-size: 0.84rem; }
+  .au-info-table__label { width: 120px; }
+}

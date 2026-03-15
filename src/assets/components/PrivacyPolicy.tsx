@@ -216,12 +216,12 @@ export default function PrivacyPolicy() {
             <div style={{ background: "var(--off)", padding: "1.5rem", borderRadius: "var(--r)", marginBottom: "1.5rem" }}>
               <p style={{ marginBottom: "0.75rem" }}><strong>7.1 Right to Request Disclosure (開示請求権):</strong> You may request disclosure of your personal information that we hold, in accordance with Article 28 of the Act.</p>
               <p style={{ marginBottom: "0.75rem" }}><strong>7.2 Right to Request Correction (訂正請求権):</strong> You may request correction of inaccurate or incomplete personal information, in accordance with Article 29 of the Act.</p>
-              <p style={{ marginBottom: "0.75rem" }}><strong>7.3 Right to Request Deletion (削除請求権):</strong> You may request deletion of your personal information if it is no longer necessary for the purposes for which it was collected, in accordance with Article 30 of the Act.</p>
+              <p style={{ marginBottom: "0.75rem" }}><strong>7.3 Right to Request Deletion (削除請求権):</strong> You may request deletion of your personal information if it is no longer necessary for the purposes for which it was collected, in accordance with Article 3of the Act.</p>
               <p style={{ marginBottom: "0.75rem" }}><strong>7.4 Right to Request Suspension of Use (利用停止請求権):</strong> You may request suspension of use or deletion of your personal information if it is being used beyond the scope of the purpose of use or was obtained through improper means, in accordance with Article 31 of the Act.</p>
               <p style={{ margin: 0 }}><strong>7.5 Right to Withdraw Consent:</strong> You may withdraw your consent for the processing of your personal information at any time, subject to legal and contractual restrictions.</p>
             </div>
             <p style={{ marginBottom: "1.5rem" }}>
-              To exercise any of these rights, please contact us using the information provided in Section 12. We will respond to your request within a reasonable timeframe, typically within 30 days. Please note that we may require verification of your identity before processing your request.
+              To exercise any of these rights, please contact us using the information provided in Section 12. We will respond to your request within a reasonable timeframe, typically within 3days. Please note that we may require verification of your identity before processing your request.
             </p>
 
             <h2 style={{ fontFamily: "var(--font-sans)", fontSize: "1.75rem", marginTop: "3rem", marginBottom: "1.25rem", color: "var(--txt)", borderBottom: "2px solid var(--border)", paddingBottom: "0.5rem" }}>
@@ -282,11 +282,11 @@ export default function PrivacyPolicy() {
             </p>
             <div style={{ background: "linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%)", padding: "2rem", borderRadius: "var(--r-lg)", marginBottom: "2rem", color: "var(--white)" }}>
               <p style={{ marginBottom: "0.75rem", fontSize: "1.2rem", fontWeight: "600" }}>Ebada Group - Personal Information Protection Manager</p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Address:</strong> 2-5-1 Marunouchi, Chiyoda-ku, Tokyo 100-0005, Japan</p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Phone:</strong> 03-1234-5678 (Monday-Friday, 9:00 AM - 6:00 PM JST)</p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Email:</strong> privacy@ebadagroup.com</p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Fax:</strong> 03-1234-5679</p>
-              <p style={{ margin: 0 }}><strong>Business License:</strong> Employment Placement Business License No. 13-ユ-123456</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Address:</strong> 2F Tonoike Shukugo Bldg., 2-10-16 Shukugo, Utsunomiya-shi, Tochigi, Japan</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Office Phone:</strong> 0283 41 6300 (Monday-Friday, 9:00 AM - 6:00 PM JST)</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Mobile:</strong> 070-2181-8345</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Email:</strong> sheikrahmanjp@gmail.com</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Representative Director:</strong> RAHMAN SHEIK HABIBUR</p>
             </div>
             <p style={{ marginBottom: "1.5rem" }}>
               If you are not satisfied with our response to your privacy concerns, you may file a complaint with the Personal Information Protection Commission of Japan (個人情報保護委員会):

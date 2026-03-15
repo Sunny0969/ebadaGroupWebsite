@@ -57,7 +57,7 @@ export default function CEOMessage() {
             </div>
             <div className="au-ceo__message">
               <p className="au-ceo__salutation">Dear Valued Partners and Friends,</p>
-              <p>In 1994, CDP Japan was founded on a singular conviction: that work is not merely a transaction — it is the foundation of dignity, purpose, and belonging. Three decades later, that conviction is more relevant than ever.</p>
+              <p>In 2023, CDP Japan was founded on a singular conviction: that work is not merely a transaction — it is the foundation of dignity, purpose, and belonging. Three decades later, that conviction is more relevant than ever.</p>
               <p>Japan's manufacturing sector faces profound challenges: an aging workforce, accelerating automation, and the urgent need to welcome and integrate international talent. These are not problems to fear — they are opportunities for companies and individuals who are prepared.</p>
               <p>At CDP Japan, our role is to be that preparation. We invest deeply in understanding each client's unique needs, in screening candidates with genuine rigor, and in providing the post-placement support that ensures every placement becomes a long-term success story.</p>
               <p>As we look ahead to the next 30 years, I am energized by what we are building: an AI-augmented matching platform, an expanded network of international recruitment partners, and a sustainability-led HR framework that we believe will define the future of Japanese staffing.</p>

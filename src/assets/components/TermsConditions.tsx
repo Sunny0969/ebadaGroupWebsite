@@ -339,11 +339,11 @@ export default function TermsConditions() {
             <div style={{ background: "linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%)", padding: "2rem", borderRadius: "var(--r-lg)", marginBottom: "2rem", color: "var(--white)" }}>
               <p style={{ marginBottom: "0.75rem", fontSize: "1.2rem", fontWeight: "600" }}>Ebada Group Co., Ltd.</p>
               <p style={{ marginBottom: "0.5rem" }}><strong>Legal Department</strong></p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Address:</strong> 2-5-1 Marunouchi, Chiyoda-ku, Tokyo 100-0005, Japan</p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Phone:</strong> 03-1234-5678 (Monday-Friday, 9:00 AM - 6:00 PM JST)</p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Email:</strong> legal@ebadagroup.com</p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Fax:</strong> 03-1234-5679</p>
-              <p style={{ margin: 0 }}><strong>Business License:</strong> Employment Placement Business License No. 13-ユ-123456</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Address:</strong> 2F Tonoike Shukugo Bldg., 2-10-16 Shukugo, Utsunomiya-shi, Tochigi, Japan</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Office Phone:</strong> 0283 41 6300 (Monday-Friday, 9:00 AM - 6:00 PM JST)</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Mobile:</strong> 070-2181-8345</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Email:</strong> sheikrahmanjp@gmail.com</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Representative Director:</strong> RAHMAN SHEIK HABIBUR</p>
             </div>
           </div>
         </div>

@@ -49,10 +49,26 @@ export default function Footer() {
             </div>
             <div className="cdp-footer__col">
               <strong>Contact</strong>
-              <Link to="/contact">Head Office</Link>
-              <Link to="/about/locations">Branch Locations</Link>
-              <Link to="/faq">FAQ</Link>
-              <Link to="/support">Support</Link>
+              <div style={{ marginTop: "0.5rem", fontSize: "0.9rem", lineHeight: "1.8" }}>
+                <p style={{ marginBottom: "0.5rem" }}>
+                  <strong>Office:</strong> <a href="tel:0283416300" style={{ color: "inherit", textDecoration: "none" }}>0283 41 6300</a>
+                </p>
+                <p style={{ marginBottom: "0.5rem" }}>
+                  <strong>Mobile:</strong> <a href="tel:07021818345" style={{ color: "inherit", textDecoration: "none" }}>070-2181-8345</a>
+                </p>
+                <p style={{ marginBottom: "0.5rem" }}>
+                  <strong>Email:</strong> <a href="mailto:sheikrahmanjp@gmail.com" style={{ color: "inherit", textDecoration: "none" }}>sheikrahmanjp@gmail.com</a>
+                </p>
+                <p style={{ marginBottom: "0.5rem", fontSize: "0.85rem", opacity: 0.9 }}>
+                  2F Tonoike Shukugo Bldg.,<br />
+                  2-10-16 Shukugo,<br />
+                  Utsunomiya-shi, Tochigi
+                </p>
+                <p style={{ marginTop: "0.75rem", fontSize: "0.85rem", opacity: 0.9 }}>
+                  <strong>Representative Director:</strong><br />
+                  RAHMAN SHEIK HABIBUR
+                </p>
+              </div>
             </div>
           </nav>
         </div>

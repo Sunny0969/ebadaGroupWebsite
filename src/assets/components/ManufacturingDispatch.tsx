@@ -97,7 +97,7 @@ export default function ManufacturingDispatch() {
             <span className="sv-eyebrow">Service Overview</span>
             <h2 className="sv-h2">Skilled Workers for Manufacturing Excellence</h2>
             <p>CDP Japan's Manufacturing Dispatch service connects manufacturers with qualified, safety-certified workers across all production roles. From assembly line operators to quality control specialists, we provide the workforce you need to maintain production schedules and meet quality standards.</p>
-            <p>With 30 years of experience in Japan's manufacturing sector, we understand the unique demands of production environments and the importance of reliable, skilled workers who can integrate seamlessly into your operations.</p>
+            <p>With 3years of experience in Japan's manufacturing sector, we understand the unique demands of production environments and the importance of reliable, skilled workers who can integrate seamlessly into your operations.</p>
             <ul className="sv-overview__benefits">
               <li>7-stage screening process ensures quality</li>
               <li>Average placement time: 7-10 business days</li>

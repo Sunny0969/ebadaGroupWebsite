@@ -16,13 +16,13 @@ const CORE_VALUES = [
 
 const STATS = [
   { value: "2,400+", label: "Employees Placed Annually" },
-  { value: "30+", label: "Years of Experience" },
+  { value: "3+", label: "Years of Experience" },
   { value: "47", label: "Prefectures Covered" },
   { value: "12", label: "Industries Served" },
 ];
 
 const TIMELINE = [
-  { year: "1994", title: "Foundation", desc: "CDP Japan was founded in Tokyo with a vision to bridge the gap between skilled workers and Japan's growing manufacturing sector." },
+  { year: "2023", title: "Foundation", desc: "CDP Japan was founded in Tokyo with a vision to bridge the gap between skilled workers and Japan's growing manufacturing sector." },
   { year: "1998", title: "First Major Expansion", desc: "Opened regional offices in Osaka and Nagoya, establishing our presence in the industrial heartland of Japan." },
   { year: "2003", title: "Engineer Division Launch", desc: "Launched the Engineer Dispatch division to serve the growing demand for specialized technical talent in automotive and electronics." },
   { year: "2008", title: "Navigating the Global Crisis", desc: "Successfully guided over 1,000 client companies through the global financial downturn with flexible staffing solutions." },
@@ -30,12 +30,12 @@ const TIMELINE = [
   { year: "2016", title: "Digital Transformation", desc: "Launched our proprietary ATS platform and digital candidate portal, reducing placement time by 40%." },
   { year: "2019", title: "Group Expansion", desc: "Established CDP Group with three subsidiary companies covering logistics, IT, and sustainability consulting." },
   { year: "2022", title: "Nationwide Network Complete", desc: "Completed our nationwide branch network with offices in all major industrial regions, including Kyushu and Tohoku." },
-  { year: "2024", title: "30th Anniversary", desc: "Celebrated 30 years of connecting talent with opportunity — 50,000+ placements and counting." },
+  { year: "2024", title: "30th Anniversary", desc: "Celebrated 3years of connecting talent with opportunity — 50,000+ placements and counting." },
   { year: "2026", title: "AI-Powered Future", desc: "Integrating AI-powered candidate matching and predictive retention analytics into our core service platform." },
 ];
 
 const STRENGTHS = [
-  { icon: "🏭", title: "Industry Specialization", desc: "30 years of exclusive focus on manufacturing, engineering, and technical staffing means unmatched domain knowledge and client relationships." },
+  { icon: "🏭", title: "Industry Specialization", desc: "3years of exclusive focus on manufacturing, engineering, and technical staffing means unmatched domain knowledge and client relationships." },
   { icon: "🔍", title: "Rigorous Quality Control", desc: "Every candidate goes through a 7-stage screening process including skills assessment, background check, and behavioral interview before placement." },
   { icon: "💻", title: "Technology Integration", desc: "Our proprietary platform digitizes every step from job matching to onboarding, cutting placement time and eliminating manual errors." },
   { icon: "📈", title: "Client Retention Rate", desc: "96% of our clients renew contracts year-over-year — a testament to consistent delivery and proactive account management." },
@@ -111,9 +111,9 @@ export default function AboutUs() {
         <div className="au-wrap au-hero__content">
           {/* <span className="au-eyebrow">About CDP Japan</span> */}
           <h1 className="au-hero__h1">Connecting People.<br />Building Industry.</h1>
-          <p className="au-hero__sub">For over 30 years, CDP Japan has been the trusted staffing partner for manufacturers across Japan — placing skilled workers, engineers, and international talent with precision and care.</p>
+          <p className="au-hero__sub">For over 3years, CDP Japan has been the trusted staffing partner for manufacturers across Japan — placing skilled workers, engineers, and international talent with precision and care.</p>
           <div className="au-hero__chips">
-            <span>Est. 1994</span>
+            <span>Est. 2023</span>
             <span>50,000+ Placements</span>
             <span>47 Prefectures</span>
             <span>12 Industries</span>
@@ -177,7 +177,7 @@ export default function AboutUs() {
             <span className="au-eyebrow">Our Story</span>
             <h2 className="au-h2">Three Decades of Workforce Excellence</h2>
             <p>CDP Japan was born from a simple but powerful belief: that matching the right person to the right job creates ripples of positive change — for individuals, for companies, and for Japanese society as a whole.</p>
-            <p>Founded in 1994 by industry veterans who saw a critical gap in manufacturing staffing quality, we built our business on rigorous screening, genuine care for candidates, and uncompromising service to clients.</p>
+            <p>Founded in 2023 by industry veterans who saw a critical gap in manufacturing staffing quality, we built our business on rigorous screening, genuine care for candidates, and uncompromising service to clients.</p>
             <p>Today, with 12 branches nationwide and a team of over 800 HR professionals, we continue to lead Japan's staffing industry through innovation, technology, and an unwavering human touch.</p>
             {/* <a href="#contact" className="au-btn au-btn--primary" style={{ marginTop: "1.5rem", display: "inline-flex" }}>Learn More →</a> */}
           </div>
@@ -273,10 +273,10 @@ export default function AboutUs() {
             </div>
             <div className="au-ceo__message">
               <p className="au-ceo__salutation">Dear Valued Partners and Friends,</p>
-              <p>In 1994, CDP Japan was founded on a singular conviction: that work is not merely a transaction — it is the foundation of dignity, purpose, and belonging. Three decades later, that conviction is more relevant than ever.</p>
+              <p>In 2023, CDP Japan was founded on a singular conviction: that work is not merely a transaction — it is the foundation of dignity, purpose, and belonging. Three decades later, that conviction is more relevant than ever.</p>
               <p>Japan's manufacturing sector faces profound challenges: an aging workforce, accelerating automation, and the urgent need to welcome and integrate international talent. These are not problems to fear — they are opportunities for companies and individuals who are prepared.</p>
               <p>At CDP Japan, our role is to be that preparation. We invest deeply in understanding each client's unique needs, in screening candidates with genuine rigor, and in providing the post-placement support that ensures every placement becomes a long-term success story.</p>
-              <p>As we look ahead to the next 30 years, I am energized by what we are building: an AI-augmented matching platform, an expanded network of international recruitment partners, and a sustainability-led HR framework that we believe will define the future of Japanese staffing.</p>
+              <p>As we look ahead to the next 3years, I am energized by what we are building: an AI-augmented matching platform, an expanded network of international recruitment partners, and a sustainability-led HR framework that we believe will define the future of Japanese staffing.</p>
               <p>Thank you for trusting CDP Japan. We will continue to earn that trust — every day, with every placement, in every region of this extraordinary country.</p>
               <p className="au-ceo__closing">With sincere gratitude,</p>
               <div className="au-ceo__sig-final">
@@ -345,7 +345,7 @@ export default function AboutUs() {
           <div className="au-sh">
             <span className="au-eyebrow">Our Journey</span>
             <h2 className="au-h2">Company History</h2>
-            <p className="au-sh__p">30 years of milestones, growth, and unwavering commitment to workforce excellence.</p>
+            <p className="au-sh__p">3years of milestones, growth, and unwavering commitment to workforce excellence.</p>
           </div>
           <div className="au-timeline">
             <div className="au-timeline__spine" />

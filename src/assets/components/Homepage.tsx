@@ -44,7 +44,7 @@ const SERVICES = [
 ];
 
 const STATS = [
-  { value: "30+", label: "Years in Business" },
+  { value: "3+", label: "Years in Business" },
   { value: "50,000+", label: "Total Placements" },
   { value: "1,200+", label: "Active Clients" },
   { value: "96%", label: "Success Rate" },
@@ -171,7 +171,7 @@ export default function HomePage() {
             Sharing the Joy<br />of Working.
           </h1>
           <p className="cdp-hero__lead">
-            Japan's trusted partner in manufacturing staffing, engineer dispatch, and workforce solutions — connecting talent with opportunity since 1994.
+            Japan's trusted partner in manufacturing staffing, engineer dispatch, and workforce solutions — connecting talent with opportunity since 2023.
           </p>
           <div className="cdp-hero__actions">
             <Link to="/job-seekers/listings" className="cdp-btn cdp-btn--white">Find a Job</Link>
@@ -283,7 +283,7 @@ export default function HomePage() {
           <div className="cdp-why__left">
             <span className="cdp-eyebrow">Why CDP Japan</span>
             <h2 className="cdp-why__h2">Built on Trust.<br />Driven by Results.</h2>
-            <p className="cdp-why__body">For over 30 years, CDP Japan has been the staffing partner of choice for Japan's leading manufacturers. Our commitment to quality, speed, and support sets us apart.</p>
+            <p className="cdp-why__body">For over 3years, CDP Japan has been the staffing partner of choice for Japan's leading manufacturers. Our commitment to quality, speed, and support sets us apart.</p>
             <Link to="/about/overview" className="cdp-btn cdp-btn--primary">Discover Our Story →</Link>
           </div>
           <div className="cdp-why__cards">

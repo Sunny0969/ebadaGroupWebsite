@@ -111,7 +111,7 @@ export default function EnvironmentalInitiatives() {
               We strive to reduce energy consumption, minimize waste, conserve resources, and support conservation efforts. All employees are encouraged to participate in environmental initiatives, and we regularly review and update our practices to align with best practices and emerging technologies.
             </p>
             <p style={{ color: "var(--txt-2)", fontSize: "1.05rem", lineHeight: 1.9 }}>
-              Our goal is to achieve carbon neutrality by 2030 and to continuously improve our environmental performance across all areas of operation.
+              Our goal is to achieve carbon neutrality by 203and to continuously improve our environmental performance across all areas of operation.
             </p>
           </div>
         </div>

@@ -153,7 +153,7 @@ export default function EmployerServices() {
       <section className="emp-hero">
         <div className="emp-wrap">
           <h1 className="emp-h1 emp-hero__h1">Workforce Solutions for Employers</h1>
-          <p className="emp-hero__p">Partner with CDP Japan to find the right talent, scale your workforce, and drive business growth. 30 years of excellence in Japanese staffing.</p>
+          <p className="emp-hero__p">Partner with CDP Japan to find the right talent, scale your workforce, and drive business growth. 3years of excellence in Japanese staffing.</p>
         </div>
       </section>
 

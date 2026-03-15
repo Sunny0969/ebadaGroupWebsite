@@ -176,7 +176,7 @@ export default function CookiePolicy() {
             </p>
             <ul style={{ marginBottom: "1.5rem", paddingLeft: "2rem" }}>
               <li><strong>Session Cookies:</strong> Deleted when you close your browser (typically within 24 hours)</li>
-              <li><strong>Authentication Cookies:</strong> Retained for 30 days or until you log out</li>
+              <li><strong>Authentication Cookies:</strong> Retained for 3days or until you log out</li>
               <li><strong>Preference Cookies:</strong> Retained for up to 1 year</li>
               <li><strong>Analytics Cookies:</strong> Retained for up to 2 years</li>
               <li><strong>Marketing Cookies:</strong> Retained for up to 1 year or until you opt out</li>
@@ -266,10 +266,11 @@ export default function CookiePolicy() {
             </p>
             <div style={{ background: "linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%)", padding: "2rem", borderRadius: "var(--r-lg)", marginBottom: "2rem", color: "var(--white)" }}>
               <p style={{ marginBottom: "0.75rem", fontSize: "1.2rem", fontWeight: "600" }}>Ebada Group - Privacy & Data Protection</p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Address:</strong> 2-5-1 Marunouchi, Chiyoda-ku, Tokyo 100-0005, Japan</p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Phone:</strong> 03-1234-5678 (Monday-Friday, 9:00 AM - 6:00 PM JST)</p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Email:</strong> privacy@ebadagroup.com</p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Fax:</strong> 03-1234-5679</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Address:</strong> 2F Tonoike Shukugo Bldg., 2-10-16 Shukugo, Utsunomiya-shi, Tochigi, Japan</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Office Phone:</strong> 0283 41 6300 (Monday-Friday, 9:00 AM - 6:00 PM JST)</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Mobile:</strong> 070-2181-8345</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Email:</strong> sheikrahmanjp@gmail.com</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Representative Director:</strong> RAHMAN SHEIK HABIBUR</p>
               <p style={{ margin: 0 }}><strong>Cookie Settings:</strong> You can manage your cookie preferences at any time through our website footer or by contacting us.</p>
             </div>
           </div>
