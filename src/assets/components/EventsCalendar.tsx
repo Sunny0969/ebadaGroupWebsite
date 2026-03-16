@@ -4,54 +4,193 @@ import Footer from "./Footer";
 import "./News.css";
 
 const EVENTS = [
+  // Eid Events - Added for dates 20, 21, 22, 23
+  {
+    id: 6,
+    title: "Eid al-Fitr 2024 - Day 1",
+    date: "2024-04-20",
+    time: "All Day",
+    location: "Worldwide",
+    description: "Eid al-Fitr marks the end of Ramadan, the Islamic holy month of fasting. A time for celebration, prayer, and community gatherings. Wishing everyone a blessed Eid!",
+    category: "Eid Celebration",
+    isEid: true,
+    registration: ""
+  },
+  {
+    id: 7,
+    title: "Eid al-Fitr 2024 - Day 2",
+    date: "2024-04-21",
+    time: "All Day",
+    location: "Worldwide",
+    description: "Eid al-Fitr celebrations continue. A time for family gatherings, feasting, and giving thanks. May this Eid bring peace, happiness, and prosperity to all.",
+    category: "Eid Celebration",
+    isEid: true,
+    registration: ""
+  },
+  {
+    id: 8,
+    title: "Eid al-Fitr 2024 - Day 3",
+    date: "2024-04-22",
+    time: "All Day",
+    location: "Worldwide",
+    description: "Eid al-Fitr celebrations. A time of joy, reflection, and community spirit. Celebrated by Muslims worldwide.",
+    category: "Eid Celebration",
+    isEid: true,
+    registration: ""
+  },
+  {
+    id: 9,
+    title: "Eid al-Fitr 2024 - Day 4",
+    date: "2024-04-23",
+    time: "All Day",
+    location: "Worldwide",
+    description: "Eid al-Fitr celebrations. Final day of festivities marking the end of Ramadan. A time for prayer, charity, and community.",
+    category: "Eid Celebration",
+    isEid: true,
+    registration: ""
+  },
+  {
+    id: 10,
+    title: "Eid al-Adha 2024 - Day 1",
+    date: "2024-06-20",
+    time: "All Day",
+    location: "Worldwide",
+    description: "Eid al-Adha, the Festival of Sacrifice, begins. One of the two most important Islamic holidays. A time for prayer, sacrifice, and helping those in need.",
+    category: "Eid Celebration",
+    isEid: true,
+    registration: ""
+  },
+  {
+    id: 11,
+    title: "Eid al-Adha 2024 - Day 2",
+    date: "2024-06-21",
+    time: "All Day",
+    location: "Worldwide",
+    description: "Eid al-Adha celebrations continue. A time of reflection, gratitude, and sharing with the community.",
+    category: "Eid Celebration",
+    isEid: true,
+    registration: ""
+  },
+  {
+    id: 12,
+    title: "Eid al-Adha 2024 - Day 3",
+    date: "2024-06-22",
+    time: "All Day",
+    location: "Worldwide",
+    description: "Eid al-Adha celebrations. A time for family gatherings, prayers, and acts of charity.",
+    category: "Eid Celebration",
+    isEid: true,
+    registration: ""
+  },
+  {
+    id: 13,
+    title: "Eid al-Adha 2024 - Day 4",
+    date: "2024-06-23",
+    time: "All Day",
+    location: "Worldwide",
+    description: "Eid al-Adha celebrations. Final day of the Festival of Sacrifice. May this Eid bring blessings and peace to all.",
+    category: "Eid Celebration",
+    isEid: true,
+    registration: ""
+  },
+  {
+    id: 14,
+    title: "Eid al-Fitr 2025 - Day 1",
+    date: "2025-03-20",
+    time: "All Day",
+    location: "Worldwide",
+    description: "Eid al-Fitr 2025 begins. Celebrating the end of Ramadan with prayers, feasting, and community gatherings.",
+    category: "Eid Celebration",
+    isEid: true,
+    registration: ""
+  },
+  {
+    id: 15,
+    title: "Eid al-Fitr 2025 - Day 2",
+    date: "2025-03-21",
+    time: "All Day",
+    location: "Worldwide",
+    description: "Eid al-Fitr 2025 continues. A time for joy, reflection, and spending time with loved ones.",
+    category: "Eid Celebration",
+    isEid: true,
+    registration: ""
+  },
+  {
+    id: 16,
+    title: "Eid al-Fitr 2025 - Day 3",
+    date: "2025-03-22",
+    time: "All Day",
+    location: "Worldwide",
+    description: "Eid al-Fitr 2025 celebrations. A time of gratitude and community spirit.",
+    category: "Eid Celebration",
+    isEid: true,
+    registration: ""
+  },
+  {
+    id: 17,
+    title: "Eid al-Fitr 2025 - Day 4",
+    date: "2025-03-23",
+    time: "All Day",
+    location: "Worldwide",
+    description: "Eid al-Fitr 2025 final day. Wishing everyone a blessed and joyful Eid!",
+    category: "Eid Celebration",
+    isEid: true,
+    registration: ""
+  },
+  // Regular Events
   {
     id: 1,
     title: "Spring Career Fair 2024",
-    date: "2024-04-20",
+    date: "2024-05-15",
     time: "10:00 - 17:00",
     location: "Tokyo International Forum",
     description: "Connect with top employers and explore career opportunities. 200+ companies participating. Free admission. Resume review services available.",
     category: "Career Fair",
+    isEid: false,
     registration: "https://example.com/register"
   },
   {
     id: 2,
     title: "HR Excellence Seminar 2024",
-    date: "2024-04-15",
+    date: "2024-05-20",
     time: "14:00 - 17:00",
     location: "Osaka Business Center",
     description: "Industry leaders discuss the future of workforce management, AI in recruitment, and best practices for employee retention.",
     category: "Seminar",
+    isEid: false,
     registration: "https://example.com/register"
   },
   {
     id: 3,
     title: "Workshop: Building Inclusive Workplaces",
-    date: "2024-04-10",
+    date: "2024-05-10",
     time: "13:00 - 16:00",
     location: "Nagoya Conference Hall",
     description: "Free workshop for HR professionals on creating inclusive workplaces. Learn best practices for diversity, equity, and inclusion.",
     category: "Workshop",
+    isEid: false,
     registration: "https://example.com/register"
   },
   {
     id: 4,
     title: "Manufacturing Industry Networking Event",
-    date: "2024-05-05",
+    date: "2024-07-05",
     time: "18:00 - 21:00",
     location: "Fukuoka Business Hotel",
     description: "Networking event for manufacturing professionals. Meet industry peers, share insights, and explore collaboration opportunities.",
     category: "Networking",
+    isEid: false,
     registration: "https://example.com/register"
   },
   {
     id: 5,
     title: "Summer Job Fair - Multiple Locations",
-    date: "2024-06-15",
+    date: "2024-08-15",
     time: "09:00 - 16:00",
     location: "Tokyo, Osaka, Nagoya",
     description: "Large-scale job fair across three major cities. Hundreds of positions available in manufacturing, engineering, and office work.",
     category: "Career Fair",
+    isEid: false,
     registration: "https://example.com/register"
   }
 ];
@@ -87,7 +226,13 @@ export default function EventsCalendar() {
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    // Use worldwide format (ISO-like but more readable)
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric',
+      weekday: 'long'
+    });
   };
 
   const getMonthDays = () => {
@@ -123,6 +268,24 @@ export default function EventsCalendar() {
     return EVENTS.some(e => {
       const eventDate = new Date(e.date);
       return eventDate.toDateString() === checkDate.toDateString();
+    });
+  };
+
+  const getEventsOnDate = (day: number | null) => {
+    if (!day) return [];
+    const checkDate = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
+    return EVENTS.filter(e => {
+      const eventDate = new Date(e.date);
+      return eventDate.toDateString() === checkDate.toDateString();
+    });
+  };
+
+  const isEidDate = (day: number | null) => {
+    if (!day) return false;
+    const checkDate = new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day);
+    return EVENTS.some(e => {
+      const eventDate = new Date(e.date);
+      return eventDate.toDateString() === checkDate.toDateString() && e.isEid;
     });
   };
 
@@ -212,7 +375,18 @@ export default function EventsCalendar() {
       <section className="news-hero">
         <div className="news-wrap">
           <h1 className="news-h1 news-hero__h1">Events Calendar</h1>
-          <p className="news-hero__p">Join us for career fairs, seminars, workshops, and networking events across Japan.</p>
+          <p className="news-hero__p">Join us for career fairs, seminars, workshops, and networking events across Japan. Also featuring worldwide celebrations including Eid al-Fitr and Eid al-Adha.</p>
+          <div style={{
+            marginTop: "1rem",
+            padding: "1rem",
+            background: "linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 165, 0, 0.1) 100%)",
+            borderRadius: "var(--r)",
+            border: "1px solid rgba(255, 215, 0, 0.3)"
+          }}>
+            <p style={{ color: "var(--txt-2)", fontSize: "0.95rem", margin: 0 }}>
+              <strong>🌙 Eid Celebrations:</strong> Eid al-Fitr and Eid al-Adha dates are marked in the calendar. These are worldwide Islamic celebrations observed by millions around the globe.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -257,20 +431,63 @@ export default function EventsCalendar() {
                     {day}
                   </div>
                 ))}
-                {getMonthDays().map((day, i) => (
-                  <div
-                    key={i}
-                    className={`news-events__calendar-day ${day === null ? "news-events__calendar-day--other" : ""} ${hasEventOnDate(day) ? "news-events__calendar-day--has-event" : ""}`}
-                  >
-                    {day}
-                  </div>
-                ))}
+                {getMonthDays().map((day, i) => {
+                  const isToday = day !== null && 
+                    new Date(currentMonth.getFullYear(), currentMonth.getMonth(), day).toDateString() === new Date().toDateString();
+                  const isEid = isEidDate(day);
+                  const hasEvent = hasEventOnDate(day);
+                  
+                  return (
+                    <div
+                      key={i}
+                      className={`news-events__calendar-day ${day === null ? "news-events__calendar-day--other" : ""} ${hasEvent ? "news-events__calendar-day--has-event" : ""} ${isEid ? "news-events__calendar-day--eid" : ""} ${isToday ? "news-events__calendar-day--today" : ""}`}
+                      title={hasEvent ? getEventsOnDate(day).map(e => e.title).join(", ") : ""}
+                    >
+                      {day}
+                      {isEid && <span className="news-events__calendar-eid-marker">🌙</span>}
+                    </div>
+                  );
+                })}
               </div>
             </div>
           ) : null}
 
           <div className="news-events__list">
-            <h2 className="news-h2" style={{ marginBottom: "2rem" }}>Upcoming Events</h2>
+            <div style={{ 
+              display: "flex", 
+              justifyContent: "space-between", 
+              alignItems: "center", 
+              marginBottom: "2rem",
+              flexWrap: "wrap",
+              gap: "1rem"
+            }}>
+              <h2 className="news-h2" style={{ margin: 0 }}>Upcoming Events</h2>
+              <div style={{
+                display: "flex",
+                gap: "1rem",
+                flexWrap: "wrap",
+                fontSize: "0.85rem"
+              }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                  <div style={{
+                    width: "12px",
+                    height: "12px",
+                    borderRadius: "50%",
+                    background: "var(--accent)"
+                  }}></div>
+                  <span style={{ color: "var(--txt-2)" }}>Regular Event</span>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                  <div style={{
+                    width: "12px",
+                    height: "12px",
+                    borderRadius: "50%",
+                    background: "linear-gradient(135deg, #FFD700 0%, #FFA500 100%)"
+                  }}></div>
+                  <span style={{ color: "var(--txt-2)" }}>🌙 Eid Celebration</span>
+                </div>
+              </div>
+            </div>
             {upcomingEvents.map(event => (
               <div key={event.id} className="news-event-card">
                 <div className="news-event-card__date">
@@ -286,20 +503,38 @@ export default function EventsCalendar() {
                 <h3 className="news-event-card__title">{event.title}</h3>
                 <p className="news-event-card__desc">{event.description}</p>
                 <div className="news-event-card__actions">
-                  <button 
-                    onClick={() => handleRegisterClick(event)}
-                    className="news-btn news-btn--primary"
-                  >
-                    Register Now
-                  </button>
+                  {!event.isEid && (
+                    <button 
+                      onClick={() => handleRegisterClick(event)}
+                      className="news-btn news-btn--primary"
+                    >
+                      Register Now
+                    </button>
+                  )}
+                  {event.isEid && (
+                    <div style={{
+                      padding: "0.5rem 1rem",
+                      background: "linear-gradient(135deg, #FFD700 0%, #FFA500 100%)",
+                      borderRadius: "var(--r)",
+                      color: "#8B4513",
+                      fontWeight: 600,
+                      fontSize: "0.9rem"
+                    }}>
+                      🌙 Eid Mubarak!
+                    </div>
+                  )}
                   <span style={{ 
                     padding: "0.3rem 0.9rem", 
                     borderRadius: "100px", 
-                    background: "var(--off)", 
-                    color: "var(--txt-2)",
+                    background: event.isEid ? "linear-gradient(135deg, #FFD700 0%, #FFA500 100%)" : "var(--off)", 
+                    color: event.isEid ? "#8B4513" : "var(--txt-2)",
                     fontSize: "0.85rem",
-                    fontWeight: 600
+                    fontWeight: 600,
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "0.3rem"
                   }}>
+                    {event.isEid && "🌙 "}
                     {event.category}
                   </span>
                 </div>

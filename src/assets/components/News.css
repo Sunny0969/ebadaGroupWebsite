@@ -527,6 +527,25 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   border-radius: 50%;
   cursor: pointer;
 }
+.news-events__calendar-day--eid {
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  color: #8B4513;
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 700;
+  position: relative;
+}
+.news-events__calendar-day--today {
+  border: 2px solid var(--accent);
+  box-sizing: border-box;
+}
+.news-events__calendar-eid-marker {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 0.7rem;
+  line-height: 1;
+}
 .news-events__list {
   display: grid;
   gap: 1.5rem;

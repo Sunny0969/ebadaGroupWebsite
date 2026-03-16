@@ -5,63 +5,63 @@ import "./Sustainability.css";
 
 const INITIATIVES = [
   {
-    icon: "🌳",
-    title: "Carbon Footprint Reduction",
-    description: "Committed to reducing our carbon emissions by 30% by 2026 through office energy efficiency, remote work policies, and sustainable transportation.",
+    icon: "💡",
+    title: "LED & Energy Efficiency Upgrade",
+    description: "All fluorescent lighting across Ebada Group offices has been replaced with LED, reducing power consumption by approximately 30% compared to conventional lighting while also cutting CO₂ emissions and lowering running costs.",
     metrics: [
-      { value: "25%", label: "Reduction Achieved" },
-      { value: "2026", label: "Target Year" }
+      { value: "~30%", label: "Power Reduction" },
+      { value: "All", label: "Offices Upgraded" }
+    ]
+  },
+  {
+    icon: "🚗",
+    title: "EV Vehicles & Charging Infrastructure",
+    description: "In line with our carbon-neutral goals, Ebada Group has introduced electric company vehicles and installed EV charging stations at our main offices, supporting both corporate and employee EV/PHV use.",
+    metrics: [
+      { value: "0", label: "Direct Emissions" },
+      { value: "EV", label: "Fleet Vehicles" }
+    ]
+  },
+  {
+    icon: "💻",
+    title: "Digital Transformation (DX)",
+    description: "Through early adoption of digitalization, Ebada Group has built internal sharing systems enabling paperless operations, remote work, and fully digital approval workflows — reducing paper waste and improving operational efficiency.",
+    metrics: [
+      { value: "100%", label: "Digital Approvals" },
+      { value: "Paperless", label: "Operations" }
     ]
   },
   {
     icon: "♻️",
-    title: "Waste Reduction Program",
-    description: "Comprehensive recycling and waste reduction initiatives across all offices. Paperless operations where possible, and responsible disposal of electronic waste.",
+    title: "3R Recycling Program",
+    description: "Ebada Group collects PET bottle caps company-wide for recycling. Revenue from recycled materials is donated via the Japan Committee for Vaccines for the World's Children (JCV), combining environmental and humanitarian impact.",
     metrics: [
-      { value: "60%", label: "Waste Reduction" },
-      { value: "12", label: "Offices" }
-    ]
-  },
-  {
-    icon: "💡",
-    title: "Energy Efficiency",
-    description: "Upgraded to LED lighting, energy-efficient HVAC systems, and smart building technologies. Solar panel installation at headquarters planned for 2025.",
-    metrics: [
-      { value: "40%", label: "Energy Savings" },
-      { value: "2025", label: "Solar Target" }
-    ]
-  },
-  {
-    icon: "🌿",
-    title: "Green Office Spaces",
-    description: "Creating healthier work environments with indoor plants, natural lighting optimization, and eco-friendly office supplies and materials.",
-    metrics: [
-      { value: "100%", label: "Eco Supplies" },
-      { value: "8", label: "Green Offices" }
+      { value: "3R", label: "Reduce Reuse Recycle" },
+      { value: "JCV", label: "Charity Partner" }
     ]
   }
 ];
 
 const CONSERVATION_ACTIVITIES = [
   {
-    title: "Tree Planting Initiative",
-    description: "Annual tree planting events in partnership with local municipalities. 500+ trees planted across Japan since 2020.",
-    year: "2020-2024"
-  },
-  {
-    title: "Coastal Cleanup Program",
-    description: "Quarterly beach and coastal cleanup activities organized by employee volunteers. 2,000+ kg of waste collected annually.",
+    title: "Forest Development Initiative",
+    description: "Ebada Group participates in a collaborative forest management program, conducting tree planting, undergrowth clearing, thinning, and forest floor maintenance. Increased CO₂ absorption through afforestation contributes to climate change mitigation and biodiversity conservation.",
     year: "Ongoing"
   },
   {
-    title: "Water Conservation",
-    description: "Installation of water-saving fixtures and rainwater collection systems at major offices. 35% reduction in water usage.",
-    year: "2022-2024"
+    title: "\"Ebada Connecting Forest\" — Named & Planted",
+    description: "Following an internal naming campaign, our forest was named 'Ebada Connecting Forest' to reflect our ties with employees, clients, and nature. Tree planting of magnolia, hydrangea, and maple was carried out by the Sustainability Promotion Committee.",
+    year: "2025"
   },
   {
-    title: "Biodiversity Support",
-    description: "Sponsoring local conservation projects and supporting biodiversity initiatives in industrial regions where we operate.",
-    year: "2023-2024"
+    title: "Community Clean-Up Campaign",
+    description: "Ebada Group organizes regular 'Clean Campaigns' in local parks and public spaces as part of our environmental conservation and community contribution activities. Employee volunteers participate to strengthen social responsibility and team unity.",
+    year: "Ongoing"
+  },
+  {
+    title: "Sustainability Certification",
+    description: "Ebada Group employees have obtained the Sustainability Management Certification Level 2, strengthening internal knowledge and commitment to sustainable business practices across all departments.",
+    year: "2025"
   }
 ];
 
@@ -105,13 +105,13 @@ export default function EnvironmentalInitiatives() {
 
           <div style={{ maxWidth: "900px", margin: "0 auto", background: "var(--off)", padding: "3rem", borderRadius: "var(--r-lg)", borderLeft: "4px solid var(--accent)" }}>
             <p style={{ color: "var(--txt-2)", fontSize: "1.05rem", lineHeight: 1.9, marginBottom: "1.5rem" }}>
-              CDP Japan is committed to minimizing our environmental impact and contributing to a sustainable future. Our environmental policy guides all operations and decision-making processes.
+              Ebada Group is committed to participating in environmental conservation through our business activities, aiming to achieve a circular economy and carbon-neutral society. We contribute to the effective use of limited resources and the realization of a sustainable coexistence with our planet.
             </p>
             <p style={{ color: "var(--txt-2)", fontSize: "1.05rem", lineHeight: 1.9, marginBottom: "1.5rem" }}>
-              We strive to reduce energy consumption, minimize waste, conserve resources, and support conservation efforts. All employees are encouraged to participate in environmental initiatives, and we regularly review and update our practices to align with best practices and emerging technologies.
+              We comply with international agreements, laws, regulations, and ordinances related to environmental conservation. We actively promote environmental education and awareness among all officers and employees, linking these efforts directly to our business operations.
             </p>
             <p style={{ color: "var(--txt-2)", fontSize: "1.05rem", lineHeight: 1.9 }}>
-              Our goal is to achieve carbon neutrality by 203and to continuously improve our environmental performance across all areas of operation.
+              Our goal is to achieve carbon neutrality and continuously improve our environmental performance across all areas of operation. We set environmental targets, review them regularly, and disclose our progress to all stakeholders.
             </p>
           </div>
         </div>
@@ -192,20 +192,20 @@ export default function EnvironmentalInitiatives() {
 
           <div className="sus-stats__grid">
             <div className="sus-stat">
-              <div className="sus-stat__value">30%</div>
-              <div className="sus-stat__label">Carbon Reduction Target</div>
+              <div className="sus-stat__value">~30%</div>
+              <div className="sus-stat__label">Energy Reduction via LED</div>
             </div>
             <div className="sus-stat">
-              <div className="sus-stat__value">60%</div>
-              <div className="sus-stat__label">Waste Reduction</div>
+              <div className="sus-stat__value">100%</div>
+              <div className="sus-stat__label">Paperless Operations</div>
             </div>
             <div className="sus-stat">
-              <div className="sus-stat__value">40%</div>
-              <div className="sus-stat__label">Energy Savings</div>
+              <div className="sus-stat__value">EV</div>
+              <div className="sus-stat__label">Zero-Emission Fleet</div>
             </div>
             <div className="sus-stat">
-              <div className="sus-stat__value">500+</div>
-              <div className="sus-stat__label">Trees Planted</div>
+              <div className="sus-stat__value">3R+</div>
+              <div className="sus-stat__label">Recycling & Charity</div>
             </div>
           </div>
         </div>

@@ -46,12 +46,12 @@ export default function CEOMessage() {
                   alt="CDP Japan President"
                 />
                 <div className="au-ceo__nameplate">
-                  <strong>Masato Fujiwara</strong>
+                  <strong>RAHMAN SHEIK HABIBUR</strong>
                   <span>President & CEO, CDP Japan</span>
                 </div>
               </div>
               <div className="au-ceo__signature-wrap">
-                <div className="au-ceo__sig-text">Masato Fujiwara</div>
+                <div className="au-ceo__sig-text">RAHMAN SHEIK HABIBUR</div>
                 <span className="au-ceo__sig-role">President & CEO</span>
               </div>
             </div>
@@ -64,7 +64,7 @@ export default function CEOMessage() {
               <p>Thank you for trusting CDP Japan. We will continue to earn that trust — every day, with every placement, in every region of this extraordinary country.</p>
               <p className="au-ceo__closing">With sincere gratitude,</p>
               <div className="au-ceo__sig-final">
-                <div className="au-ceo__sig-text au-ceo__sig-text--lg">Masato Fujiwara</div>
+                <div className="au-ceo__sig-text au-ceo__sig-text--lg">RAHMAN SHEIK HABIBUR</div>
                 <span>President & CEO, CDP Japan Co., Ltd.</span>
               </div>
             </div>

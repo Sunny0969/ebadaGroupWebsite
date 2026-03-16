@@ -362,6 +362,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   color: var(--accent);
   margin-left: 0.25rem;
 }
+.emp-form-group__error {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 3px rgba(232, 67, 26, 0.1) !important;
+}
 
 /* ══════════════════════════════════════
    RESOURCES

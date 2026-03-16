@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { LanguageProvider } from './contexts/LanguageContext'
+import { AuthProvider } from './contexts/AuthContext'
 import LiveChat from './assets/components/LiveChat'
 import HomePage from './assets/components/Homepage'
 import CompanyOverview from './assets/components/CompanyOverview'
@@ -49,6 +50,7 @@ import './App.css'
 function App() {
   return (
     <LanguageProvider>
+      <AuthProvider>
       <BrowserRouter>
         <ScrollToTop />
         <LiveChat />
@@ -103,6 +105,7 @@ function App() {
         <SocialProofNotification />
         <AccessibilityControls />
       </BrowserRouter>
+      </AuthProvider>
     </LanguageProvider>
   )
 }

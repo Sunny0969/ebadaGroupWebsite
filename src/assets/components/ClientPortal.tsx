@@ -1,7 +1,8 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
+import { useAuth } from "../../contexts/AuthContext";
 import "./Employers.css";
 
 const SAMPLE_JOBS = [
@@ -17,59 +18,281 @@ const SAMPLE_CANDIDATES = [
 ];
 
 export default function ClientPortal() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { user, login, register, logout, isAuthenticated } = useAuth();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [showRegister, setShowRegister] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
   const [loginData, setLoginData] = useState({ email: "", password: "" });
+  const [registerData, setRegisterData] = useState({
+    companyName: "",
+    contactPerson: "",
+    email: "",
+    phone: "",
+    password: "",
+    confirmPassword: "",
+    industry: "",
+    address: ""
+  });
 
-  const handleLogin = (e: React.FormEvent) => {
+  // Check URL parameter for register mode
+  useEffect(() => {
+    const registerParam = searchParams.get('register');
+    if (registerParam === 'true') {
+      setShowRegister(true);
+      // Remove the parameter from URL after setting state
+      setSearchParams({});
+    }
+  }, [searchParams, setSearchParams]);
+
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simple login check - in real app, this would authenticate with backend
-    if (loginData.email && loginData.password) {
-      setIsLoggedIn(true);
+    setIsLoading(true);
+    setError("");
+
+    try {
+      await login(loginData.email, loginData.password);
+    } catch (err: any) {
+      setError(err.message || "Login failed. Please check your credentials.");
+    } finally {
+      setIsLoading(false);
     }
   };
 
-  if (!isLoggedIn) {
+  const handleRegister = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setError("");
+
+    // Validation
+    if (registerData.password !== registerData.confirmPassword) {
+      setError("Passwords do not match");
+      setIsLoading(false);
+      return;
+    }
+
+    if (registerData.password.length < 6) {
+      setError("Password must be at least 6 characters");
+      setIsLoading(false);
+      return;
+    }
+
+    try {
+      const { confirmPassword, ...dataToSend } = registerData;
+      await register(dataToSend);
+      setShowRegister(false);
+    } catch (err: any) {
+      setError(err.message || "Registration failed. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  if (!isAuthenticated) {
     return (
       <div className="emp">
         <Header />
         <section className="emp-portal">
           <div className="emp-wrap">
             <div className="emp-portal__login">
-              <h2 className="emp-portal__login-title">Client Portal Login</h2>
-              <p className="emp-portal__login-subtitle">Access your dashboard, candidate database, and billing information.</p>
+              <h2 className="emp-portal__login-title">
+                {showRegister ? "Create Account" : "Client Portal Login"}
+              </h2>
+              <p className="emp-portal__login-subtitle">
+                {showRegister 
+                  ? "Register to access your dashboard, post jobs, and manage candidates."
+                  : "Access your dashboard, candidate database, and billing information."}
+              </p>
               
-              <form onSubmit={handleLogin} style={{ marginTop: "2rem" }}>
-                <div className="emp-form-group">
-                  <label>Email Address <span className="emp-form-group__required">*</span></label>
-                  <input 
-                    type="email" 
-                    required 
-                    value={loginData.email}
-                    onChange={(e) => setLoginData({...loginData, email: e.target.value})}
-                    placeholder="your.email@company.com"
-                  />
+              {error && (
+                <div style={{
+                  marginTop: "1rem",
+                  padding: "0.75rem",
+                  background: "rgba(232, 67, 26, 0.1)",
+                  border: "1px solid var(--accent)",
+                  borderRadius: "var(--r)",
+                  color: "var(--accent)",
+                  fontSize: "0.9rem"
+                }}>
+                  {error}
                 </div>
-                <div className="emp-form-group">
-                  <label>Password <span className="emp-form-group__required">*</span></label>
-                  <input 
-                    type="password" 
-                    required 
-                    value={loginData.password}
-                    onChange={(e) => setLoginData({...loginData, password: e.target.value})}
-                    placeholder="Enter your password"
-                  />
-                </div>
-                <button type="submit" className="emp-btn emp-btn--primary" style={{ width: "100%", marginTop: "1rem" }}>
-                  Login
-                </button>
-                <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
-                  <Link to="/support" style={{ color: "var(--accent)", fontSize: "0.9rem" }}>Forgot Password?</Link>
-                </div>
-                <div style={{ textAlign: "center", marginTop: "1rem", paddingTop: "1.5rem", borderTop: "1px solid var(--border)" }}>
-                  <p style={{ color: "var(--txt-2)", fontSize: "0.9rem", marginBottom: "0.5rem" }}>Don't have an account?</p>
-                  <a href="/employers/post-job" style={{ color: "var(--accent)", fontWeight: 600 }}>Contact us to get access</a>
-                </div>
-              </form>
+              )}
+
+              {showRegister ? (
+                <form onSubmit={handleRegister} style={{ marginTop: "2rem" }}>
+                  <div className="emp-form-group">
+                    <label>Company Name <span className="emp-form-group__required">*</span></label>
+                    <input 
+                      type="text" 
+                      required 
+                      value={registerData.companyName}
+                      onChange={(e) => setRegisterData({...registerData, companyName: e.target.value})}
+                      placeholder="Your Company Name"
+                    />
+                  </div>
+                  <div className="emp-form-group">
+                    <label>Contact Person <span className="emp-form-group__required">*</span></label>
+                    <input 
+                      type="text" 
+                      required 
+                      value={registerData.contactPerson}
+                      onChange={(e) => setRegisterData({...registerData, contactPerson: e.target.value})}
+                      placeholder="Your Name"
+                    />
+                  </div>
+                  <div className="emp-form-group">
+                    <label>Email Address <span className="emp-form-group__required">*</span></label>
+                    <input 
+                      type="email" 
+                      required 
+                      value={registerData.email}
+                      onChange={(e) => setRegisterData({...registerData, email: e.target.value})}
+                      placeholder="your.email@company.com"
+                    />
+                  </div>
+                  <div className="emp-form-group">
+                    <label>Phone <span className="emp-form-group__required">*</span></label>
+                    <input 
+                      type="tel" 
+                      required 
+                      value={registerData.phone}
+                      onChange={(e) => setRegisterData({...registerData, phone: e.target.value})}
+                      placeholder="Phone Number"
+                    />
+                  </div>
+                  <div className="emp-form-group">
+                    <label>Industry</label>
+                    <select 
+                      value={registerData.industry}
+                      onChange={(e) => setRegisterData({...registerData, industry: e.target.value})}
+                    >
+                      <option value="">Select Industry</option>
+                      <option value="Automotive">Automotive</option>
+                      <option value="Electronics">Electronics</option>
+                      <option value="Manufacturing">Manufacturing</option>
+                      <option value="Construction">Construction</option>
+                      <option value="Healthcare">Healthcare</option>
+                      <option value="Technology">Technology</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+                  <div className="emp-form-group">
+                    <label>Address</label>
+                    <textarea 
+                      value={registerData.address}
+                      onChange={(e) => setRegisterData({...registerData, address: e.target.value})}
+                      placeholder="Company Address (Optional)"
+                      rows={2}
+                    />
+                  </div>
+                  <div className="emp-form-group">
+                    <label>Password <span className="emp-form-group__required">*</span></label>
+                    <input 
+                      type="password" 
+                      required 
+                      value={registerData.password}
+                      onChange={(e) => setRegisterData({...registerData, password: e.target.value})}
+                      placeholder="Minimum 6 characters"
+                      minLength={6}
+                    />
+                  </div>
+                  <div className="emp-form-group">
+                    <label>Confirm Password <span className="emp-form-group__required">*</span></label>
+                    <input 
+                      type="password" 
+                      required 
+                      value={registerData.confirmPassword}
+                      onChange={(e) => setRegisterData({...registerData, confirmPassword: e.target.value})}
+                      placeholder="Confirm Password"
+                    />
+                  </div>
+                  <button 
+                    type="submit" 
+                    className="emp-btn emp-btn--primary" 
+                    style={{ width: "100%", marginTop: "1rem" }}
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Registering..." : "Register"}
+                  </button>
+                  <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
+                    <p style={{ color: "var(--txt-2)", fontSize: "0.9rem" }}>
+                      Already have an account?{" "}
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setShowRegister(false);
+                          setError("");
+                        }}
+                        style={{
+                          background: "none",
+                          border: "none",
+                          color: "var(--accent)",
+                          cursor: "pointer",
+                          fontWeight: 600,
+                          textDecoration: "underline"
+                        }}
+                      >
+                        Login here
+                      </button>
+                    </p>
+                  </div>
+                </form>
+              ) : (
+                <form onSubmit={handleLogin} style={{ marginTop: "2rem" }}>
+                  <div className="emp-form-group">
+                    <label>Email Address <span className="emp-form-group__required">*</span></label>
+                    <input 
+                      type="email" 
+                      required 
+                      value={loginData.email}
+                      onChange={(e) => setLoginData({...loginData, email: e.target.value})}
+                      placeholder="your.email@company.com"
+                    />
+                  </div>
+                  <div className="emp-form-group">
+                    <label>Password <span className="emp-form-group__required">*</span></label>
+                    <input 
+                      type="password" 
+                      required 
+                      value={loginData.password}
+                      onChange={(e) => setLoginData({...loginData, password: e.target.value})}
+                      placeholder="Enter your password"
+                    />
+                  </div>
+                  <button 
+                    type="submit" 
+                    className="emp-btn emp-btn--primary" 
+                    style={{ width: "100%", marginTop: "1rem" }}
+                    disabled={isLoading}
+                  >
+                    {isLoading ? "Logging in..." : "Login"}
+                  </button>
+                  <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
+                    <Link to="/support" style={{ color: "var(--accent)", fontSize: "0.9rem" }}>Forgot Password?</Link>
+                  </div>
+                  <div style={{ textAlign: "center", marginTop: "1rem", paddingTop: "1.5rem", borderTop: "1px solid var(--border)" }}>
+                    <p style={{ color: "var(--txt-2)", fontSize: "0.9rem", marginBottom: "0.5rem" }}>Don't have an account?</p>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setShowRegister(true);
+                        setError("");
+                      }}
+                      style={{
+                        background: "none",
+                        border: "none",
+                        color: "var(--accent)",
+                        cursor: "pointer",
+                        fontWeight: 600,
+                        textDecoration: "underline",
+                        fontSize: "1rem"
+                      }}
+                    >
+                      Register Now
+                    </button>
+                  </div>
+                </form>
+              )}
             </div>
           </div>
         </section>
@@ -85,8 +308,13 @@ export default function ClientPortal() {
       <section className="emp-portal">
         <div className="emp-wrap">
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "2rem", flexWrap: "wrap", gap: "1rem" }}>
-            <h1 className="emp-h1">Client Portal</h1>
-            <button className="emp-btn emp-btn--outline" onClick={() => setIsLoggedIn(false)}>Logout</button>
+            <div>
+              <h1 className="emp-h1">Client Portal</h1>
+              <p style={{ color: "var(--txt-2)", marginTop: "0.5rem" }}>
+                Welcome, {user?.contactPerson} ({user?.companyName})
+              </p>
+            </div>
+            <button className="emp-btn emp-btn--outline" onClick={logout}>Logout</button>
           </div>
 
           {/* Dashboard Stats */}

@@ -4,170 +4,211 @@ import Header from "./Header";
 import Footer from "./Footer";
 import "./Employers.css";
 
+/* ─── DATA — sourced from cdpjp.com/service ─────────────────── */
+
 const SERVICES = [
   {
     icon: "🏭",
     title: "Manufacturing Dispatch",
-    description: "Rapid placement of skilled production workers. Average placement time: 7-10 days. 7-stage quality screening process.",
+    description:
+      "Secure the right manpower — at the right time, in the right quantity, with the right skills. We respond to your timely production floor requirements with workers who can operate under your direct instruction across all phases of manufacturing activity.",
     benefits: [
-      "Nationwide coverage across 47 prefectures",
-      "Flexible contracts: short-term, long-term, seasonal",
-      "Dedicated HR support throughout placement",
-      "96% client retention rate"
-    ]
+      "Just-in-time staffing aligned to your production schedule",
+      "Reduces over-hiring risk — scale up or down with demand",
+      "Ebada Group Japan bears payroll, social insurance, and welfare costs",
+      "Proprietary retention management to minimise worker turnover",
+    ],
   },
   {
     icon: "👔",
-    title: "Recruitment Services",
-    description: "Find the right talent from entry-level to executive positions. Precision matching with 94% success rate.",
+    title: "Recruitment (Employment Agency)",
+    description:
+      "We connect companies seeking talent with highly qualified candidates in real time. Because fees are only charged upon confirmed hire, you eliminate the cost of hiring mismatches. In FY2022, CDP-model placement services achieved 416 confirmed hires.",
     benefits: [
-      "4-6 weeks average time-to-fill",
-      "90-day replacement guarantee",
-      "Access to passive and active candidates",
-      "Executive search capabilities"
-    ]
+      "Streamlined hiring — only pre-screened candidates reach interview stage",
+      "Zero cost until placement is confirmed — no risk of sunk recruitment spend",
+      "Confidential hiring for new business ventures without public job postings",
+      "Rigorous candidate evaluation: skills, cultural fit, and team compatibility",
+    ],
   },
   {
     icon: "💼",
-    title: "Business Outsourcing",
-    description: "Delegate non-core functions to our professional teams. Reduce costs by up to 50% while maintaining quality.",
+    title: "Business Process Outsourcing",
+    description:
+      "Delegate non-core factory and office operations to Ebada Group Japan's managed teams. Our outsourcing model allows your in-house staff to focus entirely on core business functions while we handle execution with accountability.",
     benefits: [
-      "Customer service, accounting, admin support",
-      "Rapid deployment within 2-4 weeks",
-      "Scalable team solutions",
-      "Full quality monitoring"
-    ]
+      "Reduces administrative burden on internal staff",
+      "Ebada manages team supervision, quality control, and attendance",
+      "Flexible scope — from single-line packing to multi-function back office",
+      "Cost-transparent model with clear SLA-based performance metrics",
+    ],
   },
   {
     icon: "⚙️",
     title: "Engineer Dispatch",
-    description: "Specialized engineers for R&D, manufacturing, and technical projects. Certified professionals across all disciplines.",
+    description:
+      "Place certified technical engineers — mechanical, electrical, process, and IT — into your R&D, production, and quality divisions. Our engineers pass rigorous technical assessments and are matched precisely to your discipline and project requirements.",
     benefits: [
-      "2-3 weeks average placement time",
-      "Verified certifications and qualifications",
-      "Project-based or long-term engagement",
-      "Strict confidentiality protocols"
-    ]
+      "Verified credentials: qualifications, certifications, and work history confirmed",
+      "Covers mechanical design, electrical maintenance, CAD, process engineering",
+      "Project-based or long-term engagement — flexible contract structure",
+      "Strict confidentiality protocols for R&D and proprietary projects",
+    ],
   },
   {
     icon: "🌍",
     title: "Foreign Employment Support",
-    description: "Complete international workforce solutions. From recruitment to integration, visa processing, and cultural training.",
+    description:
+      "A complete one-stop service for hiring and integrating international workers under Japan's Technical Intern Training (技能実習) and Specified Skilled Worker (特定技能) programmes. We manage compliance, coordination, and post-arrival support end-to-end.",
     benefits: [
-      "Global recruitment network",
-      "Pre-departure training programs",
-      "Complete visa support",
-      "Ongoing integration assistance"
-    ]
+      "One-stop support: interviews, visas, language, daily life, and attendance management",
+      "Partners only with carefully vetted supervising organisations for full compliance",
+      "Pre-departure training covering Japanese language and workplace culture",
+      "Ongoing multilingual coordinator support after placement begins",
+    ],
   },
   {
     icon: "🔄",
     title: "Re-employment Support",
-    description: "Help individuals re-enter the workforce with career counseling, skills training, and job placement services.",
+    description:
+      "A structured programme helping workers — particularly those 40 and older — return to stable employment. We provide personalised career counselling, skills refresher training, and direct placement coordination with our client network.",
     benefits: [
-      "Personalized career counseling",
-      "Skills enhancement programs",
-      "Job matching across industries",
-      "Ongoing support after placement"
-    ]
-  }
+      "Individually tailored career counselling and job matching",
+      "Skills enhancement programmes aligned to current industry requirements",
+      "Placement support across manufacturing, logistics, and office sectors",
+      "Ongoing follow-up after placement to ensure long-term stability",
+    ],
+  },
 ];
 
 const SUCCESS_STORIES = [
   {
     icon: "🏆",
-    title: "Automotive Manufacturer Expansion",
-    client: "Major Automotive Parts Company",
-    challenge: "Needed 200 skilled production workers within 3 weeks for new production line launch.",
-    solution: "CDP Japan deployed rapid placement system, conducting targeted recruitment across 5 prefectures with accelerated screening.",
-    result: "200 workers placed in 18 days. Zero safety incidents. 95% retention after one year.",
+    title: "Rapid Scale-up for New Production Line",
+    client: "Major Automotive Parts Manufacturer — Tochigi",
+    challenge:
+      "A client needed 150 production workers within three weeks to staff a newly commissioned automotive assembly line, with no existing pool of pre-screened candidates.",
+    solution:
+      "Ebada Group Japan activated a targeted cross-prefecture recruitment drive across Tochigi, Saitama, and Ibaraki, conducting accelerated 7-stage screening and onboarding in parallel with factory safety induction.",
+    result:
+      "150 workers placed in 17 days. All met the client's skills requirements. Zero safety incidents in the first 90 days. 94% of workers renewed their contracts after the initial dispatch period.",
     metrics: [
-      { value: "18 Days", label: "Time to Fill" },
-      { value: "95%", label: "Retention Rate" },
-      { value: "0", label: "Safety Incidents" }
-    ]
+      { value: "17 Days", label: "Time to Fill" },
+      { value: "94%", label: "Contract Renewal Rate" },
+      { value: "0", label: "Safety Incidents" },
+    ],
   },
   {
     icon: "⭐",
-    title: "Executive Recruitment Success",
-    client: "Leading Manufacturing Firm",
-    challenge: "Required bilingual Operations Director with 15+ years experience in automotive manufacturing.",
-    solution: "Leveraged executive search network, identifying 8 qualified candidates within 2 weeks through targeted approach.",
-    result: "Position filled in 6 weeks. Candidate exceeded expectations and led 20% efficiency improvement.",
+    title: "Confidential Direct Hire — Technical Manager",
+    client: "Precision Manufacturing Company — Oyama",
+    challenge:
+      "A client required a bilingual Production Technology Manager with 10+ years of experience in precision machining, without disclosing the vacancy publicly to avoid alerting competitors.",
+    solution:
+      "Leveraged Ebada Group Japan's private candidate database and professional network to identify and approach 6 qualified passive candidates. Full process managed under strict confidentiality from search to offer.",
+    result:
+      "Position filled in 5 weeks with zero public advertising. The placed candidate led a process improvement initiative that reduced line downtime by 22% within six months.",
     metrics: [
-      { value: "6 Weeks", label: "Time to Fill" },
-      { value: "8", label: "Qualified Candidates" },
-      { value: "20%", label: "Efficiency Gain" }
-    ]
+      { value: "5 Weeks", label: "Time to Fill" },
+      { value: "6", label: "Qualified Candidates Presented" },
+      { value: "22%", label: "Downtime Reduction" },
+    ],
   },
   {
-    icon: "💡",
-    title: "Seasonal Workforce Scaling",
-    client: "Electronics Manufacturer",
-    challenge: "Required flexible workforce scaling for peak production without long-term commitments.",
-    solution: "Implemented flexible dispatch contracts with pre-screened worker pool, enabling rapid scaling.",
-    result: "Reduced labor costs by 30% during off-peak. Maintained 100% on-time delivery during peak seasons.",
+    icon: "🌏",
+    title: "Foreign Worker Integration — Specified Skilled Worker Programme",
+    client: "Food Processing Plant — Kanazawa",
+    challenge:
+      "A client sought to hire 30 Specified Skilled Workers from Vietnam and Indonesia for production roles, but lacked the internal capacity to manage visa procedures, compliance obligations, and post-arrival support.",
+    solution:
+      "Ebada Group Japan provided full one-stop support: overseas recruitment coordination, supervising organisation selection, visa documentation, pre-departure Japanese language training, and on-site multilingual coordinator assignment after arrival.",
+    result:
+      "30 workers placed and fully onboarded within the client's timeline. 100% visa approval rate. Worker retention at 12 months: 92%. Client renewed the programme for a further 20 placements.",
     metrics: [
-      { value: "30%", label: "Cost Reduction" },
-      { value: "100%", label: "On-Time Delivery" },
-      { value: "Flexible", label: "Scaling Model" }
-    ]
-  }
+      { value: "100%", label: "Visa Approval Rate" },
+      { value: "92%", label: "12-Month Retention" },
+      { value: "30 Workers", label: "Placed On Schedule" },
+    ],
+  },
 ];
 
 const INDUSTRIES = [
-  { icon: "🚗", name: "Automotive", desc: "Assembly, quality control, engineering" },
-  { icon: "📱", name: "Electronics", desc: "Component assembly, testing, R&D" },
-  { icon: "🏗️", name: "Construction", desc: "Skilled trades, project management" },
-  { icon: "⚙️", name: "Heavy Machinery", desc: "Production, maintenance, engineering" },
-  { icon: "📦", name: "Logistics", desc: "Warehouse, distribution, delivery" },
-  { icon: "🧪", name: "Chemicals", desc: "Process operations, safety specialists" },
-  { icon: "🏥", name: "Healthcare", desc: "Medical staff, care workers" },
-  { icon: "💻", name: "Technology", desc: "IT professionals, software engineers" }
+  { icon: "🚗", name: "Automotive",         desc: "Assembly lines, quality control, press & welding, component inspection" },
+  { icon: "📱", name: "Electronics",         desc: "Component assembly, clean-room operations, circuit board testing, R&D" },
+  { icon: "🏗️", name: "Precision Machinery", desc: "CNC operation, die casting, moulding, mechanical maintenance" },
+  { icon: "⚙️", name: "Heavy Industry",      desc: "Steel, metalwork, large-scale production, equipment operation" },
+  { icon: "📦", name: "Logistics",           desc: "Warehouse operations, forklift, picking & packing, inventory management" },
+  { icon: "🧪", name: "Chemicals",           desc: "Process operations, safety-critical environments, laboratory support" },
+  { icon: "🍱", name: "Food Processing",     desc: "Production line, sanitary environments, packaging, inspection" },
+  { icon: "💻", name: "IT & Engineering",    desc: "Software engineers, CAD designers, infrastructure, technical support" },
 ];
 
+/* ─── COMPONENT ─────────────────────────────────────────────── */
 export default function EmployerServices() {
   const [visible, setVisible] = useState<Set<string>>(new Set());
   const refMap = useRef<Map<string, HTMLElement>>(new Map());
 
   useEffect(() => {
     const io = new IntersectionObserver(
-      (entries) => entries.forEach((e) => {
-        if (e.isIntersecting) {
-          const id = e.target.getAttribute("data-obs");
-          if (id) setVisible((p) => new Set([...p, id]));
-        }
-      }),
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            const id = e.target.getAttribute("data-obs");
+            if (id) setVisible((p) => new Set([...p, id]));
+          }
+        }),
       { threshold: 0.1 }
     );
     refMap.current.forEach((el) => io.observe(el));
     return () => io.disconnect();
   }, []);
 
-  const obs = (id: string) => (el: HTMLElement | null) => { if (el) refMap.current.set(id, el); };
+  const obs = (id: string) => (el: HTMLElement | null) => {
+    if (el) refMap.current.set(id, el);
+  };
 
   return (
     <div className="emp">
       <Header />
 
+      {/* ── HERO ── */}
       <section className="emp-hero">
         <div className="emp-wrap">
           <h1 className="emp-h1 emp-hero__h1">Workforce Solutions for Employers</h1>
-          <p className="emp-hero__p">Partner with CDP Japan to find the right talent, scale your workforce, and drive business growth. 3years of excellence in Japanese staffing.</p>
+          <p className="emp-hero__p">
+            Partner with Ebada Group Japan to find the right talent, scale your workforce, and
+            drive sustainable business growth. As a licensed worker dispatch and paid employment
+            placement agency, we cover every staffing need — from production floor to executive
+            suite.
+          </p>
         </div>
       </section>
 
-      <section className={`emp-section ${visible.has("services") ? "emp--in" : ""}`} data-obs="services" ref={obs("services")} style={{ background: "var(--white)" }}>
+      {/* ── SERVICES ── */}
+      <section
+        className={`emp-section ${visible.has("services") ? "emp--in" : ""}`}
+        data-obs="services"
+        ref={obs("services")}
+        style={{ background: "var(--white)" }}
+      >
         <div className="emp-wrap">
           <div className="emp-sh">
             <span className="emp-eyebrow">Our Services</span>
             <h2 className="emp-h2">Comprehensive Workforce Solutions</h2>
-            <p className="emp-sh__p">From manufacturing dispatch to executive recruitment, we provide end-to-end staffing solutions tailored to your needs.</p>
+            <p className="emp-sh__p">
+              Ebada Group Japan operates as a comprehensive human resources services company,
+              covering a wide range of staffing needs across manufacturing, engineering, and
+              business operations — with customised solutions for every client.
+            </p>
           </div>
 
           <div className="emp-services__grid">
             {SERVICES.map((service, i) => (
-              <div key={i} className="emp-service-card" style={{ "--d": `${i * 100}ms` } as React.CSSProperties}>
+              <div
+                key={i}
+                className="emp-service-card"
+                style={{ "--d": `${i * 100}ms` } as React.CSSProperties}
+              >
                 <span className="emp-service-card__icon">{service.icon}</span>
                 <h3 className="emp-service-card__title">{service.title}</h3>
                 <p className="emp-service-card__desc">{service.description}</p>
@@ -182,12 +223,21 @@ export default function EmployerServices() {
         </div>
       </section>
 
-      <section className={`emp-section ${visible.has("stories") ? "emp--in" : ""}`} data-obs="stories" ref={obs("stories")} style={{ background: "var(--off)" }}>
+      {/* ── SUCCESS STORIES ── */}
+      <section
+        className={`emp-section ${visible.has("stories") ? "emp--in" : ""}`}
+        data-obs="stories"
+        ref={obs("stories")}
+        style={{ background: "var(--off)" }}
+      >
         <div className="emp-wrap">
           <div className="emp-sh">
             <span className="emp-eyebrow">Client Success</span>
             <h2 className="emp-h2">Real Results, Real ROI</h2>
-            <p className="emp-sh__p">See how we've helped companies across Japan achieve their workforce goals.</p>
+            <p className="emp-sh__p">
+              How Ebada Group Japan has helped companies across Japan solve their most
+              challenging workforce problems — with measurable outcomes.
+            </p>
           </div>
 
           <div className="emp-stories__grid">
@@ -201,16 +251,28 @@ export default function EmployerServices() {
                   </div>
                 </div>
                 <div style={{ marginBottom: "1rem" }}>
-                  <strong style={{ color: "var(--accent)", fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>Challenge</strong>
-                  <p style={{ color: "var(--txt-2)", fontSize: "0.95rem", lineHeight: 1.7, marginTop: "0.5rem" }}>{story.challenge}</p>
+                  <strong style={{ color: "var(--accent)", fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>
+                    Challenge
+                  </strong>
+                  <p style={{ color: "var(--txt-2)", fontSize: "0.95rem", lineHeight: 1.7, marginTop: "0.5rem" }}>
+                    {story.challenge}
+                  </p>
                 </div>
                 <div style={{ marginBottom: "1rem" }}>
-                  <strong style={{ color: "var(--accent)", fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>Solution</strong>
-                  <p style={{ color: "var(--txt-2)", fontSize: "0.95rem", lineHeight: 1.7, marginTop: "0.5rem" }}>{story.solution}</p>
+                  <strong style={{ color: "var(--accent)", fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>
+                    Solution
+                  </strong>
+                  <p style={{ color: "var(--txt-2)", fontSize: "0.95rem", lineHeight: 1.7, marginTop: "0.5rem" }}>
+                    {story.solution}
+                  </p>
                 </div>
                 <div style={{ marginBottom: "1rem" }}>
-                  <strong style={{ color: "var(--accent)", fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>Result</strong>
-                  <p style={{ color: "var(--txt-2)", fontSize: "0.95rem", lineHeight: 1.7, marginTop: "0.5rem" }}>{story.result}</p>
+                  <strong style={{ color: "var(--accent)", fontSize: "0.85rem", textTransform: "uppercase", letterSpacing: "0.1em" }}>
+                    Result
+                  </strong>
+                  <p style={{ color: "var(--txt-2)", fontSize: "0.95rem", lineHeight: 1.7, marginTop: "0.5rem" }}>
+                    {story.result}
+                  </p>
                 </div>
                 <div className="emp-story__metric">
                   {story.metrics.map((metric, j) => (
@@ -226,12 +288,22 @@ export default function EmployerServices() {
         </div>
       </section>
 
-      <section className={`emp-section ${visible.has("industries") ? "emp--in" : ""}`} data-obs="industries" ref={obs("industries")} style={{ background: "var(--white)" }}>
+      {/* ── INDUSTRIES ── */}
+      <section
+        className={`emp-section ${visible.has("industries") ? "emp--in" : ""}`}
+        data-obs="industries"
+        ref={obs("industries")}
+        style={{ background: "var(--white)" }}
+      >
         <div className="emp-wrap">
           <div className="emp-sh">
-            <span className="emp-eyebrow">Industry Specializations</span>
+            <span className="emp-eyebrow">Industry Specialisations</span>
             <h2 className="emp-h2">Industries We Serve</h2>
-            <p className="emp-sh__p">Deep expertise across Japan's key industrial sectors.</p>
+            <p className="emp-sh__p">
+              Ebada Group Japan brings deep expertise across Japan's key industrial sectors —
+              combining long-term client relationships with up-to-date knowledge of each
+              sector's skills requirements and labour market conditions.
+            </p>
           </div>
 
           <div className="emp-industries__grid">
@@ -246,15 +318,30 @@ export default function EmployerServices() {
         </div>
       </section>
 
-      <section className="emp-section" style={{ background: "var(--navy)", color: "var(--white)", textAlign: "center" }}>
+      {/* ── CTA ── */}
+      <section
+        className="emp-section"
+        style={{ background: "var(--navy)", color: "var(--white)", textAlign: "center" }}
+      >
         <div className="emp-wrap">
-          <h2 className="emp-h2" style={{ color: "var(--white)", marginBottom: "1.5rem" }}>Ready to Build Your Workforce?</h2>
-          <p style={{ color: "rgba(255,255,255,0.75)", fontSize: "1.1rem", marginBottom: "2rem", maxWidth: "700px", margin: "0 auto 2rem" }}>
-            Let's discuss how CDP Japan can help you find the right talent and scale your operations.
+          <h2 className="emp-h2" style={{ color: "var(--white)", marginBottom: "1.5rem" }}>
+            Ready to Build Your Workforce?
+          </h2>
+          <p
+            style={{
+              color: "rgba(255,255,255,0.75)",
+              fontSize: "1.1rem",
+              marginBottom: "2rem",
+              maxWidth: "700px",
+              margin: "0 auto 2rem",
+            }}
+          >
+            Tell us your hiring needs and an Ebada Group Japan consultant will respond within
+            one business day with a tailored proposal.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
-            <Link to="/employers/post-job" className="emp-btn emp-btn--primary">Post a Job</Link>
-            <Link to="/employers/post-job" className="emp-btn emp-btn--ghost">Request Consultation</Link>
+            <Link to="/employers/post-job"     className="emp-btn emp-btn--primary">Post a Job</Link>
+            <Link to="/employers/consultation" className="emp-btn emp-btn--ghost">Request Consultation</Link>
           </div>
         </div>
       </section>

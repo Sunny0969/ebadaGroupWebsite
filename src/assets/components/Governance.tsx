@@ -3,126 +3,189 @@ import Header from "./Header";
 import Footer from "./Footer";
 import "./Sustainability.css";
 
+/* ─── DATA — sourced from cdpjp.com/sustainability/governance ───
+   governance/policy  +  governance/compliance
+   ─────────────────────────────────────────────────────────────── */
+
 const GOVERNANCE_PRINCIPLES = [
   {
-    title: "Transparency",
-    description: "Open communication with stakeholders, clear reporting on performance, and accessible information about our operations and decisions."
+    title: "Transparent Decision-Making",
+    description:
+      "Ebada Group prioritises highly transparent decision-making. Through the disclosure of information and data, and open communication with stakeholders, we clearly explain the processes and reasons behind our decisions — building trust and ensuring the validity of all sustainability-related choices.",
   },
   {
-    title: "Accountability",
-    description: "Clear responsibility structures, regular performance reviews, and mechanisms for addressing concerns and feedback."
+    title: "Effective Corporate Governance",
+    description:
+      "We adhere to sound corporate governance principles — ensuring the independence and diversity of leadership, fulfilling oversight responsibilities appropriately, and establishing specialist committees to address sustainability issues. We strive to enable all internal stakeholders to participate actively in governance.",
   },
   {
-    title: "Ethical Conduct",
-    description: "Strict adherence to ethical standards, zero tolerance for corruption, and promotion of integrity throughout the organization."
+    title: "Risk Management & Compliance",
+    description:
+      "Ebada Group has established a risk management framework to assess and manage sustainability-related risks appropriately — covering risk identification, evaluation, countermeasure design, and monitoring. We implement compliance programmes that ensure full legal adherence and thorough ethical conduct.",
   },
   {
-    title: "Stakeholder Engagement",
-    description: "Regular consultation with employees, clients, workers, and communities to inform decision-making and ensure diverse perspectives."
-  }
+    title: "Stakeholder Co-creation",
+    description:
+      "Our governance philosophy positions sustainability as a strategic organisational objective — pursued through active collaboration with all stakeholders: employees, clients, placed workers, business partners, and local communities.",
+  },
 ];
 
 const COMPLIANCE_AREAS = [
   {
-    title: "Labor Law Compliance",
-    description: "Full compliance with Japanese labor laws including working hours, wages, safety regulations, and employment contracts. Regular audits and training programs.",
-    icon: "⚖️"
+    title: "Labour Law Compliance",
+    description:
+      "As a licensed staffing agency, Ebada Group is fully committed to compliance with the Labour Standards Act (労働基準法), the Worker Dispatch Act (労働者派遣法), and all related employment regulations. We require all employees to adhere strictly to applicable laws and rules, and we work to eliminate any form of violation.",
+    icon: "⚖️",
   },
   {
-    title: "Data Protection",
-    description: "GDPR-aligned data protection practices, secure handling of candidate and client information, and regular security assessments.",
-    icon: "🔒"
+    title: "Personal Information Protection",
+    description:
+      "Ebada Group handles the personal information of clients, placed workers, and candidates with the utmost care and respect for privacy. We implement appropriate security measures to prevent unauthorised access, loss, destruction, or alteration of personal data. We hold Privacy Mark certification in recognition of this commitment.",
+    icon: "🔒",
   },
   {
-    title: "Anti-Corruption",
-    description: "Comprehensive anti-corruption policy, employee training, and zero-tolerance enforcement. Regular compliance reviews and reporting mechanisms.",
-    icon: "🚫"
+    title: "Ethical Conduct",
+    description:
+      "Ebada Group demands fair and sincere conduct toward society from all officers and employees. We educate our team on ethics and social responsibility, and we pursue social trust through the consistent practice of ethical behaviour in every business activity.",
+    icon: "🤝",
   },
   {
-    title: "Financial Compliance",
-    description: "Adherence to accounting standards, tax regulations, and financial reporting requirements. External audits and transparent financial practices.",
-    icon: "💰"
-  }
+    title: "Environmental Consideration",
+    description:
+      "Ebada Group operates with consideration for environmental protection, aiming to minimise the environmental impact of all business activities. We comply fully with environmental laws and regulations, and actively pursue energy conservation, recycling, and other environmental protection initiatives.",
+    icon: "🌱",
+  },
+  {
+    title: "Social Responsibility",
+    description:
+      "We place the highest importance on contributing to society and fulfilling our corporate social responsibilities. This includes supporting employee volunteer activities, engaging in regional contribution initiatives, and delivering services that respond to genuine social needs.",
+    icon: "🏘️",
+  },
+  {
+    title: "Sound Management",
+    description:
+      "Ebada Group pursues sound management practices to earn the trust of clients and all stakeholders, and to achieve sustainable growth. This means establishing appropriate internal control systems, enforcing rigorous risk management, and maintaining the integrity of all financial and operational practices.",
+    icon: "📋",
+  },
 ];
 
-const RISK_MANAGEMENT = [
-  {
-    category: "Operational Risk",
-    description: "Comprehensive safety protocols, quality control systems, and contingency planning to minimize operational disruptions and ensure service continuity.",
-    mitigation: "Regular safety audits, employee training, backup systems, and emergency response procedures."
-  },
-  {
-    category: "Compliance Risk",
-    description: "Proactive monitoring of regulatory changes, legal compliance reviews, and adaptation of policies to meet evolving requirements.",
-    mitigation: "Legal counsel, compliance team, regular training, and automated compliance monitoring systems."
-  },
-  {
-    category: "Reputational Risk",
-    description: "Protecting brand reputation through ethical practices, quality service delivery, and transparent communication with stakeholders.",
-    mitigation: "Stakeholder engagement, crisis management protocols, media relations, and continuous improvement programs."
-  },
-  {
-    category: "Financial Risk",
-    description: "Sound financial management, diversified revenue streams, and prudent financial planning to ensure long-term stability.",
-    mitigation: "Financial controls, risk assessment, insurance coverage, and conservative financial practices."
-  }
-];
-
+/* ─── COMPONENT ─────────────────────────────────────────────── */
 export default function Governance() {
   const [visible, setVisible] = useState<Set<string>>(new Set());
   const refMap = useRef<Map<string, HTMLElement>>(new Map());
 
   useEffect(() => {
     const io = new IntersectionObserver(
-      (entries) => entries.forEach((e) => {
-        if (e.isIntersecting) {
-          const id = e.target.getAttribute("data-obs");
-          if (id) setVisible((p) => new Set([...p, id]));
-        }
-      }),
+      (entries) =>
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            const id = e.target.getAttribute("data-obs");
+            if (id) setVisible((p) => new Set([...p, id]));
+          }
+        }),
       { threshold: 0.1 }
     );
     refMap.current.forEach((el) => io.observe(el));
     return () => io.disconnect();
   }, []);
 
-  const obs = (id: string) => (el: HTMLElement | null) => { if (el) refMap.current.set(id, el); };
+  const obs = (id: string) => (el: HTMLElement | null) => {
+    if (el) refMap.current.set(id, el);
+  };
 
   return (
     <div className="sus">
       <Header />
 
+      {/* ── HERO ── */}
       <section className="sus-hero">
         <div className="sus-wrap">
           <h1 className="sus-h1 sus-hero__h1">Governance</h1>
-          <p className="sus-hero__p">Strong governance, ethical practices, and risk management to ensure long-term sustainability and trust.</p>
+          <p className="sus-hero__p">
+            Ebada Group recognises the critical importance of governance in realising a sustainable
+            future — providing the framework to ensure organisational sustainability, transparency,
+            and accountability in everything we do.
+          </p>
         </div>
       </section>
 
-      <section className={`sus-section ${visible.has("governance") ? "sus--in" : ""}`} data-obs="governance" ref={obs("governance")} style={{ background: "var(--white)" }}>
+      {/* ══════════════════════════════════════
+          CORPORATE GOVERNANCE
+      ══════════════════════════════════════ */}
+      <section
+        className={`sus-section ${visible.has("governance") ? "sus--in" : ""}`}
+        data-obs="governance"
+        ref={obs("governance")}
+        style={{ background: "var(--white)" }}
+      >
         <div className="sus-wrap">
           <div className="sus-sh">
             <span className="sus-eyebrow">Corporate Governance</span>
-            <h2 className="sus-h2">Governance Structure & Principles</h2>
-            <p className="sus-sh__p">Transparent, accountable, and ethical governance practices.</p>
+            <h2 className="sus-h2">Governance Philosophy</h2>
+            <p className="sus-sh__p">
+              Ebada Group's governance philosophy positions sustainability as a core strategic
+              objective — taking responsibility for environmental impacts and social challenges,
+              and pursuing management that consistently considers long-term sustainability.
+            </p>
           </div>
 
-          <div style={{ maxWidth: "900px", margin: "0 auto", background: "var(--off)", padding: "3rem", borderRadius: "var(--r-lg)", borderLeft: "4px solid var(--accent)", marginBottom: "3rem" }}>
+          {/* Intro statement */}
+          <div
+            style={{
+              maxWidth: "900px",
+              margin: "0 auto 3rem",
+              background: "var(--off)",
+              padding: "3rem",
+              borderRadius: "var(--r-lg)",
+              borderLeft: "4px solid var(--accent)",
+            }}
+          >
             <p style={{ color: "var(--txt-2)", fontSize: "1.05rem", lineHeight: 1.9, marginBottom: "1.5rem" }}>
-              CDP Japan maintains a robust corporate governance framework that ensures transparency, accountability, and ethical decision-making at all levels of the organization.
+              Ebada Group recognises governance as an essential framework for ensuring
+              organisational sustainability with an emphasis on transparency and accountability.
+              Our governance structure reflects our commitment to responsible management — with
+              clear leadership, proactive risk management, and open engagement with every
+              stakeholder group.
             </p>
             <p style={{ color: "var(--txt-2)", fontSize: "1.05rem", lineHeight: 1.9 }}>
-              Our Board of Directors provides strategic oversight, while management implements policies and procedures that align with our values and legal requirements. Regular board meetings, independent audits, and stakeholder engagement ensure effective governance.
+              The Sustainability Promotion Committee, established under our management council,
+              is responsible for overseeing the implementation of our governance policies and
+              monitoring progress across all sustainability-related activities.
             </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "2rem", marginTop: "3rem" }}>
+          {/* 4 Governance Principles */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
+              gap: "2rem",
+            }}
+          >
             {GOVERNANCE_PRINCIPLES.map((principle, i) => (
-              <div key={i} style={{ background: "var(--white)", padding: "2rem", borderRadius: "var(--r-lg)", border: "1px solid var(--border)", borderTop: "3px solid var(--accent)" }}>
-                <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.3rem", fontWeight: 600, color: "var(--navy)", marginBottom: "0.75rem" }}>
+              <div
+                key={i}
+                style={{
+                  background: "var(--white)",
+                  padding: "2rem",
+                  borderRadius: "var(--r-lg)",
+                  border: "1px solid var(--border)",
+                  borderTop: "3px solid var(--accent)",
+                }}
+              >
+                <h3
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "1.15rem",
+                    fontWeight: 600,
+                    color: "var(--navy)",
+                    marginBottom: "0.75rem",
+                    lineHeight: 1.3,
+                  }}
+                >
                   {principle.title}
                 </h3>
-                <p style={{ color: "var(--txt-2)", fontSize: "0.95rem", lineHeight: 1.7 }}>
+                <p style={{ color: "var(--txt-2)", fontSize: "0.92rem", lineHeight: 1.75 }}>
                   {principle.description}
                 </p>
               </div>
@@ -131,55 +194,61 @@ export default function Governance() {
         </div>
       </section>
 
-      <section className={`sus-section ${visible.has("compliance") ? "sus--in" : ""}`} data-obs="compliance" ref={obs("compliance")} style={{ background: "var(--off)" }}>
+      {/* ══════════════════════════════════════
+          COMPLIANCE POLICY
+      ══════════════════════════════════════ */}
+      <section
+        className={`sus-section ${visible.has("compliance") ? "sus--in" : ""}`}
+        data-obs="compliance"
+        ref={obs("compliance")}
+        style={{ background: "var(--off)" }}
+      >
         <div className="sus-wrap">
           <div className="sus-sh">
             <span className="sus-eyebrow">Compliance Policy</span>
-            <h2 className="sus-h2">Legal Compliance Framework</h2>
-            <p className="sus-sh__p">Comprehensive compliance with all applicable laws and regulations.</p>
+            <h2 className="sus-h2">Corporate Compliance Framework</h2>
+            <p className="sus-sh__p">
+              As a licensed worker dispatch and employment placement agency, Ebada Group's mission
+              is to comply fully with the Labour Standards Act, the Worker Dispatch Act, and all
+              applicable laws and business ethics — fulfilling our social responsibilities and
+              contributing positively to society through our business activities.
+            </p>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem", marginTop: "3rem" }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+              gap: "2rem",
+              marginTop: "3rem",
+            }}
+          >
             {COMPLIANCE_AREAS.map((area, i) => (
-              <div key={i} style={{ background: "var(--white)", padding: "2rem", borderRadius: "var(--r-lg)", border: "1px solid var(--border)" }}>
-                <div style={{ fontSize: "2.5rem", marginBottom: "1rem" }}>{area.icon}</div>
-                <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.3rem", fontWeight: 600, color: "var(--navy)", marginBottom: "0.75rem" }}>
+              <div
+                key={i}
+                style={{
+                  background: "var(--white)",
+                  padding: "2rem",
+                  borderRadius: "var(--r-lg)",
+                  border: "1px solid var(--border)",
+                }}
+              >
+                <div style={{ fontSize: "2.2rem", marginBottom: "1rem" }}>{area.icon}</div>
+                <h3
+                  style={{
+                    fontFamily: "var(--font-serif)",
+                    fontSize: "1.1rem",
+                    fontWeight: 600,
+                    color: "var(--navy)",
+                    marginBottom: "0.75rem",
+                    lineHeight: 1.35,
+                  }}
+                >
                   {area.title}
                 </h3>
-                <p style={{ color: "var(--txt-2)", fontSize: "0.95rem", lineHeight: 1.7 }}>
+                <p style={{ color: "var(--txt-2)", fontSize: "0.9rem", lineHeight: 1.75 }}>
                   {area.description}
                 </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className={`sus-section ${visible.has("risk") ? "sus--in" : ""}`} data-obs="risk" ref={obs("risk")} style={{ background: "var(--white)" }}>
-        <div className="sus-wrap">
-          <div className="sus-sh">
-            <span className="sus-eyebrow">Risk Management</span>
-            <h2 className="sus-h2">Risk Mitigation Strategies</h2>
-            <p className="sus-sh__p">Proactive identification and management of risks to protect our business and stakeholders.</p>
-          </div>
-
-          <div style={{ display: "grid", gap: "2rem", marginTop: "3rem", maxWidth: "900px", margin: "3rem auto 0" }}>
-            {RISK_MANAGEMENT.map((risk, i) => (
-              <div key={i} style={{ background: "var(--off)", padding: "2.5rem", borderRadius: "var(--r-lg)", borderLeft: "3px solid var(--accent)" }}>
-                <h3 style={{ fontFamily: "var(--font-serif)", fontSize: "1.4rem", fontWeight: 600, color: "var(--navy)", marginBottom: "1rem" }}>
-                  {risk.category}
-                </h3>
-                <p style={{ color: "var(--txt-2)", fontSize: "1rem", lineHeight: 1.8, marginBottom: "1rem" }}>
-                  {risk.description}
-                </p>
-                <div style={{ background: "var(--white)", padding: "1.5rem", borderRadius: "var(--r)", marginTop: "1rem" }}>
-                  <strong style={{ color: "var(--accent)", fontSize: "0.9rem", textTransform: "uppercase", letterSpacing: "0.1em", display: "block", marginBottom: "0.5rem" }}>
-                    Mitigation Strategies
-                  </strong>
-                  <p style={{ color: "var(--txt-2)", fontSize: "0.95rem", lineHeight: 1.7 }}>
-                    {risk.mitigation}
-                  </p>
-                </div>
               </div>
             ))}
           </div>
