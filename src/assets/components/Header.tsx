@@ -116,7 +116,7 @@ export default function Header() {
       <div className="cdp-wrap cdp-header__inner">
         <Link to="/" className="cdp-logo">
           <img 
-            src="/Images/Ebada-Group.png" 
+            src="/Images/Ebada-Group-logo.png" 
             alt="Ebadah Group Logo" 
             className="cdp-logo__img"
             height="100"
