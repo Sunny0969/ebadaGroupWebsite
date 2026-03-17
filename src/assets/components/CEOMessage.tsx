@@ -42,8 +42,12 @@ export default function CEOMessage() {
             <div className="au-ceo__portrait-col">
               <div className="au-ceo__img-wrap">
                 <img
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80"
+                  src="/Images/Gemini_Generated_Image_2t6bxr2t6bxr2t6b.png"
                   alt="Ebadah Group Japan President"
+                  style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
+                  onError={(e) => {
+                    console.error("Image failed to load:", e.currentTarget.src);
+                  }}
                 />
                 <div className="au-ceo__nameplate">
                   <strong>RAHMAN SHEIK HABIBUR</strong>

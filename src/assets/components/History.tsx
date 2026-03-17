@@ -10,7 +10,7 @@ import "./About.css";
    ─────────────────────────────────────────────────────────────── */
 const TIMELINE = [
   {
-    year: "October 2023",
+    year: "26 September 2023",
     title: "Foundation of Ebadah Group Japan",
     desc: "Ebadah Group Japan Co., Ltd. was established in Utsunomiya, Tochigi Prefecture, with an initial capital of ¥10 million. Operations began in manufacturing dispatch and on-site outsourcing services, primarily serving major electronics manufacturers in the Kanto region.",
   },

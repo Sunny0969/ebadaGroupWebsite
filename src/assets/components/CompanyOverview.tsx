@@ -54,10 +54,10 @@ const COMPANY_INFO = [
   { label: "Head Office",           value: "2F Tonoike Shukugo Bldg., 2-10-16 Shukugo, Utsunomiya-shi, Tochigi, Japan" },
   { label: "TEL",                   value: "0283 41 6300", link: "tel:0283416300" },
   { label: "FAX",                   value: "0283 41 6300" },
-  { label: "Established",           value: "October 5, 2023" },
+  { label: "Established",           value: "26 September 2023" },
   { label: "Capital",               value: "¥20 Million" },
   { label: "Employees",             value: "65" },
-  { label: "Annual Revenue",        value: "¥18.5 Million" },
+  { label: "Annual Revenue",        value: "¥184556608" },
   {
     label: "License Number",
     value: "Worker Dispatch: 派09-300503",
