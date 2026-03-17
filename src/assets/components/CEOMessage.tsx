@@ -43,11 +43,11 @@ export default function CEOMessage() {
               <div className="au-ceo__img-wrap">
                 <img
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80"
-                  alt="CDP Japan President"
+                  alt="Ebadah Group Japan President"
                 />
                 <div className="au-ceo__nameplate">
                   <strong>RAHMAN SHEIK HABIBUR</strong>
-                  <span>President & CEO, CDP Japan</span>
+                  <span>President & CEO, Ebadah Group Japan</span>
                 </div>
               </div>
               <div className="au-ceo__signature-wrap">
@@ -57,15 +57,15 @@ export default function CEOMessage() {
             </div>
             <div className="au-ceo__message">
               <p className="au-ceo__salutation">Dear Valued Partners and Friends,</p>
-              <p>In 2023, CDP Japan was founded on a singular conviction: that work is not merely a transaction — it is the foundation of dignity, purpose, and belonging. Three decades later, that conviction is more relevant than ever.</p>
+              <p>In 2023, Ebadah Group Japan was founded on a singular conviction: that work is not merely a transaction — it is the foundation of dignity, purpose, and belonging. Three decades later, that conviction is more relevant than ever.</p>
               <p>Japan's manufacturing sector faces profound challenges: an aging workforce, accelerating automation, and the urgent need to welcome and integrate international talent. These are not problems to fear — they are opportunities for companies and individuals who are prepared.</p>
-              <p>At CDP Japan, our role is to be that preparation. We invest deeply in understanding each client's unique needs, in screening candidates with genuine rigor, and in providing the post-placement support that ensures every placement becomes a long-term success story.</p>
+              <p>At Ebadah Group Japan, our role is to be that preparation. We invest deeply in understanding each client's unique needs, in screening candidates with genuine rigor, and in providing the post-placement support that ensures every placement becomes a long-term success story.</p>
               <p>As we look ahead to the next 30 years, I am energized by what we are building: an AI-augmented matching platform, an expanded network of international recruitment partners, and a sustainability-led HR framework that we believe will define the future of Japanese staffing.</p>
-              <p>Thank you for trusting CDP Japan. We will continue to earn that trust — every day, with every placement, in every region of this extraordinary country.</p>
+              <p>Thank you for trusting Ebadah Group Japan. We will continue to earn that trust — every day, with every placement, in every region of this extraordinary country.</p>
               <p className="au-ceo__closing">With sincere gratitude,</p>
               <div className="au-ceo__sig-final">
                 <div className="au-ceo__sig-text au-ceo__sig-text--lg">RAHMAN SHEIK HABIBUR</div>
-                <span>President & CEO, CDP Japan Co., Ltd.</span>
+                <span>President & CEO, Ebadah Group Japan Co., Ltd.</span>
               </div>
             </div>
           </div>

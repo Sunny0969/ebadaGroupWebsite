@@ -42,7 +42,7 @@ import TermsConditions from './assets/components/TermsConditions'
 import CookiePolicy from './assets/components/CookiePolicy'
 import NotFound from './assets/components/NotFound'
 import BackToTop from './assets/components/BackToTop'
-import SocialProofNotification from './assets/components/SocialProofNotification'
+// import SocialProofNotification from './assets/components/SocialProofNotification'
 import AccessibilityControls from './assets/components/AccessibilityControls'
 import ScrollToTop from './assets/components/ScrollToTop'
 import './App.css'
@@ -102,7 +102,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
         </Routes>
         <BackToTop />
-        <SocialProofNotification />
+        {/* <SocialProofNotification /> */}
         <AccessibilityControls />
       </BrowserRouter>
       </AuthProvider>

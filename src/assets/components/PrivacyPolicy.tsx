@@ -5,10 +5,10 @@ import "./Contact.css";
 
 export default function PrivacyPolicy() {
   useEffect(() => {
-    document.title = "Privacy Policy - Ebada Group | Personal Information Protection";
+    document.title = "Privacy Policy - Ebadah Group | Personal Information Protection";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Ebada Group Privacy Policy - Learn how we collect, use, and protect your personal information in accordance with Japan\'s Personal Information Protection Act.');
+      metaDescription.setAttribute('content', 'Ebadah Group Privacy Policy - Learn how we collect, use, and protect your personal information in accordance with Japan\'s Personal Information Protection Act.');
     }
   }, []);
 
@@ -34,7 +34,7 @@ export default function PrivacyPolicy() {
                 Compliance with Japanese Law
               </p>
               <p style={{ margin: 0 }}>
-                This Privacy Policy is designed to comply with Japan's Personal Information Protection Act (Act No. 57 of 2003, as amended) and related regulations. Ebada Group is registered as a personal information handling business operator with the Personal Information Protection Commission of Japan.
+                This Privacy Policy is designed to comply with Japan's Personal Information Protection Act (Act No. 57 of 2003, as amended) and related regulations. Ebadah Group is registered as a personal information handling business operator with the Personal Information Protection Commission of Japan.
               </p>
             </div>
 
@@ -42,7 +42,7 @@ export default function PrivacyPolicy() {
               1. Introduction and Scope
             </h2>
             <p style={{ marginBottom: "1.5rem", fontSize: "1.05rem" }}>
-              Ebada Group ("we," "our," "us," or "the Company") is a licensed employment placement business (許可番号: 13-ユ-123456) and temporary staffing agency operating in Japan. We are committed to protecting your personal information in accordance with Japan's Personal Information Protection Act (個人情報保護法) and other applicable laws.
+              Ebadah Group ("we," "our," "us," or "the Company") is a licensed employment placement business (許可番号: 13-ユ-123456) and temporary staffing agency operating in Japan. We are committed to protecting your personal information in accordance with Japan's Personal Information Protection Act (個人情報保護法) and other applicable laws.
             </p>
             <p style={{ marginBottom: "1.5rem" }}>
               This Privacy Policy explains how we collect, use, disclose, retain, and protect your personal information when you use our website, services, or interact with us. By using our services, you consent to the collection and use of your personal information as described in this policy.
@@ -281,10 +281,10 @@ export default function PrivacyPolicy() {
               If you have questions, concerns, or wish to exercise your rights regarding this Privacy Policy or our handling of your personal information, please contact us:
             </p>
             <div style={{ background: "linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%)", padding: "2rem", borderRadius: "var(--r-lg)", marginBottom: "2rem", color: "var(--white)" }}>
-              <p style={{ marginBottom: "0.75rem", fontSize: "1.2rem", fontWeight: "600" }}>Ebada Group - Personal Information Protection Manager</p>
+              <p style={{ marginBottom: "0.75rem", fontSize: "1.2rem", fontWeight: "600" }}>Ebadah Group - Personal Information Protection Manager</p>
               <p style={{ marginBottom: "0.5rem" }}><strong>Address:</strong> 2F Tonoike Shukugo Bldg., 2-10-16 Shukugo, Utsunomiya-shi, Tochigi, Japan</p>
               <p style={{ marginBottom: "0.5rem" }}><strong>Office Phone:</strong> 0283 41 6300 (Monday-Friday, 9:00 AM - 6:00 PM JST)</p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Mobile:</strong> 070-2181-8345</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Mobile:</strong>  0283 41 6300</p>
               <p style={{ marginBottom: "0.5rem" }}><strong>Email:</strong> sheikrahmanjp@gmail.com</p>
               <p style={{ marginBottom: "0.5rem" }}><strong>Representative Director:</strong> RAHMAN SHEIK HABIBUR</p>
             </div>

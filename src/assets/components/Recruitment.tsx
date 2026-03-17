@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Services.css";
@@ -25,7 +26,7 @@ const SUCCESS_STORIES = [
     title: "Executive Recruitment Success",
     client: "Leading Manufacturing Firm",
     challenge: "Needed a bilingual Operations Director with 15+ years experience in automotive manufacturing.",
-    solution: "CDP Japan leveraged our executive search network, identifying 8 qualified candidates within 2 weeks.",
+    solution: "Ebadah Group  Japan leveraged our executive search network, identifying 8 qualified candidates within 2 weeks.",
     result: "Position filled in 6 weeks. Candidate has exceeded performance expectations and led 20% efficiency improvement."
   },
   {
@@ -94,12 +95,12 @@ export default function Recruitment() {
           <div className="sv-overview__text">
             <span className="sv-eyebrow">Service Overview</span>
             <h2 className="sv-h2">Comprehensive Recruitment Solutions</h2>
-            <p>CDP Japan's Recruitment service connects employers with qualified candidates across all industries and experience levels. Whether you need a single executive hire or a bulk recruitment campaign, we deliver results through our extensive network and proven methodology.</p>
+            <p>Ebadah Group  Japan's Recruitment service connects employers with qualified candidates across all industries and experience levels. Whether you need a single executive hire or a bulk recruitment campaign, we deliver results through our extensive network and proven methodology.</p>
             <p>Our recruitment specialists understand Japan's job market dynamics, cultural nuances, and the importance of finding candidates who align with your company values and long-term goals.</p>
             <ul className="sv-overview__benefits">
               <li>Access to passive and active candidates nationwide</li>
               <li>Average time-to-fill: 4-6 weeks for mid-level roles</li>
-              <li>90-day replacement guarantee</li>
+              {/* <li>90-day replacement guarantee</li> */}
               <li>94% placement success rate</li>
               <li>Dedicated recruitment consultants</li>
             </ul>
@@ -188,7 +189,7 @@ export default function Recruitment() {
         <div className="sv-wrap">
           <div className="sv-sh">
             <span className="sv-eyebrow">Why Choose Us</span>
-            <h2 className="sv-h2">What Sets CDP Japan Apart</h2>
+            <h2 className="sv-h2">What Sets Ebadah Group  Japan Apart</h2>
             <p className="sv-sh__p">Our competitive advantages in recruitment.</p>
           </div>
           <div className="sv-why__grid">
@@ -203,13 +204,13 @@ export default function Recruitment() {
         </div>
       </section>
 
-      <section className="sv-section sv-pricing">
+      {/* <section className="sv-section sv-pricing">
         <div className="sv-wrap sv-pricing__content">
           <h2 className="sv-h2 sv-pricing__h2">Get a Custom Quote</h2>
           <p className="sv-pricing__p">Recruitment fees vary based on role level, complexity, and volume. Contact us for transparent pricing tailored to your needs.</p>
           <a href="#contact" className="sv-btn sv-btn--primary">Request Consultation</a>
         </div>
-      </section>
+      </section> */}
 
       <section className={`sv-section sv-faq ${visible.has("faq") ? "sv--in" : ""}`} data-obs="faq" ref={obs("faq")}>
         <div className="sv-wrap">
@@ -236,10 +237,10 @@ export default function Recruitment() {
       <section className="sv-section sv-cta">
         <div className="sv-wrap sv-cta__content">
           <h2 className="sv-h2 sv-cta__h2">Ready to Find Your Next Great Hire?</h2>
-          <p className="sv-cta__p">Let's discuss how CDP Japan can help you find the perfect candidate for your team.</p>
+          <p className="sv-cta__p">Let's discuss how Ebadah Group  Japan can help you find the perfect candidate for your team.</p>
           <div className="sv-cta__actions">
-            <a href="#contact" className="sv-btn sv-btn--primary">Get Started</a>
-            <a href="#contact" className="sv-btn sv-btn--ghost">Request Consultation</a>
+            <Link to="/contact" className="sv-btn sv-btn--primary">Get Started</Link>
+            <Link to="/contact" className="sv-btn sv-btn--ghost">Request Consultation</Link>
           </div>
         </div>
       </section>

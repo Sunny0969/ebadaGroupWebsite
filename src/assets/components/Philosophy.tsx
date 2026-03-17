@@ -84,7 +84,7 @@ export default function Philosophy() {
             <h2 className="au-h2 au-h2--light">Company Philosophy</h2>
             <p className="au-sh__p au-sh__p--light">
               The principles that define who we are, why we exist, and how every member of
-              Ebada Group Japan works and makes decisions each day.
+              Ebadah Group Japan works and makes decisions each day.
             </p>
           </div>
 
@@ -102,10 +102,10 @@ export default function Philosophy() {
                 Creating employment opportunities for all people,<br />
                 and creating the joy of working for all people.
               </blockquote>
-              <cite className="au-phil__cite">Ebada Group Japan — Corporate Purpose</cite>
+              <cite className="au-phil__cite">Ebadah Group Japan — Corporate Purpose</cite>
 
               <p className="au-phil__purpose-body">
-                "Employment Creation" is the corporate spirit that Ebada Group Japan has shared
+                "Employment Creation" is the corporate spirit that Ebadah Group Japan has shared
                 among all its employees since its founding — an unwavering axis of judgment that
                 guides every decision we make.
               </p>
@@ -180,7 +180,7 @@ export default function Philosophy() {
                 Sharing the Joy<br />of Working.
               </h2>
               <p>
-                At Ebada Group Japan, our purpose is not simply a statement on a wall — it is the
+                At Ebadah Group Japan, our purpose is not simply a statement on a wall — it is the
                 lived experience of every worker we place and every company we support. We measure
                 our success not only in placements made, but in careers built, businesses
                 strengthened, and communities enriched.
@@ -215,7 +215,7 @@ export default function Philosophy() {
       <section className="au-cta-band">
         <div className="au-wrap au-cta-band__inner">
           <div>
-            <h2 className="au-cta-band__h2">Ready to Work with Ebada Group Japan?</h2>
+            <h2 className="au-cta-band__h2">Ready to Work with Ebadah Group Japan?</h2>
             <p>
               Whether you're seeking your next career step or building a high-performance
               workforce, our team is here to help.

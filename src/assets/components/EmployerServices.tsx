@@ -15,7 +15,7 @@ const SERVICES = [
     benefits: [
       "Just-in-time staffing aligned to your production schedule",
       "Reduces over-hiring risk — scale up or down with demand",
-      "Ebada Group Japan bears payroll, social insurance, and welfare costs",
+      "Ebadah Group Japan bears payroll, social insurance, and welfare costs",
       "Proprietary retention management to minimise worker turnover",
     ],
   },
@@ -31,18 +31,18 @@ const SERVICES = [
       "Rigorous candidate evaluation: skills, cultural fit, and team compatibility",
     ],
   },
-  {
-    icon: "💼",
-    title: "Business Process Outsourcing",
-    description:
-      "Delegate non-core factory and office operations to Ebada Group Japan's managed teams. Our outsourcing model allows your in-house staff to focus entirely on core business functions while we handle execution with accountability.",
-    benefits: [
-      "Reduces administrative burden on internal staff",
-      "Ebada manages team supervision, quality control, and attendance",
-      "Flexible scope — from single-line packing to multi-function back office",
-      "Cost-transparent model with clear SLA-based performance metrics",
-    ],
-  },
+  // {
+  //   icon: "💼",
+  //   title: "Business Process Outsourcing",
+  //   description:
+  //     "Delegate non-core factory and office operations to Ebadah Group Japan's managed teams. Our outsourcing model allows your in-house staff to focus entirely on core business functions while we handle execution with accountability.",
+  //   benefits: [
+  //     "Reduces administrative burden on internal staff",
+  //     "Ebadah manages team supervision, quality control, and attendance",
+  //     "Flexible scope — from single-line packing to multi-function back office",
+  //     "Cost-transparent model with clear SLA-based performance metrics",
+  //   ],
+  // },
   {
     icon: "⚙️",
     title: "Engineer Dispatch",
@@ -89,14 +89,14 @@ const SUCCESS_STORIES = [
     challenge:
       "A client needed 150 production workers within three weeks to staff a newly commissioned automotive assembly line, with no existing pool of pre-screened candidates.",
     solution:
-      "Ebada Group Japan activated a targeted cross-prefecture recruitment drive across Tochigi, Saitama, and Ibaraki, conducting accelerated 7-stage screening and onboarding in parallel with factory safety induction.",
+      "Ebadah Group Japan activated a targeted cross-prefecture recruitment drive across Tochigi, Saitama, and Ibaraki, conducting accelerated 7-stage screening and onboarding in parallel with factory safety induction.",
     result:
       "150 workers placed in 17 days. All met the client's skills requirements. Zero safety incidents in the first 90 days. 94% of workers renewed their contracts after the initial dispatch period.",
-    metrics: [
-      { value: "17 Days", label: "Time to Fill" },
-      { value: "94%", label: "Contract Renewal Rate" },
-      { value: "0", label: "Safety Incidents" },
-    ],
+    // metrics: [
+    //   { value: "17 Days", label: "Time to Fill" },
+    //   { value: "94%", label: "Contract Renewal Rate" },
+    //   { value: "0", label: "Safety Incidents" },
+    // ],
   },
   {
     icon: "⭐",
@@ -105,7 +105,7 @@ const SUCCESS_STORIES = [
     challenge:
       "A client required a bilingual Production Technology Manager with 10+ years of experience in precision machining, without disclosing the vacancy publicly to avoid alerting competitors.",
     solution:
-      "Leveraged Ebada Group Japan's private candidate database and professional network to identify and approach 6 qualified passive candidates. Full process managed under strict confidentiality from search to offer.",
+      "Leveraged Ebadah Group Japan's private candidate database and professional network to identify and approach 6 qualified passive candidates. Full process managed under strict confidentiality from search to offer.",
     result:
       "Position filled in 5 weeks with zero public advertising. The placed candidate led a process improvement initiative that reduced line downtime by 22% within six months.",
     metrics: [
@@ -121,7 +121,7 @@ const SUCCESS_STORIES = [
     challenge:
       "A client sought to hire 30 Specified Skilled Workers from Vietnam and Indonesia for production roles, but lacked the internal capacity to manage visa procedures, compliance obligations, and post-arrival support.",
     solution:
-      "Ebada Group Japan provided full one-stop support: overseas recruitment coordination, supervising organisation selection, visa documentation, pre-departure Japanese language training, and on-site multilingual coordinator assignment after arrival.",
+      "Ebadah Group Japan provided full one-stop support: overseas recruitment coordination, supervising organisation selection, visa documentation, pre-departure Japanese language training, and on-site multilingual coordinator assignment after arrival.",
     result:
       "30 workers placed and fully onboarded within the client's timeline. 100% visa approval rate. Worker retention at 12 months: 92%. Client renewed the programme for a further 20 placements.",
     metrics: [
@@ -176,7 +176,7 @@ export default function EmployerServices() {
         <div className="emp-wrap">
           <h1 className="emp-h1 emp-hero__h1">Workforce Solutions for Employers</h1>
           <p className="emp-hero__p">
-            Partner with Ebada Group Japan to find the right talent, scale your workforce, and
+            Partner with Ebadah Group Japan to find the right talent, scale your workforce, and
             drive sustainable business growth. As a licensed worker dispatch and paid employment
             placement agency, we cover every staffing need — from production floor to executive
             suite.
@@ -196,7 +196,7 @@ export default function EmployerServices() {
             <span className="emp-eyebrow">Our Services</span>
             <h2 className="emp-h2">Comprehensive Workforce Solutions</h2>
             <p className="emp-sh__p">
-              Ebada Group Japan operates as a comprehensive human resources services company,
+              Ebadah Group Japan operates as a comprehensive human resources services company,
               covering a wide range of staffing needs across manufacturing, engineering, and
               business operations — with customised solutions for every client.
             </p>
@@ -235,7 +235,7 @@ export default function EmployerServices() {
             <span className="emp-eyebrow">Client Success</span>
             <h2 className="emp-h2">Real Results, Real ROI</h2>
             <p className="emp-sh__p">
-              How Ebada Group Japan has helped companies across Japan solve their most
+              How Ebadah Group Japan has helped companies across Japan solve their most
               challenging workforce problems — with measurable outcomes.
             </p>
           </div>
@@ -274,14 +274,14 @@ export default function EmployerServices() {
                     {story.result}
                   </p>
                 </div>
-                <div className="emp-story__metric">
+                {/* <div className="emp-story__metric">
                   {story.metrics.map((metric, j) => (
                     <div key={j} className="emp-story__metric-item">
                       <div className="emp-story__metric-value">{metric.value}</div>
                       <div className="emp-story__metric-label">{metric.label}</div>
                     </div>
                   ))}
-                </div>
+                </div> */}
               </div>
             ))}
           </div>
@@ -300,7 +300,7 @@ export default function EmployerServices() {
             <span className="emp-eyebrow">Industry Specialisations</span>
             <h2 className="emp-h2">Industries We Serve</h2>
             <p className="emp-sh__p">
-              Ebada Group Japan brings deep expertise across Japan's key industrial sectors —
+              Ebadah Group Japan brings deep expertise across Japan's key industrial sectors —
               combining long-term client relationships with up-to-date knowledge of each
               sector's skills requirements and labour market conditions.
             </p>
@@ -336,7 +336,7 @@ export default function EmployerServices() {
               margin: "0 auto 2rem",
             }}
           >
-            Tell us your hiring needs and an Ebada Group Japan consultant will respond within
+            Tell us your hiring needs and an Ebadah Group Japan consultant will respond within
             one business day with a tailored proposal.
           </p>
           <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>

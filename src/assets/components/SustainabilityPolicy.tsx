@@ -76,7 +76,7 @@ export default function SustainabilityPolicy() {
 
           <div className="sus-policy__statement">
             <p>
-              At Ebada Group Japan, we believe that sustainable business practices are not optional—they are essential to our long-term success and our responsibility to society. For 3years, we have been connecting people with opportunities, and we recognize that this mission extends beyond job placement to creating positive impact in our communities and environment.
+              At Ebadah Group Japan, we believe that sustainable business practices are not optional—they are essential to our long-term success and our responsibility to society. For 3years, we have been connecting people with opportunities, and we recognize that this mission extends beyond job placement to creating positive impact in our communities and environment.
             </p>
             <p>
               Our sustainability commitment encompasses three core pillars: environmental stewardship, social responsibility, and strong governance. We are dedicated to reducing our environmental footprint, promoting diversity and inclusion, ensuring fair labor practices, and maintaining the highest standards of ethical conduct.
@@ -89,7 +89,7 @@ export default function SustainabilityPolicy() {
             </p>
             <div className="sus-policy__signature">
               <div className="sus-policy__signature-name">RAHMAN SHEIK HABIBUR</div>
-              <div className="sus-policy__signature-role">President & CEO, Ebada Group Japan Co., Ltd.</div>
+              <div className="sus-policy__signature-role">President & CEO, Ebadah Group Japan Co., Ltd.</div>
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function SustainabilityPolicy() {
           <div className="sus-sh">
             <span className="sus-eyebrow">Leadership Commitment</span>
             <h2 className="sus-h2">Our Pledge</h2>
-            <p className="sus-sh__p">Ebada Group Japan's leadership team is committed to embedding sustainability into every aspect of our business.</p>
+            <p className="sus-sh__p">Ebadah Group Japan's leadership team is committed to embedding sustainability into every aspect of our business.</p>
           </div>
 
           <div style={{ maxWidth: "900px", margin: "0 auto" }}>

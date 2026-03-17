@@ -1,7 +1,7 @@
 {
   "name": "ebada-group-backend",
   "version": "1.0.0",
-  "description": "Backend server for Ebada Group website",
+  "description": "Backend server for Ebadah Group website",
   "main": "src/server.js",
   "type": "module",
   "scripts": {

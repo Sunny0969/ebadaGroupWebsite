@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Services.css";
@@ -25,7 +26,7 @@ const SUCCESS_STORIES = [
     title: "Automotive R&D Project",
     client: "Major Auto Manufacturer",
     challenge: "Needed 15 specialized engineers for 18-month R&D project in electric vehicle development.",
-    solution: "CDP Japan assembled a team of electrical, mechanical, and software engineers with EV experience, deployed within 4 weeks.",
+    solution: "Ebadah Group  Japan assembled a team of electrical, mechanical, and software engineers with EV experience, deployed within 4 weeks.",
     result: "Project completed on schedule. All engineers received performance bonuses. Client extended contract for next phase."
   },
   {
@@ -94,7 +95,7 @@ export default function EngineerDispatch() {
           <div className="sv-overview__text">
             <span className="sv-eyebrow">Service Overview</span>
             <h2 className="sv-h2">Technical Engineering Solutions</h2>
-            <p>CDP Japan's Engineer Dispatch service provides qualified engineers across all technical disciplines for R&D projects, manufacturing support, and specialized technical assignments.</p>
+            <p>Ebadah Group  Japan's Engineer Dispatch service provides qualified engineers across all technical disciplines for R&D projects, manufacturing support, and specialized technical assignments.</p>
             <p>Whether you need a single specialist or an entire engineering team, we match certified professionals with the right expertise to drive your technical projects forward.</p>
             <ul className="sv-overview__benefits">
               <li>Engineers across all technical disciplines</li>
@@ -188,7 +189,7 @@ export default function EngineerDispatch() {
         <div className="sv-wrap">
           <div className="sv-sh">
             <span className="sv-eyebrow">Why Choose Us</span>
-            <h2 className="sv-h2">What Sets CDP Japan Apart</h2>
+            <h2 className="sv-h2">What Sets Ebadah Group  Japan Apart</h2>
             <p className="sv-sh__p">Our competitive advantages in engineering placement.</p>
           </div>
           <div className="sv-why__grid">
@@ -203,13 +204,13 @@ export default function EngineerDispatch() {
         </div>
       </section>
 
-      <section className="sv-section sv-pricing">
+      {/* <section className="sv-section sv-pricing">
         <div className="sv-wrap sv-pricing__content">
           <h2 className="sv-h2 sv-pricing__h2">Get a Custom Quote</h2>
           <p className="sv-pricing__p">Engineering placement fees vary based on specialization, project duration, and engagement type. Contact us for detailed pricing.</p>
           <a href="#contact" className="sv-btn sv-btn--primary">Request Consultation</a>
         </div>
-      </section>
+      </section> */}
 
       <section className={`sv-section sv-faq ${visible.has("faq") ? "sv--in" : ""}`} data-obs="faq" ref={obs("faq")}>
         <div className="sv-wrap">
@@ -236,10 +237,10 @@ export default function EngineerDispatch() {
       <section className="sv-section sv-cta">
         <div className="sv-wrap sv-cta__content">
           <h2 className="sv-h2 sv-cta__h2">Ready to Strengthen Your Engineering Team?</h2>
-          <p className="sv-cta__p">Let's discuss how CDP Japan can provide the technical expertise your projects need.</p>
+          <p className="sv-cta__p">Let's discuss how Ebadah Group  Japan can provide the technical expertise your projects need.</p>
           <div className="sv-cta__actions">
-            <a href="#contact" className="sv-btn sv-btn--primary">Get Started</a>
-            <a href="#contact" className="sv-btn sv-btn--ghost">Request Consultation</a>
+            <Link to="/contact" className="sv-btn sv-btn--primary">Get Started</Link>
+            <Link to="/contact" className="sv-btn sv-btn--ghost">Request Consultation</Link>
           </div>
         </div>
       </section>

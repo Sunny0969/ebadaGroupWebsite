@@ -47,25 +47,24 @@ const CORE_VALUES = [
 //   { value: "12",     label: "Industries Served" },
 // ];
 
-/* Real CDP Japan company data — rebranded as Ebada Group Japan */
+/* Ebadah Group Co., Ltd. Company Information */
 const COMPANY_INFO = [
-  { label: "Company Name",          value: "Ebada Group Japan Co., Ltd." },
-  { label: "Representative",        value: "President & CEO — Atsushi Tamura" },
-  { label: "Head Office",           value: "2-2-1 Mine, Utsunomiya City, Tochigi 321-0942, Japan" },
-  { label: "TEL",                   value: "028-651-6123", link: "tel:028-651-6123" },
-  { label: "FAX",                   value: "028-632-1905" },
-  { label: "Established",           value: "April 9, 2023" },
-  { label: "Capital",               value: "¥99.8 Million" },
-  { label: "Employees",             value: "155 (as of April 1, 2025)" },
-  { label: "Annual Revenue",        value: "¥13.6 Billion (FY March 2025)" },
+  { label: "Company Name",          value: "Ebadah Group Co., Ltd." },
+  { label: "Representative",        value: "Representative Director: RAHMAN SHEIK HABIBUR" },
+  { label: "Head Office",           value: "2F Tonoike Shukugo Bldg., 2-10-16 Shukugo, Utsunomiya-shi, Tochigi, Japan" },
+  { label: "TEL",                   value: "0283 41 6300", link: "tel:0283416300" },
+  { label: "FAX",                   value: "0283 41 6300" },
+  { label: "Established",           value: "October 5, 2023" },
+  { label: "Capital",               value: "¥20 Million" },
+  { label: "Employees",             value: "65" },
+  { label: "Annual Revenue",        value: "¥18.5 Million" },
   {
-    label: "License Numbers",
-    value: "Worker Dispatch: (派) 09-010024 / Paid Employment Placement: 09-ユ-010026",
+    label: "License Number",
+    value: "Worker Dispatch: 派09-300503",
   },
   {
-    label: "Memberships",
-    value:
-      "Japan Staffing Services Association · Japan BPO Association · National Outsourcing Promotion Council · NAGOMi (Foreign Talent Coexistence Support Association)",
+    label: "License Date",
+    value: "August 1, 2024",
   },
 ];
 
@@ -120,26 +119,26 @@ export default function CompanyOverview() {
         <div className="au-hero__bg">
           <img
             src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80"
-            alt="Ebada Group Japan Office"
+            alt="Ebadah Group Japan Office"
           />
           <div className="au-hero__veil" />
         </div>
         <div className="au-wrap au-hero__content">
-          <span className="au-eyebrow">About Ebada Group Japan</span>
+          <span className="au-eyebrow">About Ebadah Group Japan<span style={{ fontSize: "0.75rem", color: "var(--white)", fontWeight: "800" }}> Since 2023</span></span>
           <h1 className="au-hero__h1">
             Connecting People.<br />Building Industry.
           </h1>
           <p className="au-hero__sub">
-            Ebada Group Japan has been the trusted workforce solutions partner for
+            Ebadah Group Japan has been the trusted workforce solutions partner for
             manufacturers across Japan — placing skilled workers, engineers, and international talent
             with precision, care, and unwavering commitment.
           </p>
-          <div className="au-hero__chips">
+          {/* <div className="au-hero__chips">
             <span>Est. 2023</span>
             <span>50,000+ Placements</span>
             <span>47 Prefectures</span>
             <span>12 Industries</span>
-          </div>
+          </div> */}
         </div>
         <div className="au-hero__scroll">
           <span>SCROLL</span>
@@ -178,7 +177,7 @@ export default function CompanyOverview() {
             <h3 className="au-mv__label">Our Promise</h3>
             <p>
               We don't simply fill positions — we build enduring partnerships. Every placement is
-              backed by Ebada Group Japan's 30-year commitment to quality, genuine care, and
+              backed by Ebadah Group Japan's 30-year commitment to quality, genuine care, and
               continuous post-placement support.
             </p>
           </div>
@@ -219,7 +218,7 @@ export default function CompanyOverview() {
             <span className="au-eyebrow">Our Story</span>
             <h2 className="au-h2">Three Decades of Workforce Excellence</h2>
             <p>
-              Ebada Group Japan was founded in 2023 on a simple but powerful belief: that matching
+              Ebadah Group Japan was founded in 2023 on a simple but powerful belief: that matching
               the right person to the right job creates lasting, positive change — for individuals,
               for companies, and for Japanese society as a whole.
             </p>
@@ -240,11 +239,11 @@ export default function CompanyOverview() {
             <button
               className="au-video-thumb"
               onClick={() => setVideoOpen(true)}
-              aria-label="Play Ebada Group Japan introduction video"
+              aria-label="Play Ebadah Group Japan introduction video"
             >
               <img
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&q=80"
-                alt="Ebada Group Japan Team"
+                alt="Ebadah Group Japan Team"
               />
               <div className="au-video-thumb__overlay" />
               <div className="au-video-thumb__play">
@@ -273,7 +272,7 @@ export default function CompanyOverview() {
                       width="100%"
                       height="100%"
                       src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
-                      title="Ebada Group Japan Introduction"
+                      title="Ebadah Group Japan Introduction"
                       frameBorder="0"
                       allow="autoplay; fullscreen"
                       allowFullScreen
@@ -341,7 +340,7 @@ export default function CompanyOverview() {
             <span className="au-eyebrow">What Drives Us</span>
             <h2 className="au-h2">Core Values</h2>
             <p className="au-sh__p">
-              These six principles guide every decision we make at Ebada Group Japan — from how we
+              These six principles guide every decision we make at Ebadah Group Japan — from how we
               screen candidates to how we support our clients and our own team.
             </p>
           </div>
@@ -372,60 +371,118 @@ export default function CompanyOverview() {
       >
         <div className="au-wrap">
           <div className="au-sh">
-            <span className="au-eyebrow">Credentials & Compliance</span>
-            <h2 className="au-h2">Licenses & Memberships</h2>
+            <span className="au-eyebrow">Disclosure of Information</span>
+            <h2 className="au-h2">Worker Dispatching (Margin Rate, etc.)</h2>
             <p className="au-sh__p">
-              Ebada Group Japan operates under all required national licenses and maintains active
-              membership in Japan's leading industry associations.
+              Information regarding worker dispatching services in compliance with Japanese labor regulations.
             </p>
           </div>
 
           <div className="au-assoc__grid">
-            {/* Licenses */}
+            {/* Dispatch Statistics */}
             <div className="au-assoc__card">
               <div className="au-assoc__card-header">
-                <span className="au-assoc__ico">📋</span>
-                <h3 className="au-assoc__h3">Operating Licenses</h3>
+                <span className="au-assoc__ico">📊</span>
+                <h3 className="au-assoc__h3">Dispatch Statistics (FY2025)</h3>
               </div>
               <ul className="au-assoc__list">
                 <li>
-                  <span className="au-assoc__badge">Worker Dispatch</span>
-                  License No. (派) 09-010024
+                  <span className="au-assoc__badge">Number of Dispatched Workers</span>
+                  (As of June 1, 2025): 31 people
                 </li>
                 <li>
-                  <span className="au-assoc__badge">Employment Placement</span>
-                  License No. 09-ユ-010026
+                  <span className="au-assoc__badge">Number of Client Establishments</span>
+                  2 companies
+                </li>
+                <li>
+                  <span className="au-assoc__badge">Average Dispatch Fee</span>
+                  (Per 8 hours, all duties): 13,800 JPY
+                </li>
+                <li>
+                  <span className="au-assoc__badge">Average Wage of Dispatched Workers</span>
+                  (Per 8 hours, all duties): 10,400 JPY
+                </li>
+                <li>
+                  <span className="au-assoc__badge">Average Margin Rate</span>
+                  24.6%
                 </li>
               </ul>
-              <p className="au-assoc__note">
-                All dispatch and placement services are conducted under licenses issued by the
-                Ministry of Health, Labour and Welfare of Japan in full compliance with the
-                Worker Dispatch Act.
-              </p>
             </div>
 
-            {/* Associations */}
+            {/* Career Consulting & Contact */}
             <div className="au-assoc__card">
               <div className="au-assoc__card-header">
-                <span className="au-assoc__ico">🏛️</span>
-                <h3 className="au-assoc__h3">Industry Memberships</h3>
+                <span className="au-assoc__ico">📞</span>
+                <h3 className="au-assoc__h3">Career Consulting & Contact Information</h3>
               </div>
               <ul className="au-assoc__list">
                 <li>
                   <span className="au-assoc__dot" />
-                  Japan Staffing Services Association (JSSA)
+                  <strong>Department:</strong> Head Office Sales Department
                 </li>
                 <li>
                   <span className="au-assoc__dot" />
-                  Japan BPO Association
+                  <strong>Title/Position:</strong> Representative Director
                 </li>
                 <li>
                   <span className="au-assoc__dot" />
-                  National Outsourcing Promotion Council
+                  <strong>Name:</strong> RAHMAN SHEIK HABIBUR
                 </li>
                 <li>
                   <span className="au-assoc__dot" />
-                  NAGOMi — Foreign Talent Coexistence Support National Association
+                  <strong>Phone Number:</strong> <a href="tel:07021818345" style={{ color: "var(--accent)" }}> 0283 41 6300</a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Career Development Education and Training */}
+            <div className="au-assoc__card">
+              <div className="au-assoc__card-header">
+                <span className="au-assoc__ico">🎓</span>
+                <h3 className="au-assoc__h3">Career Development Education and Training</h3>
+              </div>
+              <ul className="au-assoc__list">
+                <li>
+                  <span className="au-assoc__badge">New Hire Training</span>
+                  Business etiquette for dispatched employees (At Hiring)
+                </li>
+                <li>
+                  <span className="au-assoc__badge">Mid-level Employee Training</span>
+                  On-site quality management (At all times)
+                </li>
+                <li>
+                  <span className="au-assoc__badge">Senior Employee Training</span>
+                  On-site production management (At all times)
+                </li>
+                <li>
+                  <span className="au-assoc__badge">Business Skill Training</span>
+                  PC skills (1st-3rd year) (At all times)
+                </li>
+                <li>
+                  <span className="au-assoc__badge">Work Style & Leader Training</span>
+                  Work Style (1st-3rd year) & Leader Training (4th year+) (At all times)
+                </li>
+              </ul>
+            </div>
+
+            {/* Labor-Management Agreement */}
+            <div className="au-assoc__card">
+              <div className="au-assoc__card-header">
+                <span className="au-assoc__ico">🤝</span>
+                <h3 className="au-assoc__h3">Labor-Management Agreement Information</h3>
+              </div>
+              <ul className="au-assoc__list">
+                <li>
+                  <span className="au-assoc__dot" />
+                  <strong>Method:</strong> Labor-Management Agreement Method (労使協定方式)
+                </li>
+                <li>
+                  <span className="au-assoc__dot" />
+                  <strong>Target Scope:</strong> Applies to all dispatched workers
+                </li>
+                <li>
+                  <span className="au-assoc__dot" />
+                  <strong>Validity Period:</strong> September 1, 2024 – August 31, 2025
                 </li>
               </ul>
             </div>
@@ -439,7 +496,7 @@ export default function CompanyOverview() {
       <section className="au-cta-band">
         <div className="au-wrap au-cta-band__inner">
           <div>
-            <h2 className="au-cta-band__h2">Ready to Work with Ebada Group Japan?</h2>
+            <h2 className="au-cta-band__h2">Ready to Work with Ebadah Group Japan?</h2>
             <p>
               Whether you're seeking your next career step or building a high-performance workforce,
               our team is ready to help.

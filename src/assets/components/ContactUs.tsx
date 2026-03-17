@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Contact.css";
 
+/* Unused - preserved for future use */
+/*
 const BRANCHES = [
   { name: "Tokyo Head Office", region: "Kanto", address: "2-5-1 Marunouchi, Chiyoda-ku, Tokyo 100-0005", phone: "03-1234-5678", email: "tokyo@cdpjp.com", manager: "Hiroshi Tanaka", hours: "Mon–Fri 9:00–18:00", lat: 35.6812, lng: 139.7671 },
   { name: "Osaka Branch", region: "Kansai", address: "1-3-2 Umeda, Kita-ku, Osaka 530-0001", phone: "06-2345-6789", email: "osaka@cdpjp.com", manager: "Yuki Yamamoto", hours: "Mon–Fri 9:00–18:00", lat: 34.7024, lng: 135.4959 },
@@ -12,6 +13,7 @@ const BRANCHES = [
   { name: "Sapporo Branch", region: "Hokkaido", address: "2-1-5 Kita 3-jo, Chuo-ku, Sapporo 060-0003", phone: "011-567-8901", email: "sapporo@cdpjp.com", manager: "Tomoki Ito", hours: "Mon–Fri 9:00–18:00", lat: 43.0618, lng: 141.3545 },
   { name: "Sendai Branch", region: "Tohoku", address: "4-6-1 Ichibancho, Aoba-ku, Sendai 980-0811", phone: "022-678-9012", email: "sendai@cdpjp.com", manager: "Rie Kobayashi", hours: "Mon–Fri 9:00–18:00", lat: 38.2688, lng: 140.8721 },
 ];
+*/
 
 const INQUIRY_TYPES = [
   { value: "job-seeker", label: "Job Seeker Inquiry", route: "sheikrahmanjp@gmail.com" },
@@ -21,6 +23,8 @@ const INQUIRY_TYPES = [
   { value: "general", label: "General Inquiry", route: "sheikrahmanjp@gmail.com" },
 ];
 
+/* Unused - preserved for future use */
+/*
 const SOCIAL_LINKS = [
   { name: "LinkedIn", url: "https://www.linkedin.com/company/cdp-japan", icon: "💼" },
   { name: "Facebook", url: "https://www.facebook.com/cdpjapan", icon: "📘" },
@@ -28,12 +32,13 @@ const SOCIAL_LINKS = [
   { name: "Instagram", url: "https://www.instagram.com/cdpjapan", icon: "📷" },
   { name: "YouTube", url: "https://www.youtube.com/cdpjapan", icon: "📺" },
 ];
+*/
 
 const HEAD_OFFICE = {
-  name: "Ebada Group Head Office",
+  name: "Ebadah Group Head Office",
   address: "2F Tonoike Shukugo Bldg., 2-10-16 Shukugo, Utsunomiya-shi, Tochigi, Japan",
   phone: "0283 41 6300",
-  mobile: "070-2181-8345",
+  mobile: " 0283 41 6300",
   email: "sheikrahmanjp@gmail.com",
   representativeDirector: "RAHMAN SHEIK HABIBUR",
   hours: "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday: 10:00 AM - 4:00 PM\nSunday: Closed",
@@ -58,10 +63,10 @@ export default function ContactUs() {
 
   useEffect(() => {
     // SEO: Update document title and meta
-    document.title = "Contact Us - Ebada Group | Get in Touch";
+    document.title = "Contact Us - Ebadah Group | Get in Touch";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Contact Ebada Group for recruitment services, job opportunities, or business inquiries. Visit our head office in Utsunomiya, Tochigi or contact us via phone or email.');
+      metaDescription.setAttribute('content', 'Contact Ebadah Group for recruitment services, job opportunities, or business inquiries. Visit our head office in Utsunomiya, Tochigi or contact us via phone or email.');
     }
 
     const io = new IntersectionObserver(
@@ -143,7 +148,7 @@ export default function ContactUs() {
         <div className="contact-hero__content">
           <h1 className="contact-h1 contact-hero__h1">Contact Us</h1>
           <p className="contact-hero__p">
-            Get in touch with Ebada Group. Whether you're a job seeker, employer, or have a general inquiry, we're here to help.
+            Get in touch with Ebadah Group. Whether you're a job seeker, employer, or have a general inquiry, we're here to help.
           </p>
         </div>
       </section>
@@ -329,19 +334,22 @@ export default function ContactUs() {
             <p className="contact-sh__p">Visit our head office in Utsunomiya, Tochigi or find directions using the map below.</p>
           </div>
 
-          <div className="contact-map">
+          <div className="contact-map" style={{ width: "100%", height: "450px", borderRadius: "var(--r-lg)", overflow: "hidden" }}>
             <iframe
-              src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6d-s6U4ZUOqN8Yk&q=${encodeURIComponent(HEAD_OFFICE.address)}&zoom=15`}
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3204.7051797096387!2d139.88114897569713!3d36.56122097231622!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601f67bb6efb3cd1%3A0x70139ecfee8dc6da!2z44OA44Kk44Ov44Oc44Km5oOF5aCx44K344K544OG44Og77yI5qCq77yJIOWuh-mDveWuruaUr-W6lw!5e0!3m2!1sen!2s!4v1773682174242!5m2!1sen!2s"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Ebada Group Head Office Location"
+              title="Ebadah Group Head Office Location"
             />
           </div>
         </div>
       </section>
 
-      <section className={`contact-section ${visible.has("branches") ? "contact--in" : ""}`} data-obs="branches" ref={obs("branches")} style={{ background: "var(--white)" }}>
+      {/* <section className={`contact-section ${visible.has("branches") ? "contact--in" : ""}`} data-obs="branches" ref={obs("branches")} style={{ background: "var(--white)" }}>
         <div className="contact-wrap">
           <div className="contact-sh">
             <span className="contact-eyebrow">Branch Offices</span>
@@ -371,9 +379,9 @@ export default function ContactUs() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className={`contact-section ${visible.has("social") ? "contact--in" : ""}`} data-obs="social" ref={obs("social")} style={{ background: "var(--off)" }}>
+      {/* <section className={`contact-section ${visible.has("social") ? "contact--in" : ""}`} data-obs="social" ref={obs("social")} style={{ background: "var(--off)" }}>
         <div className="contact-wrap">
           <div className="contact-sh">
             <span className="contact-eyebrow">Connect With Us</span>
@@ -396,7 +404,7 @@ export default function ContactUs() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

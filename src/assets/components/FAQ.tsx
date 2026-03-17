@@ -16,8 +16,8 @@ const FAQ_CATEGORIES = [
 const FAQ_ITEMS = [
   {
     category: "general",
-    question: "What is Ebada Group and what services do you provide?",
-    answer: "Ebada Group is a licensed recruitment and staffing agency in Japan, operating under Employment Placement Business License No. 13-ユ-123456 and Worker Dispatch Business License No. 派13-123456. We provide comprehensive staffing solutions including permanent employment placement, manufacturing dispatch, engineer dispatch, business outsourcing, foreign employment services, and re-employment support across various industries throughout Japan."
+    question: "What is Ebadah Group and what services do you provide?",
+    answer: "Ebadah Group is a licensed recruitment and staffing agency in Japan, operating under Employment Placement Business License No. 13-ユ-123456 and Worker Dispatch Business License No. 派13-123456. We provide comprehensive staffing solutions including permanent employment placement, manufacturing dispatch, engineer dispatch, business outsourcing, foreign employment services, and re-employment support across various industries throughout Japan."
   },
   {
     category: "general",
@@ -31,12 +31,12 @@ const FAQ_ITEMS = [
   },
   {
     category: "general",
-    question: "Is Ebada Group licensed to operate in Japan?",
-    answer: "Yes, Ebada Group is fully licensed and compliant with Japanese employment and labor laws. We hold Employment Placement Business License No. 13-ユ-123456 issued by the Tokyo Labor Bureau, and Worker Dispatch Business License No. 派13-123456 issued by the Ministry of Health, Labour and Welfare. We operate in strict compliance with the Employment Security Act (職業安定法) and Worker Dispatch Act (労働者派遣事業法)."
+    question: "Is Ebadah Group licensed to operate in Japan?",
+    answer: "Yes, Ebadah Group is fully licensed and compliant with Japanese employment and labor laws. We hold Employment Placement Business License No. 13-ユ-123456 issued by the Tokyo Labor Bureau, and Worker Dispatch Business License No. 派13-123456 issued by the Ministry of Health, Labour and Welfare. We operate in strict compliance with the Employment Security Act (職業安定法) and Worker Dispatch Act (労働者派遣事業法)."
   },
   {
     category: "job-seekers",
-    question: "How do I apply for a job through Ebada Group?",
+    question: "How do I apply for a job through Ebadah Group?",
     answer: "You can apply for jobs in several ways: (1) Browse our job listings on our website, create a free account, and apply directly through our platform, (2) Register as a candidate and our team will match you with suitable opportunities based on your profile, (3) Visit one of our branch offices for in-person assistance. Visit our 'How to Apply' page for detailed step-by-step instructions and tips for successful applications."
   },
   {
@@ -61,7 +61,7 @@ const FAQ_ITEMS = [
   },
   {
     category: "employers",
-    question: "How can I post a job opening with Ebada Group?",
+    question: "How can I post a job opening with Ebadah Group?",
     answer: "Employers can post job openings through our 'Post a Job' portal on our website. Simply create an employer account, fill out the job details including job description, requirements, salary range, and working conditions, and our team will review and publish your listing. For enterprise clients with multiple positions or ongoing staffing needs, contact our sales team at sales@ebadagroup.com for dedicated account management and customized solutions."
   },
   {
@@ -82,7 +82,7 @@ const FAQ_ITEMS = [
   {
     category: "services",
     question: "What is Manufacturing Dispatch (製造業派遣)?",
-    answer: "Manufacturing Dispatch is our service that provides skilled workers to manufacturing companies on a temporary or contract basis. This helps companies manage production peaks, seasonal demands, special projects, and temporary staffing needs without long-term employment commitments. We handle all employment administration including payroll, social insurance, and benefits. Dispatch workers are employees of Ebada Group, ensuring compliance with the Worker Dispatch Act."
+    answer: "Manufacturing Dispatch is our service that provides skilled workers to manufacturing companies on a temporary or contract basis. This helps companies manage production peaks, seasonal demands, special projects, and temporary staffing needs without long-term employment commitments. We handle all employment administration including payroll, social insurance, and benefits. Dispatch workers are employees of Ebadah Group, ensuring compliance with the Worker Dispatch Act."
   },
   {
     category: "services",
@@ -136,10 +136,10 @@ export default function FAQ() {
   const [openItems, setOpenItems] = useState<Set<number>>(new Set());
 
   useEffect(() => {
-    document.title = "FAQ - Ebada Group | Frequently Asked Questions";
+    document.title = "FAQ - Ebadah Group | Frequently Asked Questions";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Frequently asked questions about Ebada Group recruitment services, job applications, employer services, and compliance with Japanese employment laws.');
+      metaDescription.setAttribute('content', 'Frequently asked questions about Ebadah Group recruitment services, job applications, employer services, and compliance with Japanese employment laws.');
     }
   }, []);
 

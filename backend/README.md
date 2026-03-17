@@ -1,6 +1,6 @@
-# Ebada Group Backend Server
+# Ebadah Group Backend Server
 
-Backend server for Ebada Group website with MongoDB database connection.
+Backend server for Ebadah Group website with MongoDB database connection.
 
 ## 📋 Prerequisites
 

@@ -80,7 +80,7 @@ export default function HowToApply() {
       <section className="js-hero">
         <div className="js-wrap">
           <h1 className="js-h1 js-hero__h1">How to Apply</h1>
-          <p className="js-hero__p">A step-by-step guide to applying for jobs through CDP Japan. Everything you need to know to submit a successful application.</p>
+          <p className="js-hero__p">A step-by-step guide to applying for jobs through Ebadah Group  Japan. Everything you need to know to submit a successful application.</p>
         </div>
       </section>
 

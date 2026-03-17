@@ -45,7 +45,7 @@ connectDB();
 // Routes
 app.get('/', (req, res) => {
   res.json({
-    message: 'Welcome to Ebada Group Backend API',
+    message: 'Welcome to Ebadah Group Backend API',
     status: 'Server is running successfully!',
     timestamp: new Date().toISOString()
   });

@@ -10,7 +10,7 @@ const RESOURCES = [
     icon: "🧩",
     title: "Problem-Solving Capability",
     description:
-      "Ebada Group Japan identifies the root causes of your workforce challenges and proposes innovative, effective HR solutions using industry expertise built over years of hands-on manufacturing experience. We continuously track market trends and industry shifts to ensure our advice is always current and actionable.",
+      "Ebadah Group Japan identifies the root causes of your workforce challenges and proposes innovative, effective HR solutions using industry expertise built over years of hands-on manufacturing experience. We continuously track market trends and industry shifts to ensure our advice is always current and actionable.",
     link: "/contact",
     linkText: "Request a Consultation",
   },
@@ -34,7 +34,7 @@ const RESOURCES = [
     icon: "🎓",
     title: "Talent Development Programme",
     description:
-      "Ebada Group Japan prioritises human development. All dispatched staff complete internal pre-assignment training to reach a defined skill level before placement. Ongoing training, e-learning programmes, and qualification support keep workers growing — and reskilling initiatives ensure continued long-term contribution.",
+      "Ebadah Group Japan prioritises human development. All dispatched staff complete internal pre-assignment training to reach a defined skill level before placement. Ongoing training, e-learning programmes, and qualification support keep workers growing — and reskilling initiatives ensure continued long-term contribution.",
     link: "/contact",
     linkText: "View Training Details",
   },
@@ -42,7 +42,7 @@ const RESOURCES = [
     icon: "⚖️",
     title: "Compliance Standards",
     description:
-      "We maintain the highest compliance standards and enforce full legal adherence across all operations. Ebada Group Japan holds Privacy Mark certification and actively educates all staff and associates on ethical conduct. We believe compliance is the foundation of trustworthiness and long-term sustainability.",
+      "We maintain the highest compliance standards and enforce full legal adherence across all operations. Ebadah Group Japan holds Privacy Mark certification and actively educates all staff and associates on ethical conduct. We believe compliance is the foundation of trustworthiness and long-term sustainability.",
     link: "/contact",
     linkText: "View Compliance Policy",
   },
@@ -50,19 +50,21 @@ const RESOURCES = [
     icon: "🌱",
     title: "Sustainability Commitment",
     description:
-      "Based on our founding principle of 'Employment Creation', Ebada Group Japan is committed to contributing to a sustainable society — protecting human rights, promoting diversity, supporting next-generation workers, and advancing women's participation in the workforce. We align our activities with SDGs and international CSR frameworks.",
+      "Based on our founding principle of 'Employment Creation', Ebadah Group Japan is committed to contributing to a sustainable society — protecting human rights, promoting diversity, supporting next-generation workers, and advancing women's participation in the workforce. We align our activities with SDGs and international CSR frameworks.",
     link: "/contact",
     linkText: "Read Our Sustainability Policy",
   },
 ];
 
+/* Unused - preserved for future use */
+/*
 const ARTICLES = [
   {
     title: "5 Proven Strategies for Reducing Turnover on the Manufacturing Floor",
     category: "Retention",
     date: "March 20, 2025",
     excerpt:
-      "High turnover in manufacturing is costly — financially and operationally. This guide draws on Ebada Group Japan's retention management framework to present five evidence-based strategies that improve worker stability and reduce churn in production environments.",
+      "High turnover in manufacturing is costly — financially and operationally. This guide draws on Ebadah Group Japan's retention management framework to present five evidence-based strategies that improve worker stability and reduce churn in production environments.",
   },
   {
     title: "2025 Labour Market Trends in Japanese Manufacturing",
@@ -76,16 +78,17 @@ const ARTICLES = [
     category: "Legal Compliance",
     date: "March 10, 2025",
     excerpt:
-      "The Specified Skilled Worker programme is one of the most important tools available to Japanese manufacturers facing labour shortages. This guide explains employer obligations, eligible industries, and how Ebada Group Japan handles end-to-end compliance support.",
+      "The Specified Skilled Worker programme is one of the most important tools available to Japanese manufacturers facing labour shortages. This guide explains employer obligations, eligible industries, and how Ebadah Group Japan handles end-to-end compliance support.",
   },
   {
     title: "Building an Inclusive Manufacturing Workforce: DEI Best Practices for Japanese Factories",
     category: "Hiring Guides",
     date: "March 5, 2025",
     excerpt:
-      "Diversity, Equity & Inclusion (DEI) is no longer optional — it is a competitive advantage. This article shares practical guidance on recruiting and integrating international workers, women, and career-changers into your manufacturing operations, based on real Ebada Group Japan client experience.",
+      "Diversity, Equity & Inclusion (DEI) is no longer optional — it is a competitive advantage. This article shares practical guidance on recruiting and integrating international workers, women, and career-changers into your manufacturing operations, based on real Ebadah Group Japan client experience.",
   },
 ];
+*/
 
 /* ─── COMPONENT ─────────────────────────────────────────────── */
 export default function EmployerResources() {
@@ -98,7 +101,7 @@ export default function EmployerResources() {
         <div className="emp-wrap">
           <h1 className="emp-h1 emp-hero__h1">Employer Resources</h1>
           <p className="emp-hero__p">
-            Tools, guides, and insights from Ebada Group Japan — helping you build, manage, and
+            Tools, guides, and insights from Ebadah Group Japan — helping you build, manage, and
             retain a high-performing workforce across Japan's manufacturing and technical sectors.
           </p>
         </div>
@@ -111,7 +114,7 @@ export default function EmployerResources() {
             <span className="emp-eyebrow">Why Partner with Us</span>
             <h2 className="emp-h2">Our Five Strengths & Commitments</h2>
             <p className="emp-sh__p">
-              Ebada Group Japan's promise to every client: through our five core strengths and an
+              Ebadah Group Japan's promise to every client: through our five core strengths and an
               unwavering commitment to compliance and sustainability, we contribute to your business
               performance and provide reliable service — consistently, and for the long term.
               Each client is assigned a dedicated manager or team, ensuring focused, drift-free
@@ -135,7 +138,7 @@ export default function EmployerResources() {
       </section>
 
       {/* ── ARTICLES ── */}
-      <section className="emp-section" style={{ background: "var(--off)" }}>
+      {/* <section className="emp-section" style={{ background: "var(--off)" }}>
         <div className="emp-wrap">
           <div className="emp-sh">
             <span className="emp-eyebrow">Latest Updates</span>
@@ -207,7 +210,7 @@ export default function EmployerResources() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── SUSTAINABILITY STATEMENT BAND ── */}
       <section className="emp-section" style={{ background: "var(--navy)" }}>
@@ -248,7 +251,7 @@ export default function EmployerResources() {
             >
               Under our founding principle of "Employment Creation" — creating employment
               opportunities for all people, and creating the joy of working for all people —
-              Ebada Group Japan faces the environmental, social, and economic challenges
+              Ebadah Group Japan faces the environmental, social, and economic challenges
               confronting international society with sincerity.
             </p>
             <p
@@ -273,7 +276,7 @@ export default function EmployerResources() {
                 fontSize: "0.85rem",
               }}
             >
-              Sustainability Promotion Committee · Ebada Group Japan Co., Ltd.
+              Sustainability Promotion Committee · Ebadah Group Japan Co., Ltd.
             </div>
           </div>
         </div>

@@ -13,14 +13,14 @@ const OPEN_POSITIONS = [
     type: "Full-time",
     description: "Lead recruitment efforts for manufacturing and engineering positions. Build relationships with clients and candidates."
   },
-  {
-    id: 2,
-    title: "HR Business Partner",
-    department: "Human Resources",
-    location: "Osaka, Japan",
-    type: "Full-time",
-    description: "Support employee relations, talent development, and organizational growth. Work closely with management teams."
-  },
+  // {
+  //   id: 2,
+  //   title: "HR Business Partner",
+  //   department: "Human Resources",
+  //   location: "Osaka, Japan",
+  //   type: "Full-time",
+  //   description: "Support employee relations, talent development, and organizational growth. Work closely with management teams."
+  // },
   {
     id: 3,
     title: "Marketing Specialist",
@@ -37,22 +37,22 @@ const OPEN_POSITIONS = [
     type: "Full-time",
     description: "Coordinate dispatch operations, manage schedules, and ensure smooth service delivery to clients."
   },
-  {
-    id: 5,
-    title: "IT Support Specialist",
-    department: "IT",
-    location: "Tokyo, Japan",
-    type: "Full-time",
-    description: "Maintain IT infrastructure, support internal systems, and implement technology solutions."
-  },
-  {
-    id: 6,
-    title: "Client Relations Manager",
-    department: "Sales",
-    location: "Fukuoka, Japan",
-    type: "Full-time",
-    description: "Manage client relationships, identify business opportunities, and drive revenue growth."
-  }
+  // {
+  //   id: 5,
+  //   title: "IT Support Specialist",
+  //   department: "IT",
+  //   location: "Tokyo, Japan",
+  //   type: "Full-time",
+  //   description: "Maintain IT infrastructure, support internal systems, and implement technology solutions."
+  // },
+  // {
+  //   id: 6,
+  //   title: "Client Relations Manager",
+  //   department: "Sales",
+  //   location: "Fukuoka, Japan",
+  //   type: "Full-time",
+  //   description: "Manage client relationships, identify business opportunities, and drive revenue growth."
+  // }
 ];
 
 const BENEFITS = [
@@ -109,7 +109,7 @@ const CULTURE_ITEMS = [
 
 const TESTIMONIALS = [
   {
-    quote: "Working at CDP Japan has been an incredible journey. The company truly values its employees and provides excellent opportunities for growth. The supportive team environment makes every day enjoyable.",
+    quote: "Working at Ebadah Group  Japan has been an incredible journey. The company truly values its employees and provides excellent opportunities for growth. The supportive team environment makes every day enjoyable.",
     name: "Yuki Tanaka",
     role: "Senior Recruitment Consultant"
   },
@@ -119,7 +119,7 @@ const TESTIMONIALS = [
     role: "Operations Manager"
   },
   {
-    quote: "The work-life balance here is amazing. I feel valued as an employee, and the benefits package is comprehensive. CDP Japan is more than just a workplace—it's a community.",
+    quote: "The work-life balance here is amazing. I feel valued as an employee, and the benefits package is comprehensive. Ebadah Group  Japan is more than just a workplace—it's a community.",
     name: "Mei Yamamoto",
     role: "HR Business Partner"
   }
@@ -146,10 +146,10 @@ export default function JoinOurTeam() {
 
   useEffect(() => {
     // SEO: Update document title and meta
-    document.title = "Join Our Team - Careers at CDP Japan | Internal Job Opportunities";
+    document.title = "Join Our Team - Careers at Ebadah Group  Japan | Internal Job Opportunities";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Explore career opportunities at CDP Japan. We offer competitive salaries, comprehensive benefits, and a supportive work environment. Apply for internal positions in recruitment, HR, marketing, and more.');
+      metaDescription.setAttribute('content', 'Explore career opportunities at Ebadah Group  Japan. We offer competitive salaries, comprehensive benefits, and a supportive work environment. Apply for internal positions in recruitment, HR, marketing, and more.');
     }
 
     const io = new IntersectionObserver(
@@ -265,10 +265,10 @@ export default function JoinOurTeam() {
         <div className="careers-hero__content">
           <h1 className="careers-h1 careers-hero__h1">Join Our Team</h1>
           <p className="careers-hero__p">
-            Build your career with CDP Japan. We're looking for passionate individuals who want to make a difference in the recruitment and workforce solutions industry.
+            Build your career with Ebadah Group  Japan. We're looking for passionate individuals who want to make a difference in the recruitment and workforce solutions industry.
           </p>
           <p style={{ fontSize: "0.9rem", color: "rgba(255,255,255,0.7)", marginTop: "1rem" }}>
-            <strong>Note:</strong> These are internal CDP positions, not client job placements.
+            <strong>Note:</strong> These are internal Ebadah Group  positions, not client job placements.
           </p>
         </div>
       </section>
@@ -278,7 +278,7 @@ export default function JoinOurTeam() {
           <div className="careers-sh">
             <span className="careers-eyebrow">Career Opportunities</span>
             <h2 className="careers-h2">Open Positions</h2>
-            <p className="careers-sh__p">Explore current job openings at CDP Japan and find your next career opportunity.</p>
+            <p className="careers-sh__p">Explore current job openings at Ebadah Group  Japan and find your next career opportunity.</p>
           </div>
 
           <div className="careers-jobs-grid">
@@ -333,7 +333,7 @@ export default function JoinOurTeam() {
           <div className="careers-sh">
             <span className="careers-eyebrow">Company Culture</span>
             <h2 className="careers-h2">Our Work Environment</h2>
-            <p className="careers-sh__p">Discover what makes CDP Japan a great place to work.</p>
+            <p className="careers-sh__p">Discover what makes Ebadah Group  Japan a great place to work.</p>
           </div>
 
           <div className="careers-culture-grid">
@@ -355,7 +355,7 @@ export default function JoinOurTeam() {
           <div className="careers-sh">
             <span className="careers-eyebrow">Employee Testimonials</span>
             <h2 className="careers-h2">Hear From Our Team</h2>
-            <p className="careers-sh__p">See what our employees say about working at CDP Japan.</p>
+            <p className="careers-sh__p">See what our employees say about working at Ebadah Group  Japan.</p>
           </div>
 
           <div className="careers-testimonials">
@@ -375,7 +375,7 @@ export default function JoinOurTeam() {
             ))}
           </div>
 
-          <div style={{ textAlign: "center", marginTop: "3rem" }}>
+          {/* <div style={{ textAlign: "center", marginTop: "3rem" }}>
             <p style={{ color: "var(--txt-2)", marginBottom: "1rem" }}>Want to learn more about our culture?</p>
             <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
               <Link to="/careers/blog" className="careers-btn careers-btn--outline">
@@ -385,7 +385,7 @@ export default function JoinOurTeam() {
                 Application Process
               </Link>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -478,7 +478,7 @@ export default function JoinOurTeam() {
                       value={formData.coverLetter}
                       onChange={handleInputChange}
                       className={formErrors.coverLetter ? "careers-modal__input--error" : ""}
-                      placeholder="Tell us why you're interested in this position and what you can bring to CDP Japan..."
+                      placeholder="Tell us why you're interested in this position and what you can bring to Ebadah Group  Japan..."
                     />
                     {formErrors.coverLetter && <span className="careers-modal__error">{formErrors.coverLetter}</span>}
                   </div>

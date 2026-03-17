@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Services.css";
@@ -25,7 +26,7 @@ const SUCCESS_STORIES = [
     title: "Manufacturing Workforce Integration",
     client: "Automotive Parts Manufacturer",
     challenge: "Needed 150 skilled production workers to address labor shortage. Required workers with technical training and Japanese language basics.",
-    solution: "CDP Japan recruited candidates from Southeast Asia, provided 3-month pre-departure training in Japanese and technical skills, and managed complete visa process.",
+    solution: "Ebadah Group  Japan recruited candidates from Southeast Asia, provided 3-month pre-departure training in Japanese and technical skills, and managed complete visa process.",
     result: "150 workers successfully integrated. 98% retention rate after 12 months. Production capacity increased by 35%."
   },
   {
@@ -94,7 +95,7 @@ export default function ForeignEmployment() {
           <div className="sv-overview__text">
             <span className="sv-eyebrow">Service Overview</span>
             <h2 className="sv-h2">International Workforce Solutions</h2>
-            <p>CDP Japan's Foreign Employment Support service helps Japanese companies address labor shortages by recruiting, training, and integrating qualified international workers.</p>
+            <p>Ebadah Group  Japan's Foreign Employment Support service helps Japanese companies address labor shortages by recruiting, training, and integrating qualified international workers.</p>
             <p>From recruitment in source countries to pre-departure training, visa processing, and ongoing integration support, we provide end-to-end solutions for international workforce needs.</p>
             <ul className="sv-overview__benefits">
               <li>Global recruitment network across Asia</li>
@@ -104,8 +105,22 @@ export default function ForeignEmployment() {
               <li>Ongoing worker support and retention programs</li>
             </ul>
           </div>
-          <div className="sv-overview__img">
-            <img src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45f?w=800&q=80" alt="International Workers" />
+          <div className="sv-overview__img" style={{ position: "relative", width: "100%", minHeight: "400px" }}>
+            <img 
+              src="https://images.unsplash.com/photo-1526304640581-d334cdbbf45f?w=800&q=80" 
+              alt="International Workers" 
+              style={{ 
+                width: "100%", 
+                height: "100%", 
+                objectFit: "cover", 
+                display: "block",
+                borderRadius: "var(--r-lg)"
+              }}
+              onError={(e) => {
+                // Fallback if image fails to load
+                e.currentTarget.src = "https://images.unsplash.com/photo-1526304640581-d334cdbbf45f?w=800&q=80";
+              }}
+            />
           </div>
         </div>
       </section>
@@ -188,7 +203,7 @@ export default function ForeignEmployment() {
         <div className="sv-wrap">
           <div className="sv-sh">
             <span className="sv-eyebrow">Why Choose Us</span>
-            <h2 className="sv-h2">What Sets CDP Japan Apart</h2>
+            <h2 className="sv-h2">What Sets Ebadah Group  Japan Apart</h2>
             <p className="sv-sh__p">Our competitive advantages in international employment.</p>
           </div>
           <div className="sv-why__grid">
@@ -203,13 +218,13 @@ export default function ForeignEmployment() {
         </div>
       </section>
 
-      <section className="sv-section sv-pricing">
+      {/* <section className="sv-section sv-pricing">
         <div className="sv-wrap sv-pricing__content">
           <h2 className="sv-h2 sv-pricing__h2">Get a Custom Quote</h2>
           <p className="sv-pricing__p">International employment costs vary based on recruitment volume, training requirements, and visa types. Contact us for detailed pricing.</p>
-          <a href="#contact" className="sv-btn sv-btn--primary">Request Consultation</a>
+          <Link to="/contact" className="sv-btn sv-btn--primary">Request Consultation</Link>
         </div>
-      </section>
+      </section> */}
 
       <section className={`sv-section sv-faq ${visible.has("faq") ? "sv--in" : ""}`} data-obs="faq" ref={obs("faq")}>
         <div className="sv-wrap">
@@ -236,10 +251,10 @@ export default function ForeignEmployment() {
       <section className="sv-section sv-cta">
         <div className="sv-wrap sv-cta__content">
           <h2 className="sv-h2 sv-cta__h2">Ready to Build Your International Workforce?</h2>
-          <p className="sv-cta__p">Let's discuss how CDP Japan can help you access qualified international talent.</p>
+          <p className="sv-cta__p">Let's discuss how Ebadah Group  Japan can help you access qualified international talent.</p>
           <div className="sv-cta__actions">
-            <a href="#contact" className="sv-btn sv-btn--primary">Get Started</a>
-            <a href="#contact" className="sv-btn sv-btn--ghost">Request Consultation</a>
+            <Link to="/contact" className="sv-btn sv-btn--primary">Get Started</Link>
+            <Link to="/contact" className="sv-btn sv-btn--ghost">Request Consultation</Link>
           </div>
         </div>
       </section>

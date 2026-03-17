@@ -7,7 +7,7 @@ const INITIATIVES = [
   {
     icon: "💡",
     title: "LED & Energy Efficiency Upgrade",
-    description: "All fluorescent lighting across Ebada Group offices has been replaced with LED, reducing power consumption by approximately 30% compared to conventional lighting while also cutting CO₂ emissions and lowering running costs.",
+    description: "All fluorescent lighting across Ebadah Group offices has been replaced with LED, reducing power consumption by approximately 30% compared to conventional lighting while also cutting CO₂ emissions and lowering running costs.",
     metrics: [
       { value: "~30%", label: "Power Reduction" },
       { value: "All", label: "Offices Upgraded" }
@@ -16,7 +16,7 @@ const INITIATIVES = [
   {
     icon: "🚗",
     title: "EV Vehicles & Charging Infrastructure",
-    description: "In line with our carbon-neutral goals, Ebada Group has introduced electric company vehicles and installed EV charging stations at our main offices, supporting both corporate and employee EV/PHV use.",
+    description: "In line with our carbon-neutral goals, Ebadah Group has introduced electric company vehicles and installed EV charging stations at our main offices, supporting both corporate and employee EV/PHV use.",
     metrics: [
       { value: "0", label: "Direct Emissions" },
       { value: "EV", label: "Fleet Vehicles" }
@@ -25,7 +25,7 @@ const INITIATIVES = [
   {
     icon: "💻",
     title: "Digital Transformation (DX)",
-    description: "Through early adoption of digitalization, Ebada Group has built internal sharing systems enabling paperless operations, remote work, and fully digital approval workflows — reducing paper waste and improving operational efficiency.",
+    description: "Through early adoption of digitalization, Ebadah Group has built internal sharing systems enabling paperless operations, remote work, and fully digital approval workflows — reducing paper waste and improving operational efficiency.",
     metrics: [
       { value: "100%", label: "Digital Approvals" },
       { value: "Paperless", label: "Operations" }
@@ -34,7 +34,7 @@ const INITIATIVES = [
   {
     icon: "♻️",
     title: "3R Recycling Program",
-    description: "Ebada Group collects PET bottle caps company-wide for recycling. Revenue from recycled materials is donated via the Japan Committee for Vaccines for the World's Children (JCV), combining environmental and humanitarian impact.",
+    description: "Ebadah Group collects PET bottle caps company-wide for recycling. Revenue from recycled materials is donated via the Japan Committee for Vaccines for the World's Children (JCV), combining environmental and humanitarian impact.",
     metrics: [
       { value: "3R", label: "Reduce Reuse Recycle" },
       { value: "JCV", label: "Charity Partner" }
@@ -45,22 +45,22 @@ const INITIATIVES = [
 const CONSERVATION_ACTIVITIES = [
   {
     title: "Forest Development Initiative",
-    description: "Ebada Group participates in a collaborative forest management program, conducting tree planting, undergrowth clearing, thinning, and forest floor maintenance. Increased CO₂ absorption through afforestation contributes to climate change mitigation and biodiversity conservation.",
+    description: "Ebadah Group participates in a collaborative forest management program, conducting tree planting, undergrowth clearing, thinning, and forest floor maintenance. Increased CO₂ absorption through afforestation contributes to climate change mitigation and biodiversity conservation.",
     year: "Ongoing"
   },
   {
-    title: "\"Ebada Connecting Forest\" — Named & Planted",
-    description: "Following an internal naming campaign, our forest was named 'Ebada Connecting Forest' to reflect our ties with employees, clients, and nature. Tree planting of magnolia, hydrangea, and maple was carried out by the Sustainability Promotion Committee.",
+    title: "\"Ebadah Connecting Forest\" — Named & Planted",
+    description: "Following an internal naming campaign, our forest was named 'Ebadah Connecting Forest' to reflect our ties with employees, clients, and nature. Tree planting of magnolia, hydrangea, and maple was carried out by the Sustainability Promotion Committee.",
     year: "2025"
   },
   {
     title: "Community Clean-Up Campaign",
-    description: "Ebada Group organizes regular 'Clean Campaigns' in local parks and public spaces as part of our environmental conservation and community contribution activities. Employee volunteers participate to strengthen social responsibility and team unity.",
+    description: "Ebadah Group organizes regular 'Clean Campaigns' in local parks and public spaces as part of our environmental conservation and community contribution activities. Employee volunteers participate to strengthen social responsibility and team unity.",
     year: "Ongoing"
   },
   {
     title: "Sustainability Certification",
-    description: "Ebada Group employees have obtained the Sustainability Management Certification Level 2, strengthening internal knowledge and commitment to sustainable business practices across all departments.",
+    description: "Ebadah Group employees have obtained the Sustainability Management Certification Level 2, strengthening internal knowledge and commitment to sustainable business practices across all departments.",
     year: "2025"
   }
 ];
@@ -105,7 +105,7 @@ export default function EnvironmentalInitiatives() {
 
           <div style={{ maxWidth: "900px", margin: "0 auto", background: "var(--off)", padding: "3rem", borderRadius: "var(--r-lg)", borderLeft: "4px solid var(--accent)" }}>
             <p style={{ color: "var(--txt-2)", fontSize: "1.05rem", lineHeight: 1.9, marginBottom: "1.5rem" }}>
-              Ebada Group is committed to participating in environmental conservation through our business activities, aiming to achieve a circular economy and carbon-neutral society. We contribute to the effective use of limited resources and the realization of a sustainable coexistence with our planet.
+              Ebadah Group is committed to participating in environmental conservation through our business activities, aiming to achieve a circular economy and carbon-neutral society. We contribute to the effective use of limited resources and the realization of a sustainable coexistence with our planet.
             </p>
             <p style={{ color: "var(--txt-2)", fontSize: "1.05rem", lineHeight: 1.9, marginBottom: "1.5rem" }}>
               We comply with international agreements, laws, regulations, and ordinances related to environmental conservation. We actively promote environmental education and awareness among all officers and employees, linking these efforts directly to our business operations.

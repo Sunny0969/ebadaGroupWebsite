@@ -46,15 +46,15 @@ const STRENGTHS = [
 
 const BRANCHES = [
   { 
-    name: "Ebada Group Head Office", 
+    name: "Ebadah Group Head Office", 
     region: "Tochigi", 
     address: "2F Tonoike Shukugo Bldg., 2-10-16 Shukugo, Utsunomiya-shi, Tochigi, Japan", 
     phone: "0283 41 6300", 
-    mobile: "070-2181-8345",
+    mobile: " 0283 41 6300",
     email: "sheikrahmanjp@gmail.com", 
     manager: "RAHMAN SHEIK HABIBUR", 
     representativeDirector: "RAHMAN SHEIK HABIBUR",
-    company: "Ebada Group Co., Ltd.",
+    company: "Ebadah Group Co., Ltd.",
     hours: "Mon–Fri 9:00–18:00", 
     lat: 36.5658, 
     lng: 139.8836 
@@ -442,7 +442,7 @@ export default function AboutUs() {
           <div className="au-sh">
             <span className="au-eyebrow">Our Presence</span>
             <h2 className="au-h2">Head Office Location</h2>
-            <p className="au-sh__p">Ebada Group Co., Ltd. - Your trusted partner in workforce solutions.</p>
+            <p className="au-sh__p">Ebadah Group Co., Ltd. - Your trusted partner in workforce solutions.</p>
           </div>
           <div className="au-branch__layout">
             {/* Map placeholder with pin */}

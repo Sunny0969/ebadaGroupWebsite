@@ -52,7 +52,7 @@ const TIPS = [
   },
   {
     title: "Research Our Company",
-    description: "Learn about CDP Japan's values, services, and culture. Show genuine interest in what we do."
+    description: "Learn about Ebadah Group  Japan's values, services, and culture. Show genuine interest in what we do."
   },
   {
     title: "Be Professional",
@@ -85,10 +85,10 @@ export default function ApplicationProcess() {
 
   useEffect(() => {
     // SEO: Update document title and meta
-    document.title = "Application Process - How to Apply at CDP Japan | Careers";
+    document.title = "Application Process - How to Apply at Ebadah Group  Japan | Careers";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Learn about the CDP Japan recruitment process. Step-by-step guide on how to apply, required documents, application tips, and submit your job application online.');
+      metaDescription.setAttribute('content', 'Learn about the Ebadah Group  Japan recruitment process. Step-by-step guide on how to apply, required documents, application tips, and submit your job application online.');
     }
 
     const io = new IntersectionObserver(
@@ -190,7 +190,7 @@ export default function ApplicationProcess() {
         <div className="careers-hero__content">
           <h1 className="careers-h1 careers-hero__h1">Application Process</h1>
           <p className="careers-hero__p">
-            Learn about our recruitment process and submit your application to join the CDP Japan team.
+            Learn about our recruitment process and submit your application to join the Ebadah Group  Japan team.
           </p>
         </div>
       </section>
@@ -200,7 +200,7 @@ export default function ApplicationProcess() {
           <div className="careers-sh">
             <span className="careers-eyebrow">How to Apply</span>
             <h2 className="careers-h2">Our Recruitment Process</h2>
-            <p className="careers-sh__p">A step-by-step guide to applying for positions at CDP Japan.</p>
+            <p className="careers-sh__p">A step-by-step guide to applying for positions at Ebadah Group  Japan.</p>
           </div>
 
           <div className="careers-process">
@@ -276,12 +276,12 @@ export default function ApplicationProcess() {
                 View Open Positions
               </Link>
             </div>
-            <div style={{ marginTop: "2rem", textAlign: "center" }}>
-              <p style={{ color: "var(--txt-2)", marginBottom: "0.5rem" }}>Want to learn more about CDP Japan?</p>
+            {/* <div style={{ marginTop: "2rem", textAlign: "center" }}>
+              <p style={{ color: "var(--txt-2)", marginBottom: "0.5rem" }}>Want to learn more about Ebadah Group  Japan?</p>
               <Link to="/careers/blog" style={{ color: "var(--accent)", fontWeight: 600, textDecoration: "underline" }}>
                 Read our recruitment blog →
               </Link>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -293,7 +293,7 @@ export default function ApplicationProcess() {
             {!showThankYou ? (
               <>
                 <div className="careers-modal__header">
-                  <h2 className="careers-h2">CDP Japan Job Application</h2>
+                  <h2 className="careers-h2">Ebadah Group  Japan Job Application</h2>
                   <button className="careers-modal__close" onClick={closeForm}>×</button>
                 </div>
                 <form onSubmit={handleSubmit} className="careers-modal__form">
@@ -370,7 +370,7 @@ export default function ApplicationProcess() {
                       value={formData.coverLetter}
                       onChange={handleInputChange}
                       className={formErrors.coverLetter ? "careers-modal__input--error" : ""}
-                      placeholder="Tell us why you're interested in this position and what you can bring to CDP Japan..."
+                      placeholder="Tell us why you're interested in this position and what you can bring to Ebadah Group  Japan..."
                     />
                     {formErrors.coverLetter && <span className="careers-modal__error">{formErrors.coverLetter}</span>}
                   </div>

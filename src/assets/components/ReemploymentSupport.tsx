@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Services.css";
@@ -25,7 +26,7 @@ const SUCCESS_STORIES = [
     title: "Career Transition Success",
     client: "Mid-Career Professional",
     challenge: "55-year-old professional seeking re-employment after company restructuring. Needed to transition from corporate role to new industry.",
-    solution: "CDP Japan provided career counseling, skills assessment, and matched candidate with manufacturing quality control role requiring transferable skills.",
+    solution: "Ebadah Group  Japan provided career counseling, skills assessment, and matched candidate with manufacturing quality control role requiring transferable skills.",
     result: "Successfully placed in new role. Candidate has been with company for 3 years and received promotion. High job satisfaction reported."
   },
   {
@@ -94,7 +95,7 @@ export default function ReemploymentSupport() {
           <div className="sv-overview__text">
             <span className="sv-eyebrow">Service Overview</span>
             <h2 className="sv-h2">Supporting Workforce Re-entry</h2>
-            <p>CDP Japan's Re-employment Support service helps individuals re-enter the workforce through personalized career counseling, skills enhancement, and job placement services.</p>
+            <p>Ebadah Group  Japan's Re-employment Support service helps individuals re-enter the workforce through personalized career counseling, skills enhancement, and job placement services.</p>
             <p>Whether you've been unemployed, are changing careers, or returning after extended leave, we provide comprehensive support to help you find meaningful employment that matches your skills and goals.</p>
             <ul className="sv-overview__benefits">
               <li>Personalized career counseling and assessment</li>
@@ -188,7 +189,7 @@ export default function ReemploymentSupport() {
         <div className="sv-wrap">
           <div className="sv-sh">
             <span className="sv-eyebrow">Why Choose Us</span>
-            <h2 className="sv-h2">What Sets CDP Japan Apart</h2>
+            <h2 className="sv-h2">What Sets Ebadah Group  Japan Apart</h2>
             <p className="sv-sh__p">Our competitive advantages in re-employment support.</p>
           </div>
           <div className="sv-why__grid">
@@ -203,13 +204,12 @@ export default function ReemploymentSupport() {
         </div>
       </section>
 
-      <section className="sv-section sv-pricing">
+      {/* <section className="sv-section sv-pricing">
         <div className="sv-wrap sv-pricing__content">
           <h2 className="sv-h2 sv-pricing__h2">Get Started Today</h2>
           <p className="sv-pricing__p">Our re-employment support services are available to help you return to work. Contact us to learn more about our programs and services.</p>
-          {/* <a href="#contact" className="sv-btn sv-btn--primary">Request Consultation</a> */}
         </div>
-      </section>
+      </section> */}
 
       <section className={`sv-section sv-faq ${visible.has("faq") ? "sv--in" : ""}`} data-obs="faq" ref={obs("faq")}>
         <div className="sv-wrap">
@@ -236,10 +236,10 @@ export default function ReemploymentSupport() {
       <section className="sv-section sv-cta">
         <div className="sv-wrap sv-cta__content">
           <h2 className="sv-h2 sv-cta__h2">Ready to Return to Work?</h2>
-          <p className="sv-cta__p">Let's discuss how CDP Japan can help you find your next opportunity and successfully re-enter the workforce.</p>
+          <p className="sv-cta__p">Let's discuss how Ebadah Group  Japan can help you find your next opportunity and successfully re-enter the workforce.</p>
           <div className="sv-cta__actions">
-            <a href="#contact" className="sv-btn sv-btn--primary">Get Started</a>
-            <a href="#contact" className="sv-btn sv-btn--ghost">Request Consultation</a>
+            <Link to="/contact" className="sv-btn sv-btn--primary">Get Started</Link>
+            <Link to="/contact" className="sv-btn sv-btn--ghost">Request Consultation</Link>
           </div>
         </div>
       </section>

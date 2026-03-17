@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Services.css";
@@ -25,7 +26,7 @@ const SUCCESS_STORIES = [
     title: "Automotive Assembly Line Expansion",
     client: "Major Automotive Manufacturer",
     challenge: "Needed 200 skilled assembly workers within 3 weeks for a new production line launch.",
-    solution: "CDP Japan deployed our rapid placement system, conducting targeted recruitment and accelerated screening across 5 prefectures.",
+    solution: "Ebadah Group Japan deployed our rapid placement system, conducting targeted recruitment and accelerated screening across 5 prefectures.",
     result: "200 workers placed in 18 days. Zero safety incidents in first 6 months. 95% retention rate after one year."
   },
   {
@@ -96,12 +97,12 @@ export default function ManufacturingDispatch() {
           <div className="sv-overview__text">
             <span className="sv-eyebrow">Service Overview</span>
             <h2 className="sv-h2">Skilled Workers for Manufacturing Excellence</h2>
-            <p>CDP Japan's Manufacturing Dispatch service connects manufacturers with qualified, safety-certified workers across all production roles. From assembly line operators to quality control specialists, we provide the workforce you need to maintain production schedules and meet quality standards.</p>
-            <p>With 3years of experience in Japan's manufacturing sector, we understand the unique demands of production environments and the importance of reliable, skilled workers who can integrate seamlessly into your operations.</p>
+            <p>Ebadah Group Japan's Manufacturing Dispatch service connects manufacturers with qualified, safety-certified workers across all production roles. From assembly line operators to quality control specialists, we provide the workforce you need to maintain production schedules and meet quality standards.</p>
+            <p>With 3 years of experience in Japan's manufacturing sector, we understand the unique demands of production environments and the importance of reliable, skilled workers who can integrate seamlessly into your operations.</p>
             <ul className="sv-overview__benefits">
               <li>7-stage screening process ensures quality</li>
               <li>Average placement time: 7-10 business days</li>
-              <li>Nationwide coverage across all 47 prefectures</li>
+              {/* <li>Nationwide coverage across all 47 prefectures</li> */}
               <li>Flexible contracts: short-term, long-term, seasonal</li>
               <li>Dedicated HR support throughout placement</li>
             </ul>
@@ -194,7 +195,7 @@ export default function ManufacturingDispatch() {
         <div className="sv-wrap">
           <div className="sv-sh">
             <span className="sv-eyebrow">Why Choose Us</span>
-            <h2 className="sv-h2">What Sets CDP Japan Apart</h2>
+            <h2 className="sv-h2">What Sets Ebadah Group Japan Apart</h2>
             <p className="sv-sh__p">Our competitive advantages in manufacturing staffing.</p>
           </div>
           <div className="sv-why__grid">
@@ -210,13 +211,13 @@ export default function ManufacturingDispatch() {
       </section>
 
       {/* ── PRICING ── */}
-      <section className="sv-section sv-pricing">
+      {/* <section className="sv-section sv-pricing">
         <div className="sv-wrap sv-pricing__content">
           <h2 className="sv-h2 sv-pricing__h2">Get a Custom Quote</h2>
           <p className="sv-pricing__p">Every manufacturing operation is unique. Contact us for a personalized quote based on your specific workforce needs, timeline, and requirements.</p>
           <a href="#contact" className="sv-btn sv-btn--primary">Request Consultation</a>
         </div>
-      </section>
+      </section> */}
 
       {/* ── FAQ ── */}
       <section className={`sv-section sv-faq ${visible.has("faq") ? "sv--in" : ""}`} data-obs="faq" ref={obs("faq")}>
@@ -245,10 +246,10 @@ export default function ManufacturingDispatch() {
       <section className="sv-section sv-cta">
         <div className="sv-wrap sv-cta__content">
           <h2 className="sv-h2 sv-cta__h2">Ready to Strengthen Your Manufacturing Workforce?</h2>
-          <p className="sv-cta__p">Let's discuss how CDP Japan can provide the skilled workers you need to meet production goals and maintain quality standards.</p>
+          <p className="sv-cta__p">Let's discuss how Ebadah Group Japan can provide the skilled workers you need to meet production goals and maintain quality standards.</p>
           <div className="sv-cta__actions">
-            <a href="#contact" className="sv-btn sv-btn--primary">Get Started</a>
-            <a href="#contact" className="sv-btn sv-btn--ghost">Request Consultation</a>
+            <Link to="/contact" className="sv-btn sv-btn--primary">Get Started</Link>
+            <Link to="/contact" className="sv-btn sv-btn--ghost">Request Consultation</Link>
           </div>
         </div>
       </section>

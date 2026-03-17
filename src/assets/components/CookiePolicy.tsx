@@ -6,10 +6,10 @@ import "./Contact.css";
 
 export default function CookiePolicy() {
   useEffect(() => {
-    document.title = "Cookie Policy - Ebada Group | Cookie Usage Information";
+    document.title = "Cookie Policy - Ebadah Group | Cookie Usage Information";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Ebada Group Cookie Policy - Learn about how we use cookies and tracking technologies on our website, compliant with Japanese privacy regulations.');
+      metaDescription.setAttribute('content', 'Ebadah Group Cookie Policy - Learn about how we use cookies and tracking technologies on our website, compliant with Japanese privacy regulations.');
     }
   }, []);
 
@@ -35,7 +35,7 @@ export default function CookiePolicy() {
                 Compliance with Japanese Privacy Law
               </p>
               <p style={{ margin: 0 }}>
-                This Cookie Policy explains how Ebada Group uses cookies and similar tracking technologies on our website, in compliance with Japan's Personal Information Protection Act (個人情報保護法) and related regulations. This policy should be read in conjunction with our <Link to="/privacy-policy" style={{ color: "var(--accent)", textDecoration: "underline" }}>Privacy Policy</Link>.
+                This Cookie Policy explains how Ebadah Group uses cookies and similar tracking technologies on our website, in compliance with Japan's Personal Information Protection Act (個人情報保護法) and related regulations. This policy should be read in conjunction with our <Link to="/privacy-policy" style={{ color: "var(--accent)", textDecoration: "underline" }}>Privacy Policy</Link>.
               </p>
             </div>
 
@@ -53,7 +53,7 @@ export default function CookiePolicy() {
               2. How We Use Cookies
             </h2>
             <p style={{ marginBottom: "1.5rem" }}>
-              Ebada Group uses cookies and similar tracking technologies to enhance your experience on our website, provide personalized services, and analyze website usage. We use cookies for the following purposes:
+              Ebadah Group uses cookies and similar tracking technologies to enhance your experience on our website, provide personalized services, and analyze website usage. We use cookies for the following purposes:
             </p>
 
             <div style={{ background: "var(--off)", padding: "1.5rem", borderRadius: "var(--r)", marginBottom: "2rem" }}>
@@ -265,10 +265,10 @@ export default function CookiePolicy() {
               If you have questions about our use of cookies, this Cookie Policy, or wish to exercise your rights regarding cookies, please contact us:
             </p>
             <div style={{ background: "linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%)", padding: "2rem", borderRadius: "var(--r-lg)", marginBottom: "2rem", color: "var(--white)" }}>
-              <p style={{ marginBottom: "0.75rem", fontSize: "1.2rem", fontWeight: "600" }}>Ebada Group - Privacy & Data Protection</p>
+              <p style={{ marginBottom: "0.75rem", fontSize: "1.2rem", fontWeight: "600" }}>Ebadah Group - Privacy & Data Protection</p>
               <p style={{ marginBottom: "0.5rem" }}><strong>Address:</strong> 2F Tonoike Shukugo Bldg., 2-10-16 Shukugo, Utsunomiya-shi, Tochigi, Japan</p>
               <p style={{ marginBottom: "0.5rem" }}><strong>Office Phone:</strong> 0283 41 6300 (Monday-Friday, 9:00 AM - 6:00 PM JST)</p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Mobile:</strong> 070-2181-8345</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Mobile:</strong>  0283 41 6300</p>
               <p style={{ marginBottom: "0.5rem" }}><strong>Email:</strong> sheikrahmanjp@gmail.com</p>
               <p style={{ marginBottom: "0.5rem" }}><strong>Representative Director:</strong> RAHMAN SHEIK HABIBUR</p>
               <p style={{ margin: 0 }}><strong>Cookie Settings:</strong> You can manage your cookie preferences at any time through our website footer or by contacting us.</p>

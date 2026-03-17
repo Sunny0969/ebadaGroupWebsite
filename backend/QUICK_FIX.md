@@ -23,7 +23,7 @@ Open browser: http://localhost:5000
 Should show:
 ```json
 {
-  "message": "Welcome to Ebada Group Backend API",
+  "message": "Welcome to Ebadah Group Backend API",
   "status": "Server is running successfully!"
 }
 ```

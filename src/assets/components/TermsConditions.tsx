@@ -5,10 +5,10 @@ import "./Contact.css";
 
 export default function TermsConditions() {
   useEffect(() => {
-    document.title = "Terms & Conditions - Ebada Group | Service Agreement";
+    document.title = "Terms & Conditions - Ebadah Group | Service Agreement";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Ebada Group Terms & Conditions - Service agreement for employment placement and staffing services in Japan, compliant with Japanese labor and employment laws.');
+      metaDescription.setAttribute('content', 'Ebadah Group Terms & Conditions - Service agreement for employment placement and staffing services in Japan, compliant with Japanese labor and employment laws.');
     }
   }, []);
 
@@ -34,7 +34,7 @@ export default function TermsConditions() {
                 Compliance with Japanese Law
               </p>
               <p style={{ margin: 0 }}>
-                These Terms & Conditions are governed by Japanese law, including the Employment Security Act (職業安定法), Worker Dispatch Act (労働者派遣事業法), Labor Standards Act (労働基準法), and other applicable employment and labor regulations. Ebada Group operates under Employment Placement Business License No. 13-ユ-123456 and Worker Dispatch Business License No. 派13-123456.
+                These Terms & Conditions are governed by Japanese law, including the Employment Security Act (職業安定法), Worker Dispatch Act (労働者派遣事業法), Labor Standards Act (労働基準法), and other applicable employment and labor regulations. Ebadah Group operates under Employment Placement Business License No. 13-ユ-123456 and Worker Dispatch Business License No. 派13-123456.
               </p>
             </div>
 
@@ -42,7 +42,7 @@ export default function TermsConditions() {
               1. Acceptance of Terms
             </h2>
             <p style={{ marginBottom: "1.5rem", fontSize: "1.05rem" }}>
-              By accessing and using the Ebada Group website, services, or platform, you ("User," "you," or "your") accept and agree to be bound by these Terms & Conditions ("Terms"). If you do not agree to these Terms, please do not use our services. These Terms constitute a legally binding agreement between you and Ebada Group Co., Ltd. ("Ebada Group," "we," "us," or "our").
+              By accessing and using the Ebadah Group website, services, or platform, you ("User," "you," or "your") accept and agree to be bound by these Terms & Conditions ("Terms"). If you do not agree to these Terms, please do not use our services. These Terms constitute a legally binding agreement between you and Ebadah Group Co., Ltd. ("Ebadah Group," "we," "us," or "our").
             </p>
             <p style={{ marginBottom: "1.5rem" }}>
               We reserve the right to modify these Terms at any time. Material changes will be notified through our website or by email. Your continued use of our services after such modifications constitutes acceptance of the updated Terms.
@@ -52,7 +52,7 @@ export default function TermsConditions() {
               2. Services Description and Business License
             </h2>
             <p style={{ marginBottom: "1rem" }}>
-              Ebada Group is a licensed employment placement business and temporary staffing agency operating in Japan. We provide the following services:
+              Ebadah Group is a licensed employment placement business and temporary staffing agency operating in Japan. We provide the following services:
             </p>
             <div style={{ background: "var(--off)", padding: "1.5rem", borderRadius: "var(--r)", marginBottom: "1.5rem" }}>
               <h4 style={{ fontFamily: "var(--font-sans)", fontSize: "1.1rem", marginBottom: "0.75rem", color: "var(--txt)" }}>2.1 Employment Placement Services (職業紹介事業)</h4>
@@ -191,7 +191,7 @@ export default function TermsConditions() {
             <div style={{ background: "var(--off)", padding: "1.5rem", borderRadius: "var(--r)", marginBottom: "1.5rem" }}>
               <h4 style={{ fontFamily: "var(--font-sans)", fontSize: "1.1rem", marginBottom: "0.75rem", color: "var(--txt)" }}>6.1 Dispatch Worker Rights</h4>
               <ul style={{ marginBottom: "1.5rem", paddingLeft: "1.5rem" }}>
-                <li>Dispatch workers are employees of Ebada Group, not the client company</li>
+                <li>Dispatch workers are employees of Ebadah Group, not the client company</li>
                 <li>We are responsible for payment of wages, social insurance, and employment benefits</li>
                 <li>Dispatch workers have the right to equal treatment with regular employees (equal pay for equal work)</li>
                 <li>Maximum dispatch period limits apply as specified by law</li>
@@ -210,7 +210,7 @@ export default function TermsConditions() {
               7. Intellectual Property Rights
             </h2>
             <p style={{ marginBottom: "1.5rem" }}>
-              All content on our website, including text, graphics, logos, images, software, and other materials, is the property of Ebada Group or its licensors and is protected by Japanese copyright law, trademark law, and other intellectual property laws. You may not:
+              All content on our website, including text, graphics, logos, images, software, and other materials, is the property of Ebadah Group or its licensors and is protected by Japanese copyright law, trademark law, and other intellectual property laws. You may not:
             </p>
             <ul style={{ marginBottom: "1.5rem", paddingLeft: "2rem" }}>
               <li>Reproduce, distribute, or create derivative works without our written permission</li>
@@ -243,7 +243,7 @@ export default function TermsConditions() {
               9. Limitation of Liability
             </h2>
             <p style={{ marginBottom: "1rem" }}>
-              To the maximum extent permitted by Japanese law, Ebada Group shall not be liable for:
+              To the maximum extent permitted by Japanese law, Ebadah Group shall not be liable for:
             </p>
             <ul style={{ marginBottom: "1.5rem", paddingLeft: "2rem" }}>
               <li>Any indirect, incidental, special, consequential, or punitive damages</li>
@@ -260,7 +260,7 @@ export default function TermsConditions() {
               10. Indemnification
             </h2>
             <p style={{ marginBottom: "1.5rem" }}>
-              You agree to indemnify, defend, and hold harmless Ebada Group, its officers, directors, employees, agents, and affiliates from any claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees) arising out of or relating to:
+              You agree to indemnify, defend, and hold harmless Ebadah Group, its officers, directors, employees, agents, and affiliates from any claims, damages, losses, liabilities, costs, and expenses (including reasonable legal fees) arising out of or relating to:
             </p>
             <ul style={{ marginBottom: "1.5rem", paddingLeft: "2rem" }}>
               <li>Your use of our services or violation of these Terms</li>
@@ -337,11 +337,11 @@ export default function TermsConditions() {
               If you have questions, concerns, or wish to exercise your rights regarding these Terms & Conditions, please contact us:
             </p>
             <div style={{ background: "linear-gradient(135deg, var(--navy) 0%, var(--navy-2) 100%)", padding: "2rem", borderRadius: "var(--r-lg)", marginBottom: "2rem", color: "var(--white)" }}>
-              <p style={{ marginBottom: "0.75rem", fontSize: "1.2rem", fontWeight: "600" }}>Ebada Group Co., Ltd.</p>
+              <p style={{ marginBottom: "0.75rem", fontSize: "1.2rem", fontWeight: "600" }}>Ebadah Group Co., Ltd.</p>
               <p style={{ marginBottom: "0.5rem" }}><strong>Legal Department</strong></p>
               <p style={{ marginBottom: "0.5rem" }}><strong>Address:</strong> 2F Tonoike Shukugo Bldg., 2-10-16 Shukugo, Utsunomiya-shi, Tochigi, Japan</p>
               <p style={{ marginBottom: "0.5rem" }}><strong>Office Phone:</strong> 0283 41 6300 (Monday-Friday, 9:00 AM - 6:00 PM JST)</p>
-              <p style={{ marginBottom: "0.5rem" }}><strong>Mobile:</strong> 070-2181-8345</p>
+              <p style={{ marginBottom: "0.5rem" }}><strong>Mobile:</strong>  0283 41 6300</p>
               <p style={{ marginBottom: "0.5rem" }}><strong>Email:</strong> sheikrahmanjp@gmail.com</p>
               <p style={{ marginBottom: "0.5rem" }}><strong>Representative Director:</strong> RAHMAN SHEIK HABIBUR</p>
             </div>

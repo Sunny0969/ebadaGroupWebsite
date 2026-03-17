@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="cdp-logo cdp-logo--light">
               <img 
                 src="/Images/Ebada-Group.png" 
-                alt="Ebada Group Logo" 
+                alt="Ebadah Group Logo" 
                 className="cdp-logo__img"
                 height="100"
                 width="auto"
@@ -54,7 +54,7 @@ export default function Footer() {
                   <strong>Office:</strong> <a href="tel:0283416300" style={{ color: "inherit", textDecoration: "none" }}>0283 41 6300</a>
                 </p>
                 <p style={{ marginBottom: "0.5rem" }}>
-                  <strong>Mobile:</strong> <a href="tel:07021818345" style={{ color: "inherit", textDecoration: "none" }}>070-2181-8345</a>
+                  <strong>Mobile:</strong> <a href="tel:07021818345" style={{ color: "inherit", textDecoration: "none" }}> 0283 41 6300</a>
                 </p>
                 <p style={{ marginBottom: "0.5rem" }}>
                   <strong>Email:</strong> <a href="mailto:sheikrahmanjp@gmail.com" style={{ color: "inherit", textDecoration: "none" }}>sheikrahmanjp@gmail.com</a>
@@ -76,7 +76,7 @@ export default function Footer() {
           <NewsletterSignup variant="footer" />
         </div>
         <div className="cdp-footer__bottom">
-          <span>© 2026 Ebada Group. All rights reserved.</span>
+          <span>© 2026 Ebadah Group. All rights reserved.</span>
           <div className="cdp-footer__legal">
             <Link to="/privacy-policy">Privacy Policy</Link>
             <Link to="/terms-conditions">Terms & Conditions</Link>

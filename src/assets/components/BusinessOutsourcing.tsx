@@ -1,8 +1,14 @@
-import { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import "./Services.css";
 
+/* ══════════════════════════════════════
+   OLD CODE - PRESERVED BELOW
+   (Uncomment to restore original page)
+   ══════════════════════════════════════ */
+
+/*
 const PROCESS_STEPS = [
   { num: 1, icon: "📊", title: "Needs Analysis", desc: "Comprehensive assessment of your business functions suitable for outsourcing." },
   { num: 2, icon: "📋", title: "Solution Design", desc: "Customized outsourcing plan aligned with your business objectives and budget." },
@@ -52,8 +58,62 @@ const FAQS = [
   { q: "How do you ensure quality and security?", a: "All team members undergo background checks, sign NDAs, and follow strict quality protocols with regular performance monitoring." },
   { q: "Can we scale the team size?", a: "Yes, our flexible model allows you to scale team size up or down based on business needs with minimal notice." },
 ];
+*/
 
 export default function BusinessOutsourcing() {
+  // Coming Soon Page - New Implementation
+  return (
+    <div className="sv">
+      <Header />
+
+      {/* ══════════════════════════════════════
+          COMING SOON PAGE
+      ══════════════════════════════════════ */}
+      <section className="sv-hero" style={{ minHeight: "70vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div className="sv-hero__bg">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80" alt="Business Outsourcing" />
+          <div className="sv-hero__veil" />
+        </div>
+        <div className="sv-wrap" style={{ textAlign: "center", position: "relative", zIndex: 2 }}>
+          <div style={{ 
+            background: "var(--white)", 
+            padding: "4rem 3rem", 
+            borderRadius: "var(--r-lg)",
+            boxShadow: "var(--shadow)",
+            maxWidth: "600px",
+            margin: "0 auto"
+          }}>
+            <div style={{ fontSize: "5rem", marginBottom: "1.5rem" }}>🚀</div>
+            <h1 className="sv-hero__h1" style={{ marginBottom: "1rem", color: "var(--navy)" }}>
+              Coming Soon
+            </h1>
+            <p className="sv-hero__sub" style={{ marginBottom: "2rem", color: "var(--txt-2)", fontSize: "1.1rem" }}>
+              We're working hard to bring you our comprehensive Business Outsourcing services. 
+              This page will be available soon with detailed information about our outsourcing solutions.
+            </p>
+            <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+              <Link to="/contact" className="sv-btn sv-btn--primary">
+                Contact Us
+              </Link>
+              <Link to="/services/manufacturing" className="sv-btn sv-btn--ghost">
+                View Other Services
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+
+  /* ══════════════════════════════════════
+      OLD CODE - PRESERVED BELOW
+      (Uncomment to restore original page)
+  ══════════════════════════════════════ */
+  
+  /*
+  import { useState, useEffect, useRef } from "react";
   const [visible, setVisible] = useState<Set<string>>(new Set());
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const refMap = useRef<Map<string, HTMLElement>>(new Map());
@@ -247,4 +307,5 @@ export default function BusinessOutsourcing() {
       <Footer />
     </div>
   );
+  */
 }

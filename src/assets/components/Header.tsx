@@ -62,7 +62,7 @@ const NAV_LINKS = [
     label: "News & Events", 
     href: "/news", 
     sub: [
-      { label: "News Listings", href: "/news" },
+      // { label: "News Listings", href: "/news" },
       { label: "Events Calendar", href: "/news/events" }
     ] 
   },
@@ -71,7 +71,7 @@ const NAV_LINKS = [
     href: "/careers/join", 
     sub: [
       { label: "Join Our Team", href: "/careers/join" },
-      { label: "Recruitment Blog", href: "/careers/blog" },
+      // { label: "Recruitment Blog", href: "/careers/blog" },
       { label: "Application Process", href: "/careers/process" }
     ] 
   },
@@ -117,7 +117,7 @@ export default function Header() {
         <Link to="/" className="cdp-logo">
           <img 
             src="/Images/Ebada-Group.png" 
-            alt="Ebada Group Logo" 
+            alt="Ebadah Group Logo" 
             className="cdp-logo__img"
             height="100"
             width="180"

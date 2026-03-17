@@ -29,7 +29,7 @@ Open browser and go to: http://localhost:5000/
 You should see:
 ```json
 {
-  "message": "Welcome to Ebada Group Backend API",
+  "message": "Welcome to Ebadah Group Backend API",
   "status": "Server is running successfully!",
   "timestamp": "..."
 }

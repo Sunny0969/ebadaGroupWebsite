@@ -48,6 +48,8 @@ const RESOURCES = [
   }
 ];
 
+/* Unused - preserved for future use */
+/*
 const ARTICLES = [
   {
     title: "10 Tips for Writing a Japanese-Style Resume",
@@ -74,6 +76,7 @@ const ARTICLES = [
     excerpt: "Discover which skills are most sought after by Japanese employers and how to develop them."
   }
 ];
+*/
 
 export default function CareerResources() {
   return (
@@ -110,7 +113,7 @@ export default function CareerResources() {
         </div>
       </section>
 
-      <section className="js-section" style={{ background: "var(--off)" }}>
+      {/* <section className="js-section" style={{ background: "var(--off)" }}>
         <div className="js-wrap">
           <div className="js-sh">
             <span className="js-eyebrow">Career Advice</span>
@@ -137,7 +140,7 @@ export default function CareerResources() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

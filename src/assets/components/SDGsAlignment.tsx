@@ -97,7 +97,7 @@ export default function SDGsAlignment() {
           <div className="sus-sh">
             <span className="sus-eyebrow">UN Sustainable Development Goals</span>
             <h2 className="sus-h2">SDG Goals We Support</h2>
-            <p className="sus-sh__p">Ebada Group Japan actively contributes to 8 of the 17 UN Sustainable Development Goals through our operations and initiatives.</p>
+            <p className="sus-sh__p">Ebadah Group Japan actively contributes to 8 of the 17 UN Sustainable Development Goals through our operations and initiatives.</p>
           </div>
 
           <div className="sus-sdgs__grid">
@@ -215,7 +215,7 @@ export default function SDGsAlignment() {
             <span className="sus-eyebrow" style={{ color: "rgba(255,255,255,0.6)" }}>Our Commitment</span>
             <h2 className="sus-h2" style={{ color: "var(--white)" }}>Building a Sustainable Future</h2>
             <p className="sus-sh__p" style={{ color: "rgba(255,255,255,0.75)" }}>
-              Ebada Group Japan is committed to contributing to the UN Sustainable Development Goals and creating positive impact for people, planet, and prosperity.
+              Ebadah Group Japan is committed to contributing to the UN Sustainable Development Goals and creating positive impact for people, planet, and prosperity.
             </p>
           </div>
         </div>

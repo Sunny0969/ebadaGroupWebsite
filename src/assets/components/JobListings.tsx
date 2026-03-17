@@ -102,7 +102,7 @@ const SAMPLE_JOBS = [
     category: "Outsourcing",
     icon: "📦",
     description:
-      "Pick, pack, and ship products at a major distribution center near Saitama. Work in teams managed by Ebada Group Japan. Light physical work. Weekly pay option available. No Japanese language required for this position.",
+      "Pick, pack, and ship products at a major distribution center near Saitama. Work in teams managed by Ebadah Group Japan. Light physical work. Weekly pay option available. No Japanese language required for this position.",
     tags: ["No Japanese Needed", "Weekly Pay", "Light Work", "Team Environment"],
     featured: false,
     posted: "2 days ago",
@@ -134,7 +134,7 @@ const SAMPLE_JOBS = [
     category: "Foreign National Support",
     icon: "🌏",
     description:
-      "Full support for foreign national workers joining our manufacturing dispatch program. Vietnamese and Indonesian-speaking staff coordinators on-site. Company housing available. Visa procedure support, health insurance, and pension enrollment handled by Ebada Group Japan.",
+      "Full support for foreign national workers joining our manufacturing dispatch program. Vietnamese and Indonesian-speaking staff coordinators on-site. Company housing available. Visa procedure support, health insurance, and pension enrollment handled by Ebadah Group Japan.",
     tags: ["Foreign National OK", "Company Housing", "Visa Support", "Bilingual Coordinator"],
     featured: true,
     posted: "1 day ago",
@@ -158,7 +158,7 @@ const SAMPLE_JOBS = [
   {
     id: 10,
     title: "Re-employment Support — Production Supervisor Candidate",
-    company: "Ebada Group Japan — Re-employment Program",
+    company: "Ebadah Group Japan — Re-employment Program",
     location: "Utsunomiya",
     salary: "¥220,000 - ¥300,000 / month",
     type: "Direct Hire",
@@ -198,7 +198,7 @@ const SAMPLE_JOBS = [
     category: "Outsourcing",
     icon: "💼",
     description:
-      "Handle data entry, document digitisation, and administrative support tasks for a corporate client under Ebada Group Japan's business outsourcing division. Basic PC skills required (Word / Excel). Work from Tokyo office with partial remote option after training period.",
+      "Handle data entry, document digitisation, and administrative support tasks for a corporate client under Ebadah Group Japan's business outsourcing division. Basic PC skills required (Word / Excel). Work from Tokyo office with partial remote option after training period.",
     tags: ["Office Work", "Remote Option", "PC Skills Required", "Tokyo"],
     featured: false,
     posted: "4 days ago",
@@ -273,7 +273,7 @@ export default function JobListings() {
           <h1 className="js-h1 js-hero__h1">Find Your Next Opportunity in Japan</h1>
           <p className="js-hero__p">
             Browse manufacturing dispatch, engineer dispatch, outsourcing, and direct hire positions
-            across Japan — all supported by Ebada Group Japan's dedicated HR coordinators.
+            across Japan — all supported by Ebadah Group Japan's dedicated HR coordinators.
           </p>
         </div>
       </section>
@@ -525,7 +525,7 @@ export default function JobListings() {
                 <div className="js-thank-you__icon">✅</div>
                 <h2 className="js-thank-you__title">Application Submitted!</h2>
                 <p className="js-thank-you__message">
-                  Thank you for applying. An Ebada Group Japan HR coordinator will review your
+                  Thank you for applying. An Ebadah Group Japan HR coordinator will review your
                   application and contact you within 3–5 business days.
                 </p>
               </div>

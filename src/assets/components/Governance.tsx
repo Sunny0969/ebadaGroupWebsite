@@ -11,7 +11,7 @@ const GOVERNANCE_PRINCIPLES = [
   {
     title: "Transparent Decision-Making",
     description:
-      "Ebada Group prioritises highly transparent decision-making. Through the disclosure of information and data, and open communication with stakeholders, we clearly explain the processes and reasons behind our decisions — building trust and ensuring the validity of all sustainability-related choices.",
+      "Ebadah Group prioritises highly transparent decision-making. Through the disclosure of information and data, and open communication with stakeholders, we clearly explain the processes and reasons behind our decisions — building trust and ensuring the validity of all sustainability-related choices.",
   },
   {
     title: "Effective Corporate Governance",
@@ -21,7 +21,7 @@ const GOVERNANCE_PRINCIPLES = [
   {
     title: "Risk Management & Compliance",
     description:
-      "Ebada Group has established a risk management framework to assess and manage sustainability-related risks appropriately — covering risk identification, evaluation, countermeasure design, and monitoring. We implement compliance programmes that ensure full legal adherence and thorough ethical conduct.",
+      "Ebadah Group has established a risk management framework to assess and manage sustainability-related risks appropriately — covering risk identification, evaluation, countermeasure design, and monitoring. We implement compliance programmes that ensure full legal adherence and thorough ethical conduct.",
   },
   {
     title: "Stakeholder Co-creation",
@@ -34,25 +34,25 @@ const COMPLIANCE_AREAS = [
   {
     title: "Labour Law Compliance",
     description:
-      "As a licensed staffing agency, Ebada Group is fully committed to compliance with the Labour Standards Act (労働基準法), the Worker Dispatch Act (労働者派遣法), and all related employment regulations. We require all employees to adhere strictly to applicable laws and rules, and we work to eliminate any form of violation.",
+      "As a licensed staffing agency, Ebadah Group is fully committed to compliance with the Labour Standards Act (労働基準法), the Worker Dispatch Act (労働者派遣法), and all related employment regulations. We require all employees to adhere strictly to applicable laws and rules, and we work to eliminate any form of violation.",
     icon: "⚖️",
   },
   {
     title: "Personal Information Protection",
     description:
-      "Ebada Group handles the personal information of clients, placed workers, and candidates with the utmost care and respect for privacy. We implement appropriate security measures to prevent unauthorised access, loss, destruction, or alteration of personal data. We hold Privacy Mark certification in recognition of this commitment.",
+      "Ebadah Group handles the personal information of clients, placed workers, and candidates with the utmost care and respect for privacy. We implement appropriate security measures to prevent unauthorised access, loss, destruction, or alteration of personal data. We hold Privacy Mark certification in recognition of this commitment.",
     icon: "🔒",
   },
   {
     title: "Ethical Conduct",
     description:
-      "Ebada Group demands fair and sincere conduct toward society from all officers and employees. We educate our team on ethics and social responsibility, and we pursue social trust through the consistent practice of ethical behaviour in every business activity.",
+      "Ebadah Group demands fair and sincere conduct toward society from all officers and employees. We educate our team on ethics and social responsibility, and we pursue social trust through the consistent practice of ethical behaviour in every business activity.",
     icon: "🤝",
   },
   {
     title: "Environmental Consideration",
     description:
-      "Ebada Group operates with consideration for environmental protection, aiming to minimise the environmental impact of all business activities. We comply fully with environmental laws and regulations, and actively pursue energy conservation, recycling, and other environmental protection initiatives.",
+      "Ebadah Group operates with consideration for environmental protection, aiming to minimise the environmental impact of all business activities. We comply fully with environmental laws and regulations, and actively pursue energy conservation, recycling, and other environmental protection initiatives.",
     icon: "🌱",
   },
   {
@@ -64,7 +64,7 @@ const COMPLIANCE_AREAS = [
   {
     title: "Sound Management",
     description:
-      "Ebada Group pursues sound management practices to earn the trust of clients and all stakeholders, and to achieve sustainable growth. This means establishing appropriate internal control systems, enforcing rigorous risk management, and maintaining the integrity of all financial and operational practices.",
+      "Ebadah Group pursues sound management practices to earn the trust of clients and all stakeholders, and to achieve sustainable growth. This means establishing appropriate internal control systems, enforcing rigorous risk management, and maintaining the integrity of all financial and operational practices.",
     icon: "📋",
   },
 ];
@@ -102,7 +102,7 @@ export default function Governance() {
         <div className="sus-wrap">
           <h1 className="sus-h1 sus-hero__h1">Governance</h1>
           <p className="sus-hero__p">
-            Ebada Group recognises the critical importance of governance in realising a sustainable
+            Ebadah Group recognises the critical importance of governance in realising a sustainable
             future — providing the framework to ensure organisational sustainability, transparency,
             and accountability in everything we do.
           </p>
@@ -123,7 +123,7 @@ export default function Governance() {
             <span className="sus-eyebrow">Corporate Governance</span>
             <h2 className="sus-h2">Governance Philosophy</h2>
             <p className="sus-sh__p">
-              Ebada Group's governance philosophy positions sustainability as a core strategic
+              Ebadah Group's governance philosophy positions sustainability as a core strategic
               objective — taking responsibility for environmental impacts and social challenges,
               and pursuing management that consistently considers long-term sustainability.
             </p>
@@ -141,7 +141,7 @@ export default function Governance() {
             }}
           >
             <p style={{ color: "var(--txt-2)", fontSize: "1.05rem", lineHeight: 1.9, marginBottom: "1.5rem" }}>
-              Ebada Group recognises governance as an essential framework for ensuring
+              Ebadah Group recognises governance as an essential framework for ensuring
               organisational sustainability with an emphasis on transparency and accountability.
               Our governance structure reflects our commitment to responsible management — with
               clear leadership, proactive risk management, and open engagement with every
@@ -208,7 +208,7 @@ export default function Governance() {
             <span className="sus-eyebrow">Compliance Policy</span>
             <h2 className="sus-h2">Corporate Compliance Framework</h2>
             <p className="sus-sh__p">
-              As a licensed worker dispatch and employment placement agency, Ebada Group's mission
+              As a licensed worker dispatch and employment placement agency, Ebadah Group's mission
               is to comply fully with the Labour Standards Act, the Worker Dispatch Act, and all
               applicable laws and business ethics — fulfilling our social responsibilities and
               contributing positively to society through our business activities.

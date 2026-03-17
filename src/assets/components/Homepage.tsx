@@ -43,12 +43,12 @@ const SERVICES = [
   { icon: "🔄", title: "Re-employment Support", desc: "Career transition programs helping workers re-enter the workforce with confidence.", tag: "Support" },
 ];
 
-const STATS = [
-  { value: "3+", label: "Years in Business" },
-  { value: "50,000+", label: "Total Placements" },
-  { value: "1,200+", label: "Active Clients" },
-  { value: "96%", label: "Success Rate" },
-];
+// const STATS = [
+//   { value: "3+", label: "Years in Business" },
+//   { value: "50,000+", label: "Total Placements" },
+//   { value: "1,200+", label: "Active Clients" },
+//   { value: "96%", label: "Success Rate" },
+// ];
 
 const WHY = [
   { icon: "🏭", title: "Industry Expertise", desc: "Deep specialization in manufacturing, engineering, and technical staffing across all major Japanese industries." },
@@ -57,17 +57,20 @@ const WHY = [
   { icon: "🌐", title: "Nationwide Network", desc: "Offices across Japan's key industrial regions with local expertise and deep relationships." },
 ];
 
+/* Unused - preserved for future use */
+/*
 const NEWS = [
   { date: "Mar 01, 2026", category: "Campaign", title: "Spring Campaign: Digital Gift for New Registrants", img: "https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=500&q=80" },
   { date: "Feb 17, 2026", category: "Event", title: "Utsunomiya Brex Home Game Ticket Presentation Ceremony", img: "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=500&q=80" },
-  { date: "Feb 05, 2026", category: "Press Release", title: "CDP Japan Expands Operations to Kyushu Region", img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&q=80" },
-  { date: "Jan 20, 2026", category: "Notice", title: "2026 New Year Greetings from CDP President", img: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&q=80" },
+  { date: "Feb 05, 2026", category: "Press Release", title: "Ebadah Group Japan Expands Operations to Kyushu Region", img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=500&q=80" },
+  { date: "Jan 20, 2026", category: "Notice", title: "2026 New Year Greetings from Ebadah Group President", img: "https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&q=80" },
 ];
+*/
 
 const TESTIMONIALS = [
-  { name: "Takashi Yamamoto", position: "Plant Manager", company: "Honda Suppliers Co.", quote: "CDP Japan's dispatch service transformed our production line. The workers were highly skilled and adapted quickly to our environment.", rating: 5 },
-  { name: "Sarah Chen", position: "HR Director", company: "Mitsubishi Electric Partner", quote: "The foreign employment support program made our international hiring seamless. CDP handled everything professionally from visa to onboarding.", rating: 5 },
-  { name: "Kenji Nakamura", position: "Operations Head", company: "Toyota Manufacturing", quote: "Over 8 years of partnership, CDP has never failed to deliver quality talent when we needed it most. Truly reliable.", rating: 5 },
+  { name: "Takashi Yamamoto", position: "Plant Manager", company: "Honda Suppliers Co.", quote: "Ebadah Group Japan's dispatch service transformed our production line. The workers were highly skilled and adapted quickly to our environment.", rating: 5 },
+  { name: "Sarah Chen", position: "HR Director", company: "Mitsubishi Electric Partner", quote: "The foreign employment support program made our international hiring seamless. Ebadah Group handled everything professionally from visa to onboarding.", rating: 5 },
+  { name: "Kenji Nakamura", position: "Operations Head", company: "Toyota Manufacturing", quote: "Over 8 years of partnership, Ebadah Group has never failed to deliver quality talent when we needed it most. Truly reliable.", rating: 5 },
 ];
 
 const PARTNERS = ["Toyota", "Honda", "Panasonic", "Hitachi", "Mitsubishi", "Canon", "Fujitsu", "NEC", "Denso", "Yamaha"];
@@ -75,8 +78,8 @@ const PARTNERS = ["Toyota", "Honda", "Panasonic", "Hitachi", "Mitsubishi", "Cano
 export default function HomePage() {
   const [testSlide, setTestSlide] = useState(0);
   const [visible, setVisible] = useState<Set<string>>(new Set());
-  const [counterStarted, setCounterStarted] = useState(false);
-  const statsRef = useRef<HTMLDivElement>(null);
+  // const [counterStarted, setCounterStarted] = useState(false); // Unused - stats section is commented out
+  // const statsRef = useRef<HTMLDivElement>(null); // Unused - stats section is commented out
   const sectionRefs = useRef<Map<string, HTMLElement>>(new Map());
 
   // Handle smooth scrolling with offset for fixed header
@@ -122,13 +125,13 @@ export default function HomePage() {
     return () => io.disconnect();
   }, []);
 
-  useEffect(() => {
-    const el = statsRef.current;
-    if (!el) return;
-    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) setCounterStarted(true); }, { threshold: 0.3 });
-    io.observe(el);
-    return () => io.disconnect();
-  }, []);
+  // useEffect(() => {
+  //   const el = statsRef.current;
+  //   if (!el) return;
+  //   const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) setCounterStarted(true); }, { threshold: 0.3 });
+  //   io.observe(el);
+  //   return () => io.disconnect();
+  // }, []); // Unused - stats section is commented out
 
   useEffect(() => {
     const t = setInterval(() => setTestSlide((p) => (p + 1) % TESTIMONIALS.length), 5000);
@@ -261,7 +264,7 @@ export default function HomePage() {
       </section>
 
       {/* ── STATS ── */}
-      <div className={`cdp-stats ${counterStarted ? "cdp-stats--go" : ""}`} ref={statsRef}>
+      {/* <div className={`cdp-stats ${counterStarted ? "cdp-stats--go" : ""}`} ref={statsRef}>
         <div className="cdp-wrap cdp-stats__row">
           {STATS.map((s, i) => (
             <div className="cdp-stat" key={i} style={{ "--delay": `${i * 100}ms` } as React.CSSProperties}>
@@ -270,9 +273,9 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-      </div>
+      </div> */}
 
-      {/* ── WHY CDP ── */}
+      {/* ── WHY Ebadah Group ── */}
       <section
         id="about"
         className={`cdp-section cdp-why ${visible.has("why") ? "is-in" : ""}`}
@@ -281,9 +284,9 @@ export default function HomePage() {
       >
         <div className="cdp-wrap cdp-why__layout">
           <div className="cdp-why__left">
-            <span className="cdp-eyebrow">Why CDP Japan</span>
+            <span className="cdp-eyebrow">Why Ebadah Group Japan</span>
             <h2 className="cdp-why__h2">Built on Trust.<br />Driven by Results.</h2>
-            <p className="cdp-why__body">For over 3years, CDP Japan has been the staffing partner of choice for Japan's leading manufacturers. Our commitment to quality, speed, and support sets us apart.</p>
+            <p className="cdp-why__body">For over 3years, Ebadah Group Japan has been the staffing partner of choice for Japan's leading manufacturers. Our commitment to quality, speed, and support sets us apart.</p>
             <Link to="/about/overview" className="cdp-btn cdp-btn--primary">Discover Our Story →</Link>
           </div>
           <div className="cdp-why__cards">
@@ -323,7 +326,7 @@ export default function HomePage() {
       </section>
 
       {/* ── NEWS ── */}
-      <section
+      {/* <section
         id="news"
         className={`cdp-section cdp-news ${visible.has("news") ? "is-in" : ""}`}
         data-observe="news"
@@ -353,7 +356,7 @@ export default function HomePage() {
             <Link to="/news" className="cdp-btn cdp-btn--outline">View All News →</Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── TESTIMONIALS ── */}
       <section
